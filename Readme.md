@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 - Студент: [Мария](https://up.htmlacademy.ru/htmlcss/27/user/1067017).
-- Наставник: `Юлия Цапова`.
+- Наставник: [Юлия Цапова](https://htmlacademy.ru/profile/julie_web_).
 
 ---
 
