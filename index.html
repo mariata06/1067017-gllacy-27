@@ -1,12 +1,203 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
-
+    <!--
     <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+-->
+    <header>
+      <nav>
+        <a>
+          <img
+            src="img/index-logo.svg"
+            width=""
+            height=""
+            alt="Логотип интернет-магазина Gllasy"
+          />
+        </a>
+        <ul>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">О компании</a></li>
+        </ul>
+        <ul>
+          <li><svg></svg>Иконка поиска</li>
+          <li>
+            <button type="button"><svg></svg>Вход</button>
+          </li>
+          <li>
+            <a href="#"><svg></svg>Пусто</a>
+          </li>
+        </ul>
+      </nav>
+      
+      <div class="working-time">
+        <p>С 10 до 20, ежедневно</p>
+        <p>8 812 450-25-25</p>
+      </div>
 
+      <h1>интернет-магазин Gllasy</h1>
+      <h2 class="slogan">Крем-брюле и пломбир с малиновым джемом</h2>
+      <div class="slider-indicator"><svg></svg></div>
+      <a href="#">Давайте оба!</a>
+    </header>
+
+    <main>
+      <section class="action info">
+        <h3>Малинка даром!</h3>
+        <p>
+          При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ
+          банку малинового варенья бесплатно.
+        </p>
+        <form action="calalog.html" target="_blank">
+          <button>Хочу варенье!</button>
+        </form>
+      </section>
+
+      <section class="action info">
+        <h3>Шоколадки даром!</h3>
+        <p>
+          При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
+          шоколадной присыпки совершенно бесплатно!
+        </p>
+        <form action="calalog.html" target="_blank">
+          <button>Хочу шоколадки!</button>
+        </form>
+      </section>
+
+      <section class="hits">
+        <ul>
+          <li>
+            <svg>Иконка ХИТ</svg>
+            <img src="img/...." alt="creamy-orange" width="" height="" />
+            <span>310 Р/кг</span>
+            <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+          </li>
+          <li>
+            <svg>Иконка ХИТ</svg>
+            <img src="img/...." alt="creamy-coffee" width="" height="" />
+            <span>380 Р/кг</span>
+            <p>Сливочно-кофейное с кусочками шоколада</p>
+          </li>
+          <li>
+            <svg>Иконка ХИТ</svg>
+            <img src="img/...." alt="creamy-strawberry" width="" height="" />
+            <span>355 Р/кг</span>
+            <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+          </li>
+          <li>
+            <svg>Иконка ХИТ</svg>
+            <img src="img/...." alt="creme-brulee" width="" height="" />
+            <span>415 Р/кг</span>
+            <p>Сливочное крем-брюле с карамельной подливкой</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="about">
+        <h4>
+          Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого
+          собственного производства на развес
+        </h4>
+        <ul>
+          <li>
+            <svg>Иконка Мороженое</svg>
+            <p class="dignity">
+              Все наше мороженое изготавливается на собственном производстве, с
+              использованием современного оборудования и проверенных временем
+              технологий.
+            </p>
+          </li>
+          <li>
+            <svg>Иконка Листик</svg>
+            <p class="dignity">
+              Для приготовления мороженого используются настоящие сливки и
+              молоко высочайшего качества. Все дополнительные ингредиенты и
+              добавки произведены из натурального, экологически чистого сырья
+            </p>
+          </li>
+          <li>
+            <svg>Иконка Корова</svg>
+            <p class="dignity">
+              Закупка ингредиентов производится только у проверенных фермерских
+              хозяйств и компаний, с которыми нас связывает долговременное
+              сотрудничество.
+            </p>
+          </li>
+          <li>
+            <svg>Иконка Грудусник</svg>
+            <p class="dignity">
+              Доставка нашего мороженого до заказчиков осуществляется в
+              специальном термопаке, который не дает мороженому растаять в пути
+              и позволяет сохранить превосходный вкус.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="info news">
+        <p>Новое в нашем блоге</p>
+        <h3>10 способов сервировки фруктовых щербетов к столу</h3>
+      </section>
+
+      <section class="info mailing">
+        <p>
+          Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего
+          самого вкусного, что у нас происходит. Обещаем не спамить и не слать
+          всякой ненужной ерунды. Честно =)
+        </p>
+        <input type="email" placeholder="email@example.com" />
+        <input type="submit" Отправить />
+      </section>
+
+      <section class="address">
+        <!-- фоновая картинка карты или ссылка на карту -->
+        <img src="img/..." alt="map" />
+        <svg>Иконка Пин Мороженое</svg>
+        <div>
+          <p>
+            Адрес главного офиса<br />
+            и офлайн-магазина:
+          </p>
+          <p>
+            ул. Большая Конюшенная 19/8,<br />
+            Санкт-Петербург
+          </p>
+          <p>Для заказов по телефону:</p>
+          <p>
+            8 812 450-25-25<br />
+            (с 10 до 20 ежедневно)
+          </p>
+          <p><input type="submit" value="Форма обратной связи" /></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <ul class="social">
+        <li><a href="https://twitter.com/?lang=ru" class="social-icon">twitter</a></li>
+        <!--или svg-->
+        <li><a href="https://www.instagram.com/" class="social-icon">instagram</a></li>
+        <li><a href="https://www.facebook.com/" class="social-icon">facebook</a></li>
+        <li><a href="https://www.vk.com/" class="social-icon">vkontakte</a></li>
+      </ul>
+
+      <ul class="policy">
+        <li><svg>иконка Сердце</svg>Для поставщиков</li>
+        <li>О производстве</li>
+        <li>Наши документы</li>
+        <li>Экологические стандарты</li>
+      </ul>
+
+      <div class="copyright">
+        <a href="https://htmlacademy.ru/intensive/htmlcss"
+          ><img src="img/..." alt="Лого разработчика" width="" height=""
+        /></a>
+        <p>Сделано в HTML Academy © 2019</p>
+      </div>
+    </footer>
   </body>
 </html>
