@@ -13,60 +13,68 @@
         <img src="img/main-logo.svg" alt="Логотип интернет-магазина Gllacy" width="642" height="267">
       </a>
       <ul>
-        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="catalog.html">Каталог</a>
+          <!--ВЫПАДАЮЩЕЕ ПОДМЕНЮ КАТАЛОГА-->
+          <ul class="menu-catalog visually-hidden">
+            <li><b><a href="#">Новинки</a></b></li>
+            <li><a href="catalog.html">Сливочное</a></li>
+            <li><a href="#">Щербеты</a></li>
+            <li><a href="#">Фруктовый лёд</a></li>
+            <li><a href="#">Мелорин</a></li>
+          </ul>
+        </li>
         <li><a href="#">Доставка и оплата</a></li>
         <li><a href="#">О компании</a></li>
       </ul>
-      <!--ВЫПАДАЮЩЕЕ МЕНЮ КАТАЛОГА-->
-      <ul class="menu-catalog visually-hidden">
-        <li><button type="button"><b>Новинки</b></button></li>
-        <li><button type="button">Сливочное</button></li>
-        <li><button type="button">Щербеты</button></li>
-        <li><button type="button">Фруктовый лёд</button></li>
-        <li><button type="button">Мелорин</button></li>
-      </ul>
+
       <ul>
         <li>
-          <!--СТРОКА ПОИСКА-->
-          <img src="img/icon-magnifying-glass.svg" alt="Поиск" width="17" height="17">
-          <label for="search" class="search visually-hidden"><input type="text" value="Что ищем?" id="search"></label>
+          <!--ФОРМА ПОИСКА-->
+          <div class="search">
+            <h2 class="visually-hidden">Форма поиска</h2>
+            <img src="img/icon-magnifying-glass.svg" alt="Поиск" width="17" height="17">
+            <form action="url" method="post" class="visually-hidden">
+              <label for="search"></label>
+              <input type="search" id="search" value="Крем-брюле">
+              <button type="submit"></button>
+            </form>
+          </div>
         </li>
+
         <li>
-          <label><input type="image" src="img/icon-enter.svg" alt="Вход" width="17" height="17">Вход</label>
+          <!--ВХОД В ЛИЧНЫЙ КАБИНЕТ-->
+          <div class="login">
+            <h2 class="visually-hidden">Вход в личный кабинет</h2>
+            <img src="img/icon-enter.svg" alt="Вход" width="17" height="17"><span>Вход</span>
+            <form action="url" method="post" class="visually-hidden">
+              <p>
+                <input type="email" name="login" placeholder="email@example.com">
+              </p>
+              <p>
+                <input type="password" name="password" placeholder="........">
+              </p>
+              <button type="button">
+                Войти
+              </button>
+              <a href="#">Забыли пароль?</a>
+              <a href="#">Новая регистрация</a>
+            </form>
+          </div>
         </li>
+
         <li>
-          <label for="cart"><input type="image" id="cart" src="img/icon-cart.svg" alt="Корзина" width="17"
-              height="17">Пусто</label>
+          <!--КОРЗИНА-->
+          <div class="cart">
+            <h2 class="visually-hidden">Корзина</h2>
+            <img src="img/icon-cart.svg" alt="Корзина" width="17"><span>Пусто</span>
+          </div>
         </li>
       </ul>
-
-      <!--КОРЗИНА-->
-      <div class="cart visually-hidden">
-        <div class="item">
-          <img src="img/Х.png" alt="удалить" width="11" height="11">
-          <img src="img/icon-creamy-orange.png" alt="Пломбир с апельсиновым джемом" width="33" height="33">
-          <p>Пломбир с апельсиновым джемом</p>
-          <span>1,5 кг Х 200 руб.</span>
-          <span>300 руб.</span>
-        </div>
-
-        <div class="item">
-
-        </div>
-        <img src="img/Х.png" alt="удалить" width="11" height="11">
-        <img src="img/icon-creamy-strawberry.png" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33"
-          height="33">
-        <p>Клубничный пломбир с присыпкой из белого шоколада</p>
-        <span>1,5 кг Х 300 руб.</span>
-        <span>450 руб.</span>
-        <p><b>Итого: 750 руб.</b></p>
-        <button type="submit">Оформить заказ</button>
-      </div>
     </nav>
 
     <div class="working-time">
-      <p>С 10 до 20, ежедневно<br>
-        8 812 450-25-25</p>
+      <p>С 10 до 20, ежедневно</p>
+      <p>8 812 450-25-25</p>
     </div>
   </header>
 
@@ -86,9 +94,7 @@
         При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ
         банку малинового варенья бесплатно.
       </p>
-      <form action="calalog.html" target="_blank">
-        <a href="#">Хочу варенье!</a>
-      </form>
+      <a href="#">Хочу варенье!</a>
     </article>
 
     <article class="action info">
@@ -97,13 +103,11 @@
         При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
         шоколадной присыпки совершенно бесплатно!
       </p>
-      <form action="calalog.html" target="_blank">
-        <a href="#">Хочу шоколадки!</a>
-      </form>
+      <a href="#">Хочу шоколадки!</a>
     </article>
 
     <section class="hits">
-      <h3 class="visually-hidden">Наши хиты</h3>
+      <h2 class="visually-hidden">Наши хиты</h2>
       <ul>
         <li>
           <img src="img/icon-hit.png" alt="наш хит" width="61" height="61">
@@ -135,10 +139,10 @@
     </section>
 
     <section class="about">
-      <h3>
+      <h2>
         Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого
         собственного производства на развес
-      </h3>
+      </h2>
       <ul>
         <li class="feature">
           <img src="img/icon-ice-cream.svg" alt="о мороженом" width="20" height="20">
@@ -168,41 +172,55 @@
     </section>
 
     <article class="info news">
-      <h1>Новое в нашем блоге</h1>
-      <p>10 способов сервировки фруктовых щербетов к столу</p>
+      <h2>Новое в нашем блоге</h2>
+      <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
     </article>
 
     <section class="info mailing">
-      <h3 class="visually-hidden">Подписка на рассылку</h3>
+      <h2 class="visually-hidden">Подписка на рассылку</h2>
       <p>
         Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего
         самого вкусного, что у нас происходит. Обещаем не спамить и не слать
         всякой ненужной ерунды. Честно =)
       </p>
-      <input type="email" placeholder="email@example.com">
-      <input type="submit" value="Отправить">
+      <form action="url" method="post">
+        <input type="email" placeholder="email@example.com">
+        <button type="submit">Отправить</button>
+      </form>
     </section>
 
     <section class="address">
-      <h3 class="visually-hidden">Наши контакты</h3>
+      <h2 class="visually-hidden">Наши контакты</h2>
       <img src="img/map.png" alt="как найти наш интернет-магазин" width="1200" height="430">
       <img src="img/ice-cream-pin.png" alt="указатель адреса на карте" width="218" height="142">
       <div>
-        <p>
-          Адрес главного офиса<br>
-          и офлайн-магазина:
-        </p>
-        <p>
-          ул. Большая Конюшенная 19/8,<br>
-          Санкт-Петербург
-        </p>
-        <p>
-          Для заказов по телефону:<br>
-          8 812 450-25-25<br>
-          (с 10 до 20 ежедневно)
-        </p>
-        <p><a href="#">Форма обратной связи</a></p>
+        <p>Адрес главного офиса</p>
+        <p>и офлайн-магазина:</p>
+        <p>ул. Большая Конюшенная 19/8,</p>
+        <p>Санкт-Петербург</p>
+        <p>Для заказов по телефону:</p>
+        <p>8 812 450-25-25</p>
+        <p>(с 10 до 20 ежедневно)</p>
+        <a href="#">Форма обратной связи</a>
       </div>
+    </section>
+
+    <!--ДИАЛОГОВОЕ ОКНО ФОРМА ОБРАТНОЙ СВЯЗИ-->
+    <section class="feedback visually-hidden">
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <h3>Мы обязательно вам ответим!</h3>
+      <input type="image" src="img/Х.png" alt="закрыть">
+      <form action="url" method="post">
+        <p>
+          <label for="name"><input id="name" type="text" name="name" value="" placeholder="Имя Фамилия"></label>
+        </p>
+        <p>
+          <label for="email"><input id="email" type="email" name="email" value=""
+              placeholder="email@example.com"></label>
+        </p>
+        <p><textarea cols="35" rows="5" placeholder="В свободной форме"></textarea></p>
+        <button type="submit">Отправить</button>
+      </form>
     </section>
   </main>
 
@@ -216,18 +234,15 @@
       <li>
         <a href="https://instagram.com/" aria-label="instagram" class="social-icon"><img src="img/icon-instagram.svg"
             alt="instagram" width="15" height="15"></a>
-        <!--<a href="https://www.instagram.com/" class="social-icon">instagram</a>-->
       </li>
       <li>
         <a href="https://facebook.com/" aria-label="facebook" class="social-icon"><img src="img/icon-facebook.svg"
             alt="facebook" width="15" height="15"></a>
-        <!--<a href="https://www.facebook.com/" class="social-icon">facebook</a>-->
       </li>
 
       <li>
         <a href="https://vk.com/" aria-label="vkontakte" class="social-icon"><img src="img/icon-vk.svg" alt="vkontakte"
             width="15" height="15"></a>
-        <!--<a href="https://www.vk.com/" class="social-icon">vkontakte</a></li>-->
     </ul>
 
     <ul class="footer-menu">
@@ -248,39 +263,6 @@
     </div>
   </footer>
 
-  <!--ДИАЛОГОВОЕ ОКНО ВХОД В ЛИЧНЫЙ КАБИНЕТ-->
-  <section class="login visually-hidden">
-    <h3 class="visually-hidden">Вход в личный кабинет</h3>
-    <form action="url" method="post">
-      <p>
-        <input type="email" name="login" placeholder="Электронная почта">
-      </p>
-      <p>
-        <input type="password" name="password" placeholder="Пароль">
-      </p>
-      <button type="button">
-        Войти
-      </button>
-      <a href="#">Забыли пароль?</a>
-      <a href="#">Новая регистрация</a>
-    </form>
-  </section>
-
-  <!--ДИАЛОГОВОЕ ОКНО ФОРМА ОБРАТНОЙ СВЯЗИ-->
-  <section class="feedback visually-hidden">
-    <h2>Мы обязательно вам ответим!</h2>
-    <form action="url" method="post">
-      <p>
-        <label for="name"><input id="name" type="text" name="name" value="" placeholder="Как вас зовут?"></label>
-      </p>
-      <p>
-        <label for="email"><input id="email" type="email" name="email" value=""
-            placeholder="Ваша почта для ответа?"></label>
-      </p>
-      <p><textarea cols="35" rows="5" placeholder="Напишите что-нибудь..."></textarea></p>
-      <button type="submit">Отправить</button>
-    </form>
-  </section>
 </body>
 
 </html>
