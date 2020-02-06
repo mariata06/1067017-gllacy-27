@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 27px;
+  /*fontsize + (leading / 2) = lineheight = 16 + 22/2 = 27*/
+  font-weight: 400;
+  color: #ffffff;
+
+  background-color: #849d8f;
+  background-image: url("img/slider-bg-1.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+button {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(to bottom, #f26843, #e74a35);
+  box-shadow: 0px 2px 2px 0px #904737;
+  border-radius: 50px;
+  border: none;
+}
+
+button:hover,
+button:focus {
+  background: linear-gradient(to bottom, #dd866c, #d47061);
+  box-shadow: 0px 2px 2px 0px #931705;
+}
+
+button:active {
+  background: linear-gradient(to bottom, #bb4836, #c66142);
+  box-shadow: inset 0px 2px 2px 0px #802b1f;
+}
+
+.main-navigation {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 23px;
+
+  background-color: #849d8f;
+}
+
+.site-navigation,
+.menu-catalog,
+.user-navigation,
+.hits-list,
+.footer-menu,
+.social-list,
+.breadcrumbs,
+.menu-sort,
+.creamy-list,
+.pager-list {
+  list-style: none;
+}
+
+.site-navigation a,
+.user-navigation a,
+.footer-menu a,
+.breadcrumbs a {
+  color: #ffffff;
+}
+
+.menu-catalog a {
+  color: #323232;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus,
+.user-navigation span:hover,
+.user-navigation span:focus {
+  background-color: #f7f7f4;
+  color: #353535;
+}
+
+.menu-catalog a:hover,
+.menu-catalog a:focus {
+  background-color: #f3ddd6;
+}
+
+.user-navigation.search,
+.user-navigation.login,
+.user-navigation.cart {
+  background-color: #9eb2a7;
+}
+
+/*****************************************************************************
+******************************SECTION ABOUT***********************************
+*****************************************************************************/
+.about h2 {
+  font-size: 24px;
+  line-height: 39px;
+  font-weight: 500;
+  color: #323232;
+}
+
+.feature-list {
+  list-style: none;
+}
+
+.feature {
+  color: #323232;
+}
+
+.news h2 {
+  color: #323232;
+}
+
+.news a {
+  font-size: 24px;
+  line-height: 39px;
+  font-weight: 700;
+  color: #323232;
+  text-decoration: underline;
+}
+
+.mailing p {
+  color: #5a5a5a;
+}
+
+.mailing:placeholder {
+  line-height: 28px;
+  color: #999999;
+}
+
+
+/*****************************************************************************
+************************************FOOTER************************************
+*****************************************************************************/
+.footer-menu a {
+  font-size: 13px;
+  line-height: 22px;
+  text-decoration: underline;
+}
+
+.footer-menu a:first-child {
+  font-weight: 700;
+}
+
+.copyright p {
+  font-size: 12px;
+  line-height: 21px;
+}
+
+.copyright a {
+  color: #ffffff;
+}
+
+.social-icon img {
+  background: #e8ebe9;
+}
+
+.social-icon img:hover,
+.social-icon img:focus {
+  background: #ffffff;
+}
+
+.social-icon img:active {
+  background: #e8e8e8;
+}
+
+/*****************************************************************************
+************************************CATALOG PAGE******************************
+*****************************************************************************/
+
+
+
+
+.menu-sort a {
+  color: #000000;
+}
+
+/*****************************************************************************
+**********************************SECTION CREAMY******************************
+*****************************************************************************/
+.creamy-list span {
+  font-size: 45px;
+  line-height: 67, 5px;
+  font-weight: 700;
+}

@@ -4,15 +4,18 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <nav>
+    <nav class="main-navigation">
       <a href="index.html">
         <img src="img/main-logo.svg" alt="Логотип интернет-магазина Gllaсy" width="154" height="64">
       </a>
-      <ul>
+      <ul class="site-navigation">
         <li><a href="catalog.html">Каталог</a>
           <!--ВЫПАДАЮЩЕЕ ПОДМЕНЮ КАТАЛОГА-->
           <ul class="menu-catalog visually-hidden">
@@ -27,7 +30,7 @@
         <li><a href="#">О компании</a></li>
       </ul>
 
-      <ul>
+      <ul class="user-navigation">
         <li>
           <!--ФОРМА ПОИСКА-->
           <div class="search">
@@ -118,7 +121,7 @@
       <h2 class="visually-hidden">Фильтр и сортировка</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
 
-        <!--ВЫПАДАЮЩЕЕ ПОДМЕНЮ СРТИРОВКИ-->
+        <!--ВЫПАДАЮЩЕЕ ПОДМЕНЮ СОРТИРОВКИ-->
         <div class="sort">
           <p>Сортировка:</p>
           <p><a href="#">по популярности</a></p>
@@ -127,7 +130,7 @@
             <li><a href="#">сначала недорогие</a></li>
             <li><a href="#">сначала дорогие</a></li>
             <li><a href="#">по жирности</a></li>
-          </ul> 
+          </ul>
           <img src="img/icon-down-dir.svg" alt="сортировать" width="11" height="11">
         </div>
 
@@ -176,7 +179,7 @@
 
     <section class="catalog-section creamy">
       <h2 class="visually-hidden">Раздел Сливочное мороженое</h2>
-      <ul>
+      <ul class="creamy-list">
         <li>
           <img src="img/creamy-orange.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
             height="267">
@@ -246,7 +249,7 @@
 
     <!--Пагинация страниц-->
     <div class="item-list">
-      <ul class="pager">
+      <ul class="pager-list">
         <li class="pager-next first">
           <a href="/node?page=5" title="На предыдущую страницу">‹</a>
         </li>
@@ -272,7 +275,7 @@
   </main>
 
   <footer>
-    <ul class="social">
+    <ul class="social-list">
       <li>
         <a href="https://twitter.com/" aria-label="twitter" class="social-icon"><img src="img/icon-twitter.svg"
             alt="twitter" width="32" height="32"></a>
