@@ -16,7 +16,7 @@
         <li><a href="catalog.html">Каталог</a>
           <!--ВЫПАДАЮЩЕЕ ПОДМЕНЮ КАТАЛОГА-->
           <ul class="menu-catalog visually-hidden">
-            <li><b><a href="#">Новинки</a></b></li>
+            <li><a href="#">Новинки</a></li>
             <li><a href="catalog.html">Сливочное</a></li>
             <li><a href="#">Щербеты</a></li>
             <li><a href="#">Фруктовый лёд</a></li>
@@ -90,7 +90,7 @@
                   <td><span>300 руб.</span></td>
                 </tr>
               </table>
-              <span><b>Итого: 750 руб.</b></span>
+              <span>Итого: 750 руб.</span>
               <button type="submit">Оформить заказ</button>
             </form>
           </div>
@@ -118,20 +118,27 @@
       <h2 class="visually-hidden">Фильтр и сортировка</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
 
+        <!--ВЫПАДАЮЩЕЕ ПОДМЕНЮ СРТИРОВКИ-->
         <div class="sort">
-          <label for="sort"><b>Сортировка:</b></label>
-          <select id="sort">
-            <option selected>По популярности</option>
-          </select><img src="img/icon-down-dir.svg" alt="сортировать" width="11" height="11">
+          <p>Сортировка:</p>
+          <p><a href="#">по популярности</a></p>
+          <ul class="menu-sort">
+            <li><a href="#">по популярности</a></li>
+            <li><a href="#">сначала недорогие</a></li>
+            <li><a href="#">сначала дорогие</a></li>
+            <li><a href="#">по жирности</a></li>
+          </ul> 
+          <img src="img/icon-down-dir.svg" alt="сортировать" width="11" height="11">
         </div>
 
-        <div class="price-indicator">
-          <label for="price"><b>Цена:</b></label><b class="min-price">100</b><span>руб.</span><input type="range"
-            min="100" max="500" step="10" value="500" id="price"><b class="max-price">500</b><span>руб.</span>
-        </div>
+        <fieldset class="price-indicator">
+          <legend><label for="price">Цена:</label></legend>
+          <span class="min-price">100</span><span>руб.</span><input type="range" min="100" max="500" step="10"
+            value="500" id="price"><span class="max-price">500</span><span>руб.</span>
+        </fieldset>
 
-        <div class="fat-content">
-          <p><b>Жирность:</b></p>
+        <fieldset class="fat-content">
+          <legend>Жирность:</legend>
           <input type="radio" name="fat-content" id="fatfree" value="0%">
           <label for="fatfree">0 %</label>
 
@@ -143,10 +150,10 @@
 
           <input type="radio" name="fat-content" id="30pluspurcentfat" value="выше 30%">
           <label for="30pluspurcentfat">выше 30 %</label>
-        </div>
+        </fieldset>
 
-        <div class="fillings">
-          <p><b>Наполнители:</b></p>
+        <fieldset class="fillings">
+          <legend>Наполнители:</legend>
           <input type="checkbox" id="chokolate" name="fillings" checked>
           <label for="chokolate">шоколадные</label>
 
@@ -161,7 +168,7 @@
 
           <input type="checkbox" id="jams" name="fillings">
           <label for="jams">джемы</label>
-        </div>
+        </fieldset>
 
         <button type="submit">Применить</button>
       </form>
