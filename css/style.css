@@ -100,7 +100,8 @@ a {
   box-shadow: none;
 }
 
-.user-navigation svg {
+.user-navigation svg,
+.user-navigation span {
   background-color: #9db1a5;
   /*index.psd*/
   background-color: #a1b4a9;
@@ -413,8 +414,8 @@ a {
   text-decoration: none;
 }
 
-.user-navigation .cart svg,
-.user-navigation .cart span {
+.user-navigation .full-cart svg,
+.user-navigation .full-cart span {
   color: #323232;
   background-color: #ffffff;
 }
