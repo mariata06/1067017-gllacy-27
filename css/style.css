@@ -10,53 +10,46 @@ body {
   color: #ffffff;
 
   background-color: #849d8f;
-  background-image: url("img/slider-bg-1.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
 }
 
 a {
   text-decoration: none;
 }
 
+/*
 .visually-hidden {
   display: none;
 }
-
-button {
+*/
+.button {
   font-size: 18px;
   line-height: 30px;
-  font-weight: bold;
+  font-weight: 700;
   color: #ffffff;
-  background: linear-gradient(to bottom, #f26843, #e74a35);
-  box-shadow: 0px 2px 2px 0px #904737;
+  background: linear-gradient(to bottom, #f26843, #e74b36);
+  box-shadow: 0px 2px 2px 0px #9e4334;
   border-radius: 50px;
   border: none;
+  display: block;
+  text-align: center;
 }
 
-button:hover,
-button:focus {
-  background: linear-gradient(to bottom, #dd866c, #d47061);
-  box-shadow: 0px 2px 2px 0px #931705;
+.button:hover,
+.button:focus {
+  background: linear-gradient(to bottom, #f58669, #ec6f5e);
+  box-shadow: 0px 2px 2px 0px #ac1000;
 }
 
-button:active {
-  background: linear-gradient(to bottom, #bb4836, #c66142);
-  box-shadow: inset 0px 2px 2px 0px #802b1f;
-}
-
-.main-navigation {
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 23px;
-
-  background-color: #849d8f;
+.button:active {
+  background: linear-gradient(to bottom, #d74632, #e1613e);
+  box-shadow: inset 0px 2px 2px 0px #952718;
 }
 
 .site-navigation,
 .menu-catalog,
 .user-navigation,
 .hits-list,
+.feature-list,
 .footer-menu,
 .social-list,
 .breadcrumbs,
@@ -66,36 +59,201 @@ button:active {
   list-style: none;
 }
 
-.site-navigation a,
-.user-navigation a,
-.footer-menu a,
-.breadcrumbs a {
+/*****************************************************************************
+******************************SECTION HEADER**********************************
+*****************************************************************************/
+.site-navigation a {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 23px;
   color: #ffffff;
-}
-
-.menu-catalog a {
-  color: #323232;
+  text-decoration: underline;
+  text-decoration-color: #a0b5a9;
 }
 
 .site-navigation a:hover,
-.site-navigation a:focus,
-.user-navigation a:hover,
-.user-navigation a:focus,
-.user-navigation span:hover,
-.user-navigation span:focus {
-  background-color: #f7f7f4;
-  color: #353535;
+.site-navigation a:focus {
+  background-color: #f7f6f3;
+  color: #323232;
+}
+
+.site-navigation a:active {
+  background-color: #ededed;
+  box-shadow: inset 0px 2px 2px 0px #696969;
+}
+
+.menu-catalog a {
+  font-size: 14px;
+  line-height: 22px;
+  color: #323232;
+  background-color: #f8f7f4;
+  text-decoration: none;
 }
 
 .menu-catalog a:hover,
 .menu-catalog a:focus {
-  background-color: #f3ddd6;
+  background-color: #fbded7;
 }
 
-.user-navigation.search,
-.user-navigation.login,
-.user-navigation.cart {
-  background-color: #9eb2a7;
+.menu-catalog a:active {
+  background-color: #f6b5a5;
+  box-shadow: none;
+}
+
+.user-navigation svg {
+  background-color: #9db1a5;
+  /*index.psd*/
+  background-color: #a1b4a9;
+  /*styleguide.psd*/
+  fill: #ffffff;
+}
+
+.user-navigation svg:hover,
+.user-navigation svg:focus {
+  background-color: #f7f6f3;
+  fill: #323232;
+}
+
+.user-navigation span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #ffffff;
+  background-color: #9db1a5;
+  /*index.psd*/
+  background-color: #a1b4a9;
+  /*styleguide.psd*/
+}
+
+.user-navigation span:hover,
+.user-navigation span:focus {
+  color: #323232;
+  background-color: #f7f6f3;
+}
+
+.working-time p:first-of-type {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.working-time p:last-of-type {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 34px;
+}
+
+/*****************************************************************************
+******************************SECTION SLIDER**********************************
+*****************************************************************************/
+.slider {
+  background-image: url("../img/slider-bg-1.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.slider-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 90.175px;
+  text-align: center;
+}
+
+.slider-button {
+  font-size: 30px;
+  line-height: 54px;
+  width: 280px;
+  height: 60px;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+}
+
+.button-indicator {
+  width: 17px;
+  height: 17px;
+  border-radius: 50px;
+  border: 2px solid #ffffff;
+}
+
+.button-indicator:hover,
+.button-indicator:focus {
+  background-color: #b2c1b7;
+}
+
+.button-indicator:active {
+  background-color: #ffffff;
+}
+
+.button-indicator:first-child {
+  background-color: #ffffff;
+}
+
+.button-indicator:not(first-child) {
+  background-color: #849d8f;
+}
+
+/*****************************************************************************
+******************************ARTICLE ACTION**********************************
+*****************************************************************************/
+
+.action-raspberry {
+  background-image: url(../img/raspberry-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.action-choko {
+  background-image: url(../img/chokolate-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.action-title {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 55.5px;
+}
+
+.action-description {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 29px;
+}
+
+.raspberry-button {
+  height: 48px;
+  width: 166px;
+}
+
+.choko-button {
+  height: 48px;
+  width: 188px;
+}
+
+/*****************************************************************************
+******************************SECTION HITS************************************
+*****************************************************************************/
+.hits-list li>a,
+.creamy-list li>a {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: #9db1a5;
+}
+
+.hits-list a:hover,
+.hits-list a:focus,
+.hits-list a:active,
+.creamy-list a:hover,
+.creamy-list a:focus,
+.creamy-list a:active {
+  color: #ffbc9e;
+  text-decoration-color: #ffbc9e;
+}
+
+.hits-list span {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 67.5px;
 }
 
 /*****************************************************************************
@@ -108,15 +266,23 @@ button:active {
   color: #323232;
 }
 
-.feature-list {
-  list-style: none;
-}
-
 .feature {
   color: #323232;
 }
 
-.news h2 {
+/*****************************************************************************
+******************************ARTICLE NEWS************************************
+*****************************************************************************/
+.news {
+  background-image: url(../img/strawberry-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.news-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 27px;
   color: #323232;
 }
 
@@ -128,6 +294,15 @@ button:active {
   text-decoration: underline;
 }
 
+.news a:hover,
+.news a:active {
+  color: #e84d37;
+  text-decoration-color: #f9cdc4;
+}
+
+/*****************************************************************************
+******************************SECTION MAILING*********************************
+*****************************************************************************/
 .mailing p {
   color: #5a5a5a;
 }
@@ -137,18 +312,68 @@ button:active {
   color: #999999;
 }
 
+.mailing-button {
+  width: 130px;
+  height: 44px;
+}
+
+/*****************************************************************************
+*********************************SECTION ADDRESS******************************
+*****************************************************************************/
+.address p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.address p:nth-child(3),
+.address p:nth-child(4),
+.address p:nth-child(6) {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.feedback-button {
+  width: 250px;
+  height: 44px;
+}
+
+/*****************************************************************************
+*******************************SECTION FEEDBACK*******************************
+*****************************************************************************/
+.feedback-title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 38px;
+  color: #3f3f3f;
+}
+
+.feedbacksend-button {
+  height: 44px;
+  width: 140px;
+}
 
 /*****************************************************************************
 ************************************FOOTER************************************
 *****************************************************************************/
-.footer-menu a {
+.footer-menu li>a {
   font-size: 13px;
+  font-weight: 400;
   line-height: 22px;
+  color: #ffffff;
   text-decoration: underline;
+  text-decoration-color: #9db1a5;
 }
 
-.footer-menu a:first-child {
+.footer-menu li:first-of-type a {
   font-weight: 700;
+}
+
+.footer-menu a:hover,
+.footer-menu a:focus,
+.footer-menu a:active {
+  color: #ffbc9e;
+  text-decoration-color: #ffbc9e;
 }
 
 .copyright p {
@@ -160,28 +385,201 @@ button:active {
   color: #ffffff;
 }
 
-.social-icon img {
-  background: #e8ebe9;
+.social-list li {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #c2cec7;
+  border-radius: 50%;
 }
 
-.social-icon img:hover,
-.social-icon img:focus {
-  background: #ffffff;
+.social-icon {
+  fill: #e8ebe9;
 }
 
-.social-icon img:active {
-  background: #e8e8e8;
+.social-icon:hover,
+.social-icon:focus {
+  fill: #ffffff;
+}
+
+.social-icon:active {
+  fill: #e9e9e9;
 }
 
 /*****************************************************************************
 ************************************CATALOG PAGE******************************
 *****************************************************************************/
+.site-navigation .current {
+  background-color: #d07058;
+  text-decoration: none;
+}
 
+.user-navigation .cart svg,
+.user-navigation .cart span {
+  color: #323232;
+  background-color: #ffffff;
+}
 
+.breadcrumbs li>a {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: #aebeb5;
+}
 
+.breadcrumbs .active {
+  text-decoration: none;
+}
 
-.menu-sort a {
-  color: #000000;
+.breadcrumbs .next {
+  content: "»";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus,
+.breadcrumbs a:active {
+  color: #ffbc9e;
+  text-decoration-color: #ffbc9e;
+}
+
+/*****************************************************************************
+**********************************SECTION FILTER******************************
+*****************************************************************************/
+
+.label-sort {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.sort .active>a {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #ffffff;
+  background-color: #9db1a5;
+}
+
+.sort .active>a:hover {
+  color: #323232;
+}
+
+.menu-sort li>a {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.menu-sort li>a:hover {
+  color: #ffffff;
+  background-color: #1e90ff;
+}
+
+.sort svg {
+  fill: #ffffff;
+}
+
+.sort svg:hover {
+  fill: #323232;
+}
+
+.label-price {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.price-indicator span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.label-fat-content {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.fat-content label {
+  font-weight: 500;
+}
+
+.radio {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 3px solid #e6ebe9;
+  position: relative;
+}
+
+.radio:hover {
+  border: 3px solid #ffffff;
+}
+
+.radio:active {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 3px solid #ffffff;
+}
+
+.radio:active .radio-active {
+  background-color: #eef2f0;
+}
+
+.radio-active {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+.fillings svg {
+  fill: #eef1ef;
+}
+
+.fillings svg:hover {
+  fill: #ffffff;
+}
+
+.fillings label {
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.filter-button {
+  font-weight: 500;
+  line-height: 25px;
+  color: #ffffff;
+  width: 140px;
+  height: 32px;
+  border-radius: 50px;
+  border: 2px solid #ffffff;
+  background-color: #9cb0a4;
+}
+
+.filter-button:hover,
+.filter-button:hover {
+  color: #353535;
+  background-color: #fbfcfb;
+}
+
+.filter-button:active {
+  box-shadow: inset 0px 3px 3px 0px #6a6b6a;
+  border: none;
 }
 
 /*****************************************************************************
@@ -189,6 +587,50 @@ button:active {
 *****************************************************************************/
 .creamy-list span {
   font-size: 45px;
-  line-height: 67, 5px;
+  line-height: 67.5px;
   font-weight: 700;
+}
+
+.creamy-list p {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: #9db1a5;
+}
+
+/*****************************************************************************
+**********************************PAGINATION**********************************
+*****************************************************************************/
+.pager-list li {
+  font-weight: 500;
+  line-height: 25px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 50px;
+  background-color: transparent;
+}
+
+.pager-list li>a {
+  color: #ffffff;
+}
+
+.pager-list .pager-current {
+  font-weight: 500;
+  line-height: 25px;
+  color: #323232;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 50px;
+
+  background-color: #ffffff;
+}
+
+.pager-item:hover {
+  background-color: #9db1a5;
 }
