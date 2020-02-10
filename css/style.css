@@ -1,11 +1,32 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+*/
 body {
   margin: 0;
   padding: 0;
 
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
-  line-height: 27px;
-  /*fontsize + (leading / 2) = lineheight = 16 + 22/2 = 27*/
+  line-height: 22px;
   font-weight: 400;
   color: #ffffff;
 
@@ -16,14 +37,9 @@ a {
   text-decoration: none;
 }
 
-/*
-.visually-hidden {
-  display: none;
-}
-*/
 .button {
   font-size: 18px;
-  line-height: 30px;
+  line-height: 24px;
   font-weight: 700;
   color: #ffffff;
   background: linear-gradient(to bottom, #f26843, #e74b36);
@@ -45,16 +61,13 @@ a {
   box-shadow: inset 0px 2px 2px 0px #952718;
 }
 
-.site-navigation,
-.menu-catalog,
-.user-navigation,
-.hits-list,
+.main-navigation ul,
+.catalog-list,
 .feature-list,
 .footer-menu,
 .social-list,
 .breadcrumbs,
 .menu-sort,
-.creamy-list,
 .pager-list {
   list-style: none;
 }
@@ -65,7 +78,7 @@ a {
 .site-navigation a {
   font-size: 16px;
   font-weight: bold;
-  line-height: 23px;
+  line-height: 18px;
   color: #ffffff;
   text-decoration: underline;
   text-decoration-color: #a0b5a9;
@@ -84,7 +97,7 @@ a {
 
 .menu-catalog a {
   font-size: 14px;
-  line-height: 22px;
+  line-height: 16px;
   color: #323232;
   background-color: #f8f7f4;
   text-decoration: none;
@@ -101,11 +114,8 @@ a {
 }
 
 .user-navigation svg,
-.user-navigation span {
-  background-color: #9db1a5;
-  /*index.psd*/
+.user-navigation a {
   background-color: #a1b4a9;
-  /*styleguide.psd*/
   fill: #ffffff;
 }
 
@@ -115,33 +125,30 @@ a {
   fill: #323232;
 }
 
-.user-navigation span {
+.user-navigation a {
   font-size: 14px;
   font-weight: 500;
-  line-height: 22px;
+  line-height: 16px;
   color: #ffffff;
-  background-color: #9db1a5;
-  /*index.psd*/
   background-color: #a1b4a9;
-  /*styleguide.psd*/
 }
 
-.user-navigation span:hover,
-.user-navigation span:focus {
+.user-navigation a:hover,
+.user-navigation a:focus {
   color: #323232;
   background-color: #f7f6f3;
 }
 
-.working-time p:first-of-type {
+.working-time {
   font-size: 14px;
   font-weight: 700;
-  line-height: 22px;
+  line-height: 16px;
 }
 
-.working-time p:last-of-type {
+.working-time span {
   font-size: 22px;
   font-weight: 700;
-  line-height: 34px;
+  line-height: 24px;
 }
 
 /*****************************************************************************
@@ -156,15 +163,13 @@ a {
 .slider-title {
   font-size: 60px;
   font-weight: 700;
-  line-height: 90.175px;
+  line-height: 60.35px;
   text-align: center;
 }
 
 .slider-button {
-  font-size: 30px;
-  line-height: 54px;
-  width: 280px;
-  height: 60px;
+  font-size: 32px;
+  line-height: 44px;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 }
 
@@ -197,12 +202,14 @@ a {
 *****************************************************************************/
 
 .action-raspberry {
+  background-color: #a3092d;
   background-image: url(../img/raspberry-bg.jpg);
   background-repeat: no-repeat;
   background-position: left;
 }
 
 .action-choko {
+  background-color: #512f19;
   background-image: url(../img/chokolate-bg.jpg);
   background-repeat: no-repeat;
   background-position: left;
@@ -211,58 +218,52 @@ a {
 .action-title {
   font-size: 35px;
   font-weight: 700;
-  line-height: 55.5px;
+  line-height: 41px;
 }
 
 .action-description {
   font-size: 18px;
   font-weight: 700;
-  line-height: 29px;
+  line-height: 22px;
 }
 
-.raspberry-button {
-  height: 48px;
-  width: 166px;
-}
+.raspberry-button {}
 
-.choko-button {
-  height: 48px;
-  width: 188px;
-}
+.choko-button {}
 
 /*****************************************************************************
 ******************************SECTION HITS************************************
 *****************************************************************************/
-.hits-list li>a,
-.creamy-list li>a {
+.catalog .catalog-item {
   color: #ffffff;
   font-weight: 500;
   text-decoration: underline;
-  text-decoration-color: #9db1a5;
+  text-decoration-color: #ffffff;
 }
 
-.hits-list a:hover,
-.hits-list a:focus,
-.hits-list a:active,
-.creamy-list a:hover,
-.creamy-list a:focus,
-.creamy-list a:active {
+.catalog .catalog-item:hover,
+.catalog .catalog-item:focus,
+.catalog .catalog-item:active {
   color: #ffbc9e;
   text-decoration-color: #ffbc9e;
 }
 
-.hits-list span {
+.catalog-list span {
   font-size: 45px;
   font-weight: 700;
-  line-height: 67.5px;
+  line-height: 45px;
 }
 
 /*****************************************************************************
 ******************************SECTION ABOUT***********************************
 *****************************************************************************/
+.about {
+  background-color: #ecdfc7;
+}
+
 .about h2 {
   font-size: 24px;
-  line-height: 39px;
+  line-height: 30px;
   font-weight: 500;
   color: #323232;
 }
@@ -275,6 +276,7 @@ a {
 ******************************ARTICLE NEWS************************************
 *****************************************************************************/
 .news {
+  background-color: #ffffff;
   background-image: url(../img/strawberry-bg.jpg);
   background-repeat: no-repeat;
   background-position: left;
@@ -283,13 +285,12 @@ a {
 .news-title {
   font-size: 16px;
   font-weight: 500;
-  line-height: 27px;
   color: #323232;
 }
 
 .news a {
   font-size: 24px;
-  line-height: 39px;
+  line-height: 30px;
   font-weight: 700;
   color: #323232;
   text-decoration: underline;
@@ -304,40 +305,42 @@ a {
 /*****************************************************************************
 ******************************SECTION MAILING*********************************
 *****************************************************************************/
+.mailing {
+  background-color: #f8f7f4;
+}
+
 .mailing p {
   color: #5a5a5a;
 }
 
+/*
 .mailing:placeholder {
-  line-height: 28px;
+  font-size: 50px;
+  line-height: 50px;
   color: #999999;
 }
-
-.mailing-button {
-  width: 130px;
-  height: 44px;
-}
+*/
+.mailing-button {}
 
 /*****************************************************************************
 *********************************SECTION ADDRESS******************************
 *****************************************************************************/
-.address p {
+.address {
+  background-color: #9bafa4;
+}
+
+.contacts p {
   font-size: 14px;
+  line-height: 20px;
+}
+
+.contacts span {
+  font-size: 18px;
+  font-weight: 700;
   line-height: 24px;
 }
 
-.address p:nth-child(3),
-.address p:nth-child(4),
-.address p:nth-child(6) {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 30px;
-}
-
-.feedback-button {
-  width: 250px;
-  height: 44px;
-}
+.feedback-button {}
 
 /*****************************************************************************
 *******************************SECTION FEEDBACK*******************************
@@ -345,28 +348,25 @@ a {
 .feedback-title {
   font-size: 24px;
   font-weight: 500;
-  line-height: 38px;
+  line-height: 28px;
   color: #3f3f3f;
 }
 
-.feedbacksend-button {
-  height: 44px;
-  width: 140px;
-}
+.feedbacksend-button {}
 
 /*****************************************************************************
 ************************************FOOTER************************************
 *****************************************************************************/
-.footer-menu li>a {
+.footer-menu a {
   font-size: 13px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 18px;
   color: #ffffff;
   text-decoration: underline;
   text-decoration-color: #9db1a5;
 }
 
-.footer-menu li:first-of-type a {
+.footer-menu a:first-of-type {
   font-weight: 700;
 }
 
@@ -379,7 +379,7 @@ a {
 
 .copyright p {
   font-size: 12px;
-  line-height: 21px;
+  line-height: 18px;
 }
 
 .copyright a {
@@ -423,7 +423,7 @@ a {
 .breadcrumbs li>a {
   font-size: 14px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 16px;
   color: #ffffff;
   text-decoration: underline;
   text-decoration-color: #aebeb5;
@@ -437,7 +437,7 @@ a {
   content: "»";
   font-size: 14px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 16px;
   color: #ffffff;
 }
 
@@ -455,13 +455,13 @@ a {
 .label-sort {
   font-size: 14px;
   font-weight: 500;
-  line-height: 22px;
+  line-height: 16px;
 }
 
 .sort .active>a {
   font-size: 16px;
   font-weight: 500;
-  line-height: 25px;
+  line-height: 18px;
   color: #ffffff;
   background-color: #9db1a5;
 }
@@ -473,7 +473,7 @@ a {
 .menu-sort li>a {
   font-size: 14px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 16px;
   color: #323232;
   background-color: #ffffff;
 }
@@ -494,23 +494,24 @@ a {
 .label-price {
   font-size: 14px;
   font-weight: 500;
-  line-height: 22px;
+  line-height: 16px;
 }
 
 .price-indicator span {
   font-size: 14px;
   font-weight: 500;
-  line-height: 22px;
+  line-height: 16px;
 }
 
 .label-fat-content {
   font-size: 14px;
   font-weight: 500;
-  line-height: 22px;
+  line-height: 16px;
 }
 
 .fat-content label {
   font-weight: 500;
+  line-height: 18px;
 }
 
 .radio {
@@ -558,15 +559,13 @@ a {
 
 .fillings label {
   font-weight: 500;
-  line-height: 25px;
+  line-height: 18px;
 }
 
 .filter-button {
   font-weight: 500;
-  line-height: 25px;
+  line-height: 18px;
   color: #ffffff;
-  width: 140px;
-  height: 32px;
   border-radius: 50px;
   border: 2px solid #ffffff;
   background-color: #9cb0a4;
@@ -584,26 +583,17 @@ a {
 }
 
 /*****************************************************************************
-**********************************SECTION CREAMY******************************
+**********************************SECTION CATALOG CREAMY**********************
 *****************************************************************************/
-.creamy-list span {
-  font-size: 45px;
-  line-height: 67.5px;
-  font-weight: 700;
-}
 
-.creamy-list p {
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-color: #9db1a5;
-}
+
 
 /*****************************************************************************
 **********************************PAGINATION**********************************
 *****************************************************************************/
-.pager-list li {
+.pager-list a {
   font-weight: 500;
-  line-height: 25px;
+  line-height: 18px;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -614,13 +604,9 @@ a {
   background-color: transparent;
 }
 
-.pager-list li>a {
-  color: #ffffff;
-}
-
 .pager-list .pager-current {
   font-weight: 500;
-  line-height: 25px;
+  line-height: 18px;
   color: #323232;
   display: flex;
   justify-content: center;
@@ -628,10 +614,9 @@ a {
   width: 27px;
   height: 27px;
   border-radius: 50px;
-
   background-color: #ffffff;
 }
 
-.pager-item:hover {
+.pager-list a:hover {
   background-color: #9db1a5;
 }

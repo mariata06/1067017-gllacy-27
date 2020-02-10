@@ -35,11 +35,12 @@
           <!--ФОРМА ПОИСКА-->
           <div class="search">
             <h2 class="visually-hidden">Форма поиска</h2>
-            <svg width="17px" height="17px" viewBox="0 0 17 17">
-              <path d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
+            <a href="#">
+              <svg width="17px" height="17px" viewBox="0 0 17 17">
+                <path d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
 		S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
 		S11,4.019,11,6.5S8.981,11,6.5,11z" />
-            </svg>
+              </svg></a>
             <form action="https://echo.htmlacademy.ru" method="post" class="visually-hidden">
               <label for="search"></label>
               <input type="search" id="search" value="Крем-брюле">
@@ -52,12 +53,12 @@
           <!--ВХОД В ЛИЧНЫЙ КАБИНЕТ-->
           <div class="login">
             <h2 class="visually-hidden">Вход в личный кабинет</h2>
-            <svg width="21px" height="19px" viewBox="0 0 21 19">
-              <polygon points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959 " />
-              <path
-                d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z" />
-            </svg>
-            <span>Вход</span>
+            <a href="#">
+              <svg width="21px" height="19px" viewBox="0 0 21 19">
+                <polygon points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959 " />
+                <path
+                  d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z" />
+              </svg>Вход</a>
             <form action="https://echo.htmlacademy.ru" method="post" class="visually-hidden">
               <p>
                 <input type="email" name="login" placeholder="email@example.com">
@@ -76,27 +77,28 @@
           <!--КОРЗИНА-->
           <div class="cart empty-cart">
             <h2 class="visually-hidden">Корзина</h2>
-            <svg width="21px" height="20px" viewBox="0 0 21 20">
-              <path
-                d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66L17.372,13z" />
-              <circle cx="6.984" cy="18" r="2" />
-              <circle cx="15.984" cy="18" r="2" />
-            </svg>
-            <span>Пусто</span>
+            <a href="#">
+              <svg width="21px" height="20px" viewBox="0 0 21 20">
+                <path
+                  d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66L17.372,13z" />
+                <circle cx="6.984" cy="18" r="2" />
+                <circle cx="15.984" cy="18" r="2" />
+              </svg>Пусто</a>
           </div>
         </li>
       </ul>
     </nav>
 
     <div class="working-time">
-      <p>С 10 до 20, ежедневно</p>
-      <p>8 812 450-25-25</p>
+      <p> С 10 до 20, ежедневно
+        <span>8 812 450-25-25</span></p>
     </div>
   </header>
 
   <section class="slider">
     <h1 class="visually-hidden">интернет-магазин Gllacy</h1>
     <h2 class="slider-title">Крем-брюле и пломбир с малиновым джемом</h2>
+    <!--
     <div class="slider-indicator">
       <div class="button-indicator">
       </div>
@@ -104,7 +106,7 @@
       </div>
       <div class="button-indicator">
       </div>
-    </div>
+    </div>-->
     <a href="#" class="button slider-button">Давайте оба!</a>
   </section>
 
@@ -127,31 +129,27 @@
       <a href="#" class="button choko-button">Хочу шоколадки!</a>
     </article>
 
-    <section class="hits">
+    <section class="catalog">
       <h2 class="visually-hidden">Наши хиты</h2>
-      <ul class="hits-list">
+      <ul class="catalog-list">
         <li>
-          <img src="img/icon-hit.png" alt="наш хит" width="61" height="61">
           <img src="img/creamy-orange.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
             height="267">
           <span>310 Р/кг</span>
           <a href="#" class="catalog-item">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </li>
         <li>
-          <img src="img/icon-hit.png" alt="наш хит" width="61" height="61">
           <img src="img/creamy-coffee.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
           <span>380 Р/кг</span>
           <a href="#" class="catalog-item">Сливочно-кофейное с кусочками шоколада</a>
         </li>
         <li>
-          <img src="img/icon-hit.png" alt="наш хит" width="61" height="61">
           <img src="img/creamy-strawberry.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267"
             height="267">
           <span>355 Р/кг</span>
           <a href="#" class="catalog-item">Сливочно-клубничное с присыпкой из белого шоколада</a>
         </li>
         <li>
-          <img src="img/icon-hit.png" alt="наш хит" width="61" height="61">
           <img src="img/creme-brulee.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
           <span>415 Р/кг</span>
           <a href="#" class="catalog-item">Сливочное крем-брюле с карамельной подливкой</a>
@@ -166,25 +164,21 @@
       </h2>
       <ul class="feature-list">
         <li class="feature">
-          <img src="img/icon-ice-cream.svg" alt="о мороженом" width="49" height="49">
           Все наше мороженое изготавливается на собственном производстве, с
           использованием современного оборудования и проверенных временем
           технологий.
         </li>
         <li class="feature">
-          <img src="img/icon-leaf.svg" alt="об использовании ингридиентов" width="49" height="49">
           Для приготовления мороженого используются настоящие сливки и молоко
           высочайшего качества. Все дополнительные ингредиенты и добавки
           произведены из натурального, экологически чистого сырья
         </li>
         <li class="feature">
-          <img src="img/icon-cow.svg" alt="о закупке сырья" width="49" height="49">
           Закупка ингредиентов производится только у проверенных фермерских
           хозяйств и компаний, с которыми нас связывает долговременное
           сотрудничество.
         </li>
         <li class="feature">
-          <img src="img/icon-termometer.svg" alt="об условиях транспортировки" width="49" height="49">
           Доставка нашего мороженого до заказчиков осуществляется в
           специальном термопаке, который не дает мороженому растаять в пути и
           позволяет сохранить превосходный вкус.
@@ -214,14 +208,13 @@
       <h2 class="visually-hidden">Наши контакты</h2>
       <img src="img/map.png" alt="как найти наш интернет-магазин" width="1200" height="430">
       <img src="img/ice-cream-pin.png" alt="указатель адреса на карте" width="218" height="142">
-      <div>
-        <p>Адрес главного офиса</p>
-        <p>и офлайн-магазина:</p>
-        <p>ул. Большая Конюшенная 19/8,</p>
-        <p>Санкт-Петербург</p>
-        <p>Для заказов по телефону:</p>
-        <p>8 812 450-25-25</p>
-        <p>(с 10 до 20 ежедневно)</p>
+      <div class="contacts">
+        <p>Адрес главного офиса и офлайн-магазина:
+          <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+          Для заказов по телефону:
+          <span>8 812 450-25-25</span>
+          (с 10 до 20 ежедневно)
+        </p>
         <a href="#" class="button feedback-button">Форма обратной связи</a>
       </div>
     </section>
@@ -230,7 +223,6 @@
     <section class="feedback visually-hidden">
       <h2 class="visually-hidden">Обратная связь</h2>
       <h3 class="feedback-title">Мы обязательно вам ответим!</h3>
-      <input type="image" src="img/x.svg" alt="закрыть" width="11" height="11">
       <form action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label for="name"><input id="name" type="text" name="name" value="" placeholder="Имя Фамилия"></label>
@@ -306,7 +298,7 @@
 
     <ul class="footer-menu">
       <li>
-        <img src="img/icon-heart.svg" alt="иконка любимые" width="15" height="13"><a href="#">Для поставщиков</a>
+        <a href="#">Для поставщиков</a>
       </li>
       <li><a href="#">О производстве</a></li>
       <li><a href="#">Наши документы</a></li>
