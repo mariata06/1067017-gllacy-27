@@ -53,7 +53,7 @@
           <!--ВХОД В ЛИЧНЫЙ КАБИНЕТ-->
           <div class="login">
             <h2 class="visually-hidden">Вход в личный кабинет</h2>
-            <a href="#">
+            <a href="#" class="enter">
               <svg width="21px" height="19px" viewBox="0 0 21 19">
                 <polygon points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959 " />
                 <path
@@ -66,7 +66,7 @@
               <p>
                 <input type="password" name="password" placeholder="........">
               </p>
-              <button type="button">Войти</button>
+              <button type="button" class="button">Войти</button>
               <a href="#">Забыли пароль?</a>
               <a href="#">Новая регистрация</a>
             </form>
@@ -137,22 +137,26 @@
             height="267">
           <span>310 Р/кг</span>
           <a href="#" class="catalog-item">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          <button type="button" class="button visually-hidden">Быстрый просмотр</button>
         </li>
         <li>
           <img src="img/creamy-coffee.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
           <span>380 Р/кг</span>
           <a href="#" class="catalog-item">Сливочно-кофейное с кусочками шоколада</a>
+          <button type="button" class="button visually-hidden">Быстрый просмотр</button>
         </li>
         <li>
           <img src="img/creamy-strawberry.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267"
             height="267">
           <span>355 Р/кг</span>
           <a href="#" class="catalog-item">Сливочно-клубничное с присыпкой из белого шоколада</a>
+          <button type="button" class="button visually-hidden">Быстрый просмотр</button>
         </li>
         <li>
           <img src="img/creme-brulee.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
           <span>415 Р/кг</span>
           <a href="#" class="catalog-item">Сливочное крем-брюле с карамельной подливкой</a>
+          <button type="button" class="button visually-hidden">Быстрый просмотр</button>
         </li>
       </ul>
     </section>
@@ -209,12 +213,8 @@
       <img src="img/map.png" alt="как найти наш интернет-магазин" width="1200" height="430">
       <img src="img/ice-cream-pin.png" alt="указатель адреса на карте" width="218" height="142">
       <div class="contacts">
-        <p>Адрес главного офиса и офлайн-магазина:
-          <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
-          Для заказов по телефону:
-          <span>8 812 450-25-25</span>
-          (с 10 до 20 ежедневно)
-        </p>
+        <p class="contacts-address"><span>Адрес главного офиса и офлайн-магазина:</span>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+        <p class="contacts-phone"><span>Для заказов по телефону:</span>8 812 450-25-25<span>(с 10 до 20 ежедневно)</span></p>
         <a href="#" class="button feedback-button">Форма обратной связи</a>
       </div>
     </section>
@@ -297,9 +297,7 @@
     </ul>
 
     <ul class="footer-menu">
-      <li>
-        <a href="#">Для поставщиков</a>
-      </li>
+      <li><a href="#">Для поставщиков</a></li>
       <li><a href="#">О производстве</a></li>
       <li><a href="#">Наши документы</a></li>
       <li><a href="#">Экологические стандарты</a></li>

@@ -42,8 +42,9 @@ a {
   line-height: 24px;
   font-weight: 700;
   color: #ffffff;
-  background: linear-gradient(to bottom, #f26843, #e74b36);
-  box-shadow: 0px 2px 2px 0px #9e4334;
+  background-image: linear-gradient(to bottom, #f26843, #e74a35);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
   border-radius: 50px;
   border: none;
   display: block;
@@ -52,13 +53,13 @@ a {
 
 .button:hover,
 .button:focus {
-  background: linear-gradient(to bottom, #f58669, #ec6f5e);
-  box-shadow: 0px 2px 2px 0px #ac1000;
+  background-image: linear-gradient(to bottom, #f26843, #e74a35);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.004);
 }
 
 .button:active {
-  background: linear-gradient(to bottom, #d74632, #e1613e);
-  box-shadow: inset 0px 2px 2px 0px #952718;
+  background-image: linear-gradient(to bottom, #e74a35, #f26843);
+  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
 }
 
 .main-navigation ul,
@@ -91,8 +92,12 @@ a {
 }
 
 .site-navigation a:active {
-  background-color: #ededed;
-  box-shadow: inset 0px 2px 2px 0px #696969;
+  background-color: rgba(248, 247, 244, 0.988);
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+}
+
+.menu-catalog {
+  background-color: #f8f7f4;
 }
 
 .menu-catalog a {
@@ -111,6 +116,10 @@ a {
 .menu-catalog a:active {
   background-color: #f6b5a5;
   box-shadow: none;
+}
+
+.menu-catalog .current {
+  background-color: #d07058;
 }
 
 .user-navigation svg,
@@ -137,6 +146,56 @@ a {
 .user-navigation a:focus {
   color: #323232;
   background-color: #f7f6f3;
+}
+
+.search {
+  background-color: #f8f7f4;
+}
+
+.login {
+  background-color: #f8f7f4;
+}
+
+.login a {
+  color: #323232;
+  text-decoration: underline;
+  background-color: #f8f7f4;
+}
+
+.login .enter {
+  background-color: #a1b4a9;
+  text-decoration: none;
+}
+
+.cart {
+  background-color: #a1b4a9;
+}
+
+.cart form {
+  color: #323232;
+  background-color: #f8f7f4;
+}
+
+.cart form .item {
+  font-size: 13px;
+  line-height: 16px;
+  color: #323232;
+}
+
+.cart form .price {
+  color: #999999;
+}
+
+.cart form .total-amount {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.cart .full-cart,
+.cart svg {
+  color: #323232;
+  background-color: #f8f7f4;
 }
 
 .working-time {
@@ -170,7 +229,6 @@ a {
 .slider-button {
   font-size: 32px;
   line-height: 44px;
-  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 }
 
 .button-indicator {
@@ -254,10 +312,15 @@ a {
   line-height: 45px;
 }
 
+.catalog-list li:hover {
+  background-color: #9bafa3;
+}
+
 /*****************************************************************************
 ******************************SECTION ABOUT***********************************
 *****************************************************************************/
 .about {
+  color: #323232;
   background-color: #ecdfc7;
 }
 
@@ -265,11 +328,6 @@ a {
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
-  color: #323232;
-}
-
-.feature {
-  color: #323232;
 }
 
 /*****************************************************************************
@@ -280,12 +338,12 @@ a {
   background-image: url(../img/strawberry-bg.jpg);
   background-repeat: no-repeat;
   background-position: left;
+  color: #323232;
 }
 
 .news-title {
   font-size: 16px;
   font-weight: 500;
-  color: #323232;
 }
 
 .news a {
@@ -312,14 +370,11 @@ a {
 .mailing p {
   color: #5a5a5a;
 }
-
-/*
-.mailing:placeholder {
-  font-size: 50px;
-  line-height: 50px;
+.mailing input::placeholder {
+  line-height: 24px;
   color: #999999;
 }
-*/
+
 .mailing-button {}
 
 /*****************************************************************************
@@ -330,14 +385,14 @@ a {
 }
 
 .contacts p {
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.contacts span {
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
+}
+
+.contacts span {
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .feedback-button {}
@@ -345,6 +400,10 @@ a {
 /*****************************************************************************
 *******************************SECTION FEEDBACK*******************************
 *****************************************************************************/
+.feedback {
+  background-color: #f8f7f4;
+}
+
 .feedback-title {
   font-size: 24px;
   font-weight: 500;
@@ -357,7 +416,7 @@ a {
 /*****************************************************************************
 ************************************FOOTER************************************
 *****************************************************************************/
-.footer-menu a {
+.footer-menu li {
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
@@ -366,8 +425,12 @@ a {
   text-decoration-color: #9db1a5;
 }
 
-.footer-menu a:first-of-type {
+.footer-menu li:first-of-type {
   font-weight: 700;
+}
+
+.footer-menu a {
+  color: #ffffff;
 }
 
 .footer-menu a:hover,
@@ -414,13 +477,7 @@ a {
   text-decoration: none;
 }
 
-.user-navigation .full-cart svg,
-.user-navigation .full-cart span {
-  color: #323232;
-  background-color: #ffffff;
-}
-
-.breadcrumbs li>a {
+.breadcrumbs a {
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
@@ -451,14 +508,13 @@ a {
 /*****************************************************************************
 **********************************SECTION FILTER******************************
 *****************************************************************************/
-
 .label-sort {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
 }
 
-.sort .active>a {
+.sort .active {
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
@@ -466,11 +522,11 @@ a {
   background-color: #9db1a5;
 }
 
-.sort .active>a:hover {
+.sort .active:hover {
   color: #323232;
 }
 
-.menu-sort li>a {
+.menu-sort a {
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
@@ -478,7 +534,7 @@ a {
   background-color: #ffffff;
 }
 
-.menu-sort li>a:hover {
+.menu-sort a:hover {
   color: #ffffff;
   background-color: #1e90ff;
 }
@@ -514,49 +570,6 @@ a {
   line-height: 18px;
 }
 
-.radio {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 3px solid #e6ebe9;
-  position: relative;
-}
-
-.radio:hover {
-  border: 3px solid #ffffff;
-}
-
-.radio:active {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 3px solid #ffffff;
-}
-
-.radio:active .radio-active {
-  background-color: #eef2f0;
-}
-
-.radio-active {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: transparent;
-  position: absolute;
-  top: 25%;
-  left: 25%;
-}
-
-.fillings svg {
-  fill: #eef1ef;
-}
-
-.fillings svg:hover {
-  fill: #ffffff;
-}
-
 .fillings label {
   font-weight: 500;
   line-height: 18px;
@@ -572,7 +585,7 @@ a {
 }
 
 .filter-button:hover,
-.filter-button:hover {
+.filter-button:focus {
   color: #353535;
   background-color: #fbfcfb;
 }
@@ -583,7 +596,7 @@ a {
 }
 
 /*****************************************************************************
-**********************************SECTION CATALOG CREAMY**********************
+**********************************SECTION CATALOG*****************************
 *****************************************************************************/
 
 
@@ -591,29 +604,27 @@ a {
 /*****************************************************************************
 **********************************PAGINATION**********************************
 *****************************************************************************/
+.pager-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pager-list li,
 .pager-list a {
   font-weight: 500;
   line-height: 18px;
   color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 27px;
   height: 27px;
+  display: block;
   border-radius: 50px;
   background-color: transparent;
+  text-align: center;
 }
 
 .pager-list .pager-current {
-  font-weight: 500;
-  line-height: 18px;
   color: #323232;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 27px;
-  height: 27px;
-  border-radius: 50px;
   background-color: #ffffff;
 }
 
