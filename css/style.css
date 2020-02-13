@@ -53,13 +53,12 @@ a {
 
 .button:hover,
 .button:focus {
-  background-image: linear-gradient(to bottom, #f26843, #e74a35);
-  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.004);
+  background-image: linear-gradient(to bottom, #f58669, #ec6f5e);
 }
 
 .button:active {
   background-image: linear-gradient(to bottom, #e74a35, #f26843);
-  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+  box-shadow: inset 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
 }
 
 .main-navigation ul,
@@ -93,7 +92,7 @@ a {
 
 .site-navigation a:active {
   background-color: rgba(248, 247, 244, 0.988);
-  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+  box-shadow: inset 0px 2px 1px 0px #696969;
 }
 
 .menu-catalog {
@@ -104,7 +103,6 @@ a {
   font-size: 14px;
   line-height: 16px;
   color: #323232;
-  background-color: #f8f7f4;
   text-decoration: none;
 }
 
@@ -118,82 +116,62 @@ a {
   box-shadow: none;
 }
 
-.menu-catalog .current {
+.menu-catalog .catalog-current {
+  color: #ffffff;
   background-color: #d07058;
 }
 
-.user-navigation svg,
-.user-navigation a {
-  background-color: #a1b4a9;
-  fill: #ffffff;
-}
-
-.user-navigation svg:hover,
-.user-navigation svg:focus {
-  background-color: #f7f6f3;
-  fill: #323232;
-}
-
-.user-navigation a {
+.user-navigation-item {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
   color: #ffffff;
   background-color: #a1b4a9;
 }
-
-.user-navigation a:hover,
-.user-navigation a:focus {
+.user-navigation-item svg {
+  fill: #ffffff;
+}
+.user-navigation-item:hover {
   color: #323232;
   background-color: #f7f6f3;
 }
+.user-navigation-item:hover svg {
+  fill: #323232;
+}
 
-.search {
+.login-form {
   background-color: #f8f7f4;
 }
 
-.login {
-  background-color: #f8f7f4;
-}
-
-.login a {
+.login-form a {
   color: #323232;
   text-decoration: underline;
-  background-color: #f8f7f4;
 }
 
-.login .enter {
-  background-color: #a1b4a9;
-  text-decoration: none;
-}
-
-.cart {
-  background-color: #a1b4a9;
-}
-
-.cart form {
+.cart-form {
   color: #323232;
   background-color: #f8f7f4;
 }
 
-.cart form .item {
+.cart-form .item {
   font-size: 13px;
   line-height: 16px;
-  color: #323232;
 }
 
-.cart form .price {
+.cart-form .price {
   color: #999999;
 }
 
-.cart form .total-amount {
+.cart-form .total-amount {
   font-size: 15px;
   line-height: 18px;
   font-weight: 700;
 }
 
-.cart .full-cart,
-.cart svg {
+.cart .full-cart {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
   color: #323232;
   background-color: #f8f7f4;
 }
@@ -370,6 +348,7 @@ a {
 .mailing p {
   color: #5a5a5a;
 }
+
 .mailing input::placeholder {
   line-height: 24px;
   color: #999999;
@@ -384,7 +363,12 @@ a {
   background-color: #9bafa4;
 }
 
+.contacts {
+  background-color: #fefefe;
+}
+
 .contacts p {
+  color: #323232;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -472,7 +456,7 @@ a {
 /*****************************************************************************
 ************************************CATALOG PAGE******************************
 *****************************************************************************/
-.site-navigation .current {
+.site-navigation .navigation-current {
   background-color: #d07058;
   text-decoration: none;
 }
