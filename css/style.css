@@ -75,6 +75,41 @@ a {
 /*****************************************************************************
 ******************************SECTION HEADER**********************************
 *****************************************************************************/
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1200px;
+  /*временно для сетки*/
+  background-color: #5a5a5a;
+  margin: 0 auto;
+}
+
+.site-navigation {
+  display: flex;
+  width: 450px;
+  /*временно для сетки*/
+  background-color: tomato;
+  /*временно для сетки*/
+  padding-left: 0px;
+  /*временно для сетки*/
+}
+
+.user-navigation {
+  display: flex;
+  width: 520px;
+  /*временно для сетки*/
+  background-color: gold;
+  /*временно для сетки*/
+  padding-left: 0px;
+  /*временно для сетки*/
+}
+
+.user-account {
+  width: 200px;
+  /*временно для сетки*/
+}
+
 .site-navigation a {
   font-size: 16px;
   font-weight: bold;
@@ -82,6 +117,14 @@ a {
   color: #ffffff;
   text-decoration: underline;
   text-decoration-color: #a0b5a9;
+}
+
+.site-navigation li {
+  display: inline-block;
+}
+
+.menu-catalog li {
+  display: block;
 }
 
 .site-navigation a:hover,
@@ -121,20 +164,28 @@ a {
   background-color: #d07058;
 }
 
+.user-navigation li {
+  display: inline-block;
+}
+
 .user-navigation-item {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
   color: #ffffff;
   background-color: #a1b4a9;
+  display: inline-block;
 }
+
 .user-navigation-item svg {
   fill: #ffffff;
 }
+
 .user-navigation-item:hover {
   color: #323232;
   background-color: #f7f6f3;
 }
+
 .user-navigation-item:hover svg {
   fill: #323232;
 }
@@ -180,6 +231,9 @@ a {
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
+  float: right;
+  width: 170px;
+  /*временно для сетки*/
 }
 
 .working-time span {
@@ -192,9 +246,11 @@ a {
 ******************************SECTION SLIDER**********************************
 *****************************************************************************/
 .slider {
+  width: 1200px; /*временно для сетки*/
   background-image: url("../img/slider-bg-1.png");
   background-position: top center;
   background-repeat: no-repeat;
+  margin: 0 auto;
 }
 
 .slider-title {
@@ -209,11 +265,19 @@ a {
   line-height: 44px;
 }
 
+.slider-indicator {
+  width: 70px;
+  /*временно для сетки*/
+  display: flex;
+  justify-content: space-between;
+}
+
 .button-indicator {
   width: 17px;
   height: 17px;
   border-radius: 50px;
   border: 2px solid #ffffff;
+  display: inline;
 }
 
 .button-indicator:hover,
@@ -236,6 +300,19 @@ a {
 /*****************************************************************************
 ******************************ARTICLE ACTION**********************************
 *****************************************************************************/
+.action-wrapper {
+  justify-content: space-around;
+  width: 1200px;
+  /*временно для сетки*/
+  display: flex;
+  margin: 0 auto;
+}
+
+.action {
+  display: inline-block;
+  width: 550px;
+  /*временно для сетки*/
+}
 
 .action-raspberry {
   background-color: #a3092d;
@@ -270,11 +347,30 @@ a {
 /*****************************************************************************
 ******************************SECTION HITS************************************
 *****************************************************************************/
+/*временно для сетки*/
+.catalog h2 {
+  width: 70px; 
+  display: block;
+}
+.catalog {
+  width: 1200px; /*временно для сетки*/
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.catalog-list li {
+  display: inline-block;
+  width: 268px;
+  /*временно для сетки*/
+}
+
 .catalog .catalog-item {
   color: #ffffff;
   font-weight: 500;
   text-decoration: underline;
   text-decoration-color: #ffffff;
+  display: block;
 }
 
 .catalog .catalog-item:hover,
@@ -288,6 +384,7 @@ a {
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
+  display: block;
 }
 
 .catalog-list li:hover {
@@ -300,6 +397,9 @@ a {
 .about {
   color: #323232;
   background-color: #ecdfc7;
+  width: 1100px;
+  /*временно для сетки*/
+  margin: 0 auto;
 }
 
 .about h2 {
@@ -311,12 +411,23 @@ a {
 /*****************************************************************************
 ******************************ARTICLE NEWS************************************
 *****************************************************************************/
+.info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  /*временно для сетки*/
+  margin: 0 auto;
+}
+
 .news {
   background-color: #ffffff;
   background-image: url(../img/strawberry-bg.jpg);
   background-repeat: no-repeat;
   background-position: left;
   color: #323232;
+  display: inline-block;
+  width: 550px;
+  /*временно для сетки*/
 }
 
 .news-title {
@@ -343,6 +454,9 @@ a {
 *****************************************************************************/
 .mailing {
   background-color: #f8f7f4;
+  display: inline-block;
+  width: 550px;
+  /*временно для сетки*/
 }
 
 .mailing p {
@@ -360,11 +474,15 @@ a {
 *********************************SECTION ADDRESS******************************
 *****************************************************************************/
 .address {
+  width: 1200px; /*временно для сетки*/
   background-color: #9bafa4;
+  margin: 0 auto;
 }
 
 .contacts {
   background-color: #fefefe;
+  width: 300px;
+  /*временно для сетки*/
 }
 
 .contacts p {
@@ -381,11 +499,23 @@ a {
 
 .feedback-button {}
 
+.address {
+  position: relative;
+}
+
+.address-pin {
+  position: absolute;
+  top: 25%;
+  left: 20%;
+}
+
 /*****************************************************************************
 *******************************SECTION FEEDBACK*******************************
 *****************************************************************************/
 .feedback {
   background-color: #f8f7f4;
+  width: 300px;
+  /*временно для сетки*/
 }
 
 .feedback-title {
@@ -400,6 +530,36 @@ a {
 /*****************************************************************************
 ************************************FOOTER************************************
 *****************************************************************************/
+footer {
+  width: 1200px;  /*временно для сетки*/
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.social-wrapper,
+.footer-menu,
+.copyright {
+  display: inline;
+}
+
+.social-list {
+  display: flex;
+  width: 200px;
+  /*временно для сетки*/
+  justify-content: space-between;
+}
+
+.social-icon {
+  display: inline;
+}
+
+.footer-menu {
+  width: 400px;
+  /*временно для сетки*/
+  justify-content: space-between;
+}
+
 .footer-menu li {
   font-size: 13px;
   font-weight: 400;
@@ -407,6 +567,9 @@ a {
   color: #ffffff;
   text-decoration: underline;
   text-decoration-color: #9db1a5;
+  display: inline-block;
+  width: 170px;
+  /*временно для сетки*/
 }
 
 .footer-menu li:first-of-type {
@@ -461,6 +624,10 @@ a {
   text-decoration: none;
 }
 
+.breadcrumbs {
+  display: flex;
+}
+
 .breadcrumbs a {
   font-size: 14px;
   font-weight: 400;
@@ -468,6 +635,7 @@ a {
   color: #ffffff;
   text-decoration: underline;
   text-decoration-color: #aebeb5;
+  display: inline;
 }
 
 .breadcrumbs .active {
@@ -492,6 +660,11 @@ a {
 /*****************************************************************************
 **********************************SECTION FILTER******************************
 *****************************************************************************/
+/*временно для сетки*/
+.filter {
+  width: 1200px; 
+  margin: 0 auto;
+}
 .label-sort {
   font-size: 14px;
   font-weight: 500;
