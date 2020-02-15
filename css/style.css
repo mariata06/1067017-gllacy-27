@@ -8,7 +8,7 @@ html {
   box-sizing: inherit;
 }
 
-/*
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -18,8 +18,9 @@ html {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+  display: none;
 }
-*/
+
 body {
   margin: 0;
   padding: 0;
@@ -47,7 +48,6 @@ a {
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
   border-radius: 50px;
   border: none;
-  display: block;
   text-align: center;
 }
 
@@ -77,37 +77,29 @@ a {
 *****************************************************************************/
 .main-navigation {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   width: 1200px;
   /*временно для сетки*/
+  padding: 0 27px;
   background-color: #5a5a5a;
   margin: 0 auto;
 }
 
 .site-navigation {
   display: flex;
-  width: 450px;
-  /*временно для сетки*/
+  flex-wrap: wrap;
+  width: 350px;
   background-color: tomato;
   /*временно для сетки*/
   padding-left: 0px;
   /*временно для сетки*/
+  justify-content: space-between;
+  margin-left: 24px;
+  align-items: center;
 }
 
-.user-navigation {
-  display: flex;
-  width: 520px;
-  /*временно для сетки*/
-  background-color: gold;
-  /*временно для сетки*/
-  padding-left: 0px;
-  /*временно для сетки*/
-}
-
-.user-account {
-  width: 200px;
-  /*временно для сетки*/
+.site-navigation li {
+  display: inline;
 }
 
 .site-navigation a {
@@ -117,14 +109,6 @@ a {
   color: #ffffff;
   text-decoration: underline;
   text-decoration-color: #a0b5a9;
-}
-
-.site-navigation li {
-  display: inline-block;
-}
-
-.menu-catalog li {
-  display: block;
 }
 
 .site-navigation a:hover,
@@ -164,8 +148,19 @@ a {
   background-color: #d07058;
 }
 
+.user-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  width: 244px;
+  background-color: gold;
+  /*временно для сетки*/
+  margin-left: 370px;
+  padding-left: 0px;
+  justify-content: space-between;
+}
+
 .user-navigation li {
-  display: inline-block;
+  display: inline;
 }
 
 .user-navigation-item {
@@ -188,6 +183,35 @@ a {
 
 .user-navigation-item:hover svg {
   fill: #323232;
+}
+
+.search .user-navigation-item {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+
+.user-account .user-navigation-item {
+  height: 32px;
+  width: 92px;
+  border-radius: 50px;
+}
+
+.cart .user-navigation-item {
+  height: 32px;
+  width: 100px;
+  border-radius: 50px;
+}
+
+.full-cart {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #323232;
+  background-color: #f8f7f4;
+  height: 32px;
+  width: 118px;
+  border-radius: 50px;
 }
 
 .login-form {
@@ -219,34 +243,37 @@ a {
   font-weight: 700;
 }
 
-.cart .full-cart {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16px;
-  color: #323232;
-  background-color: #f8f7f4;
-}
-
 .working-time {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 16px;
-  float: right;
   width: 170px;
-  /*временно для сетки*/
+  position: absolute;
+  top: 73px;
+  left: 1027px;
 }
 
 .working-time span {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.working-time span {
+  margin-top: 0px;
+}
+
+.working-time p {
   font-size: 22px;
   font-weight: 700;
   line-height: 24px;
+  text-indent: 16px;
+  margin-top: 0px;
 }
 
 /*****************************************************************************
 ******************************SECTION SLIDER**********************************
 *****************************************************************************/
 .slider {
-  width: 1200px; /*временно для сетки*/
+  width: 1200px;
+  /*временно для сетки*/
   background-image: url("../img/slider-bg-1.png");
   background-position: top center;
   background-repeat: no-repeat;
@@ -263,12 +290,14 @@ a {
 .slider-button {
   font-size: 32px;
   line-height: 44px;
+  padding: 20px 40px;
 }
 
 .slider-indicator {
   width: 70px;
   /*временно для сетки*/
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -301,17 +330,19 @@ a {
 ******************************ARTICLE ACTION**********************************
 *****************************************************************************/
 .action-wrapper {
-  justify-content: space-around;
+  justify-content: space-between;
   width: 1200px;
   /*временно для сетки*/
   display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
+  padding: 0 27px;
 }
 
 .action {
-  display: inline-block;
-  width: 550px;
-  /*временно для сетки*/
+  width: 560px;
+  margin-bottom: 24px;
+  min-height: 230px;
 }
 
 .action-raspberry {
@@ -332,6 +363,7 @@ a {
   font-size: 35px;
   font-weight: 700;
   line-height: 41px;
+  margin-top: 20px;
 }
 
 .action-description {
@@ -340,29 +372,33 @@ a {
   line-height: 22px;
 }
 
-.raspberry-button {}
-
-.choko-button {}
+.raspberry-button,
+.choko-button {
+  padding: 18px 20px;
+}
 
 /*****************************************************************************
 ******************************SECTION HITS************************************
 *****************************************************************************/
-/*временно для сетки*/
 .catalog h2 {
-  width: 70px; 
-  display: block;
+  width: 70px;
 }
+
 .catalog {
-  width: 1200px; /*временно для сетки*/
-  display: flex;
-  justify-content: space-between;
+  width: 1200px;
   margin: 0 auto;
+  padding: 0 27px;
+}
+
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 0px;
 }
 
 .catalog-list li {
-  display: inline-block;
   width: 268px;
-  /*временно для сетки*/
 }
 
 .catalog .catalog-item {
@@ -371,6 +407,7 @@ a {
   text-decoration: underline;
   text-decoration-color: #ffffff;
   display: block;
+  text-align: center;
 }
 
 .catalog .catalog-item:hover,
@@ -384,7 +421,6 @@ a {
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
-  display: block;
 }
 
 .catalog-list li:hover {
@@ -397,9 +433,10 @@ a {
 .about {
   color: #323232;
   background-color: #ecdfc7;
-  width: 1100px;
-  /*временно для сетки*/
+  width: 1146px;
   margin: 0 auto;
+  padding: 0 27px;
+  min-height: 310px;
 }
 
 .about h2 {
@@ -408,15 +445,28 @@ a {
   font-weight: 500;
 }
 
+.about ul {
+  padding-left: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about .feature {
+  width: 540px;
+}
+
 /*****************************************************************************
 ******************************ARTICLE NEWS************************************
 *****************************************************************************/
 .info-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 1200px;
   /*временно для сетки*/
   margin: 0 auto;
+  padding: 0 27px;
 }
 
 .news {
@@ -425,9 +475,7 @@ a {
   background-repeat: no-repeat;
   background-position: left;
   color: #323232;
-  display: inline-block;
-  width: 550px;
-  /*временно для сетки*/
+  width: 560px;
 }
 
 .news-title {
@@ -454,9 +502,8 @@ a {
 *****************************************************************************/
 .mailing {
   background-color: #f8f7f4;
-  display: inline-block;
-  width: 550px;
-  /*временно для сетки*/
+  width: 560px;
+  min-height: 220px;
 }
 
 .mailing p {
@@ -468,13 +515,15 @@ a {
   color: #999999;
 }
 
-.mailing-button {}
+.mailing-button {
+  padding: 15px 14px;
+}
 
 /*****************************************************************************
 *********************************SECTION ADDRESS******************************
 *****************************************************************************/
 .address {
-  width: 1200px; /*временно для сетки*/
+  width: 1200px;
   background-color: #9bafa4;
   margin: 0 auto;
 }
@@ -482,7 +531,6 @@ a {
 .contacts {
   background-color: #fefefe;
   width: 300px;
-  /*временно для сетки*/
 }
 
 .contacts p {
@@ -531,69 +579,21 @@ a {
 ************************************FOOTER************************************
 *****************************************************************************/
 footer {
-  width: 1200px;  /*временно для сетки*/
+  width: 1200px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
-}
-
-.social-wrapper,
-.footer-menu,
-.copyright {
-  display: inline;
+  padding: 0 27px;
 }
 
 .social-list {
   display: flex;
-  width: 200px;
-  /*временно для сетки*/
+  flex-wrap: wrap;
+  width: 188px;
   justify-content: space-between;
-}
-
-.social-icon {
-  display: inline;
-}
-
-.footer-menu {
-  width: 400px;
-  /*временно для сетки*/
-  justify-content: space-between;
-}
-
-.footer-menu li {
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 18px;
-  color: #ffffff;
-  text-decoration: underline;
-  text-decoration-color: #9db1a5;
-  display: inline-block;
-  width: 170px;
-  /*временно для сетки*/
-}
-
-.footer-menu li:first-of-type {
-  font-weight: 700;
-}
-
-.footer-menu a {
-  color: #ffffff;
-}
-
-.footer-menu a:hover,
-.footer-menu a:focus,
-.footer-menu a:active {
-  color: #ffbc9e;
-  text-decoration-color: #ffbc9e;
-}
-
-.copyright p {
-  font-size: 12px;
-  line-height: 18px;
-}
-
-.copyright a {
-  color: #ffffff;
+  padding-left: 0px;
+  align-items: center;
 }
 
 .social-list li {
@@ -616,6 +616,50 @@ footer {
   fill: #e9e9e9;
 }
 
+.footer-menu {
+  width: 330px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 0px;
+}
+
+.footer-menu li {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: #9db1a5;
+  width: 165px;
+}
+
+.footer-menu li:first-of-type {
+  font-weight: 700;
+}
+
+.footer-menu a {
+  color: #ffffff;
+}
+
+.footer-menu a:hover,
+.footer-menu a:focus,
+.footer-menu a:active {
+  color: #ffbc9e;
+  text-decoration-color: #ffbc9e;
+}
+
+.copyright p {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.copyright a {
+  color: #ffffff;
+}
+
 /*****************************************************************************
 ************************************CATALOG PAGE******************************
 *****************************************************************************/
@@ -626,6 +670,7 @@ footer {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .breadcrumbs a {
@@ -660,11 +705,19 @@ footer {
 /*****************************************************************************
 **********************************SECTION FILTER******************************
 *****************************************************************************/
-/*временно для сетки*/
+
 .filter {
-  width: 1200px; 
+  width: 1200px;
   margin: 0 auto;
+  padding: 0 27px;
 }
+
+.filter h2 {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 41px;
+}
+
 .label-sort {
   font-size: 14px;
   font-weight: 500;
@@ -761,10 +814,19 @@ footer {
 /*****************************************************************************
 **********************************PAGINATION**********************************
 *****************************************************************************/
+.item-list {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .pager-list {
+  margin-left: auto;
+  width: 200px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding-left: 0px;
 }
 
 .pager-list li,
@@ -774,7 +836,7 @@ footer {
   color: #ffffff;
   width: 27px;
   height: 27px;
-  display: block;
+  display: inline;
   border-radius: 50px;
   background-color: transparent;
   text-align: center;
