@@ -829,8 +829,7 @@ footer {
   padding-left: 0px;
 }
 
-.pager-list li,
-.pager-list a {
+.pager-list li {
   font-weight: 500;
   line-height: 18px;
   color: #ffffff;
@@ -840,6 +839,14 @@ footer {
   border-radius: 50px;
   background-color: transparent;
   text-align: center;
+}
+
+.pager-list a {
+  color: #ffffff;
+  width: 27px;
+  height: 27px;
+  display: block;
+  border-radius: 50px;
 }
 
 .pager-list .pager-current {
