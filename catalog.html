@@ -10,12 +10,13 @@
 </head>
 
 <body>
-  <header>
-    <nav class="main-navigation">
-      <a href="index.html">
-        <img src="img/main-logo.svg" alt="Логотип интернет-магазина Gllaсy" width="154" height="64">
-      </a>
-      <div class="site-navigation-wrapper">
+  <div class="header-wrapper">
+    <header>
+      <nav class="main-navigation">
+        <a href="index.html">
+          <img src="img/main-logo.svg" alt="Логотип интернет-магазина Gllaсy" width="154" height="64">
+        </a>
+        
         <ul class="site-navigation">
           <li><a href="catalog.html" class="site-navigation-item navigation-current">Каталог</a>
             <!--ВЫПАДАЮЩЕЕ ПОДМЕНЮ КАТАЛОГА-->
@@ -30,9 +31,7 @@
           <li><a href="#" class="site-navigation-item">Доставка и оплата</a></li>
           <li><a href="#" class="site-navigation-item">О компании</a></li>
         </ul>
-      </div>
 
-      <div class="user-navigation-wrapper">
         <ul class="user-navigation">
           <li>
             <!--ФОРМА ПОИСКА-->
@@ -91,130 +90,144 @@
             </div>
           </li>
         </ul>
+
+        <form action="https://echo.htmlacademy.ru" method="post" class="visually-hidden">
+          <div class="cart-form">
+            <table class="order-table">
+              <tr class="item first-item">
+                <td><input type="image" src="img/x.svg" alt="удалить" width="11" height="11"></td>
+                <td>
+                  <img src="img/icon-creamy-orange.png" alt="Пломбир с апельсиновым джемом" width="33" height="33">
+                </td>
+                <td class="cart-item">
+                  Пломбир с апельсиновым джемом
+                </td>
+                <td>1,5 кг Х <span class="price">200 руб.</span></td>
+                <td class="cost-item">300 руб.</td>
+              </tr>
+              <tr class="item second-item">
+                <td><input type="image" src="img/x.svg" alt="удалить" width="11" height="11"></td>
+
+                <td>
+                  <img src="img/icon-creamy-strawberry.png" alt="Клубничный пломбир с присыпкой из белого шоколада"
+                    width="33" height="33">
+                </td>
+                <td class="cart-item">
+                  Клубничный пломбир с присыпкой из белого шоколада
+                </td>
+                <td>1,5 кг Х <span class="price">300 руб.</span></td>
+                <td class="cost-item">450 руб.</td>
+              </tr>
+            </table>
+            <table class="total-amount">
+              <tr>
+                <td>Итого: 750 руб.</td>
+              </tr>
+            </table>
+
+            <button type="submit" class="button sendorder-button">Оформить заказ</button>
+          </div>
+        </form>
+      </nav>
+
+      <div class="working-time">
+        <p> <span>С 10 до 20, ежедневно</span>
+          8 812 450-25-25</p>
       </div>
 
-
-      <form action="https://echo.htmlacademy.ru" method="post" class="visually-hidden">
-        <div class="cart-form">
-          <table class="order-table">
-            <tr class="item first-item">
-              <td><input type="image" src="img/x.svg" alt="удалить" width="11" height="11"></td>
-              <td>
-                <img src="img/icon-creamy-orange.png" alt="Пломбир с апельсиновым джемом" width="33" height="33">
-              </td>
-              <td>
-                <p>Пломбир с апельсиновым джемом</p>
-              </td>
-              <td>1,5 кг Х <span class="price">200 руб.</span></td>
-              <td>300 руб.</td>
-            </tr>
-            <tr class="item second-item">
-              <td><input type="image" src="img/x.svg" alt="удалить" width="11" height="11"></td>
-
-              <td>
-                <img src="img/icon-creamy-strawberry.png" alt="Клубничный пломбир с присыпкой из белого шоколада"
-                  width="33" height="33">
-              </td>
-              <td>
-                <p>Клубничный пломбир с присыпкой из белого шоколада</p>
-              </td>
-              <td>1,5 кг Х <span class="price">300 руб.</span></td>
-              <td>450 руб.</td>
-            </tr>
-          </table>
-          <span class="total-amount">Итого: 750 руб.</span>
-          <button type="submit" class="button sendorder-button">Оформить заказ</button>
-        </div>
-      </form>
-    </nav>
-
-    <div class="working-time">
-      <p> <span>С 10 до 20, ежедневно</span>
-        8 812 450-25-25</p>
-    </div>
-
-    <ul class="breadcrumbs">
-      <li><a href="index.html">Главная</a><span class="next">››</span></li>
-      <li><a href="#">Каталог</a><span class="next">››</span></li>
-      <li><a href="#" class="active">Сливочное</a></li>
-    </ul>
-  </header>
+      <ul class="breadcrumbs">
+        <li><a href="index.html">Главная</a><span class="next">››</span></li>
+        <li><a href="#">Каталог</a><span class="next">››</span></li>
+        <li><a href="#" class="active">Сливочное</a></li>
+      </ul>
+    </header>
+  </div>
 
   <main>
     <h1 class="visually-hidden">интернет-магазин Gllacy</h1>
     <section class="filter">
       <h2>Сливочное мороженое</h2>
       <h2 class="visually-hidden">Фильтр и сортировка</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
+      <div class="filter-container">
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <div class="filter-form">
+            <!--ВЫПАДАЮЩЕЕ ПОДМЕНЮ СОРТИРОВКИ-->
+            <div class="sort">
+              <p class="label-sort">Сортировка:</p>
+              <a href="#" class="menu-sort-item sort-item-current">по популярности<svg width="11px" height="10px">
+                  <polyline points="5.5,10 0,0 11,0 " />
+                </svg></a>
+              <ul class="menu-sort visually-hidden">
+                <li><a href="#" class="menu-sort-item">по популярности</a></li>
+                <li><a href="#" class="menu-sort-item">сначала недорогие</a></li>
+                <li><a href="#" class="menu-sort-item">сначала дорогие</a></li>
+                <li><a href="#" class="menu-sort-item">по жирности</a></li>
+              </ul>
+            </div>
 
-        <!--ВЫПАДАЮЩЕЕ ПОДМЕНЮ СОРТИРОВКИ-->
-        <div class="sort">
-          <p class="label-sort">Сортировка:</p>
-          <a href="#" class="menu-sort-item sort-item-active">по популярности<svg width="11px" height="10px">
-              <polyline points="5.5,10 0,0 11,0 " />
-            </svg></a>
-          <ul class="menu-sort visually-hidden">
-            <li><a href="#" class="menu-sort-item">по популярности</a></li>
-            <li><a href="#" class="menu-sort-item">сначала недорогие</a></li>
-            <li><a href="#" class="menu-sort-item">сначала дорогие</a></li>
-            <li><a href="#" class="menu-sort-item">по жирности</a></li>
-          </ul>
-        </div>
+            <div class="price-indicator">
+              <fieldset>
+                <legend><label for="price" class="label-price">Цена:&nbsp;<span class="min-price">100 руб.
+                      -&nbsp;</span><span class="max-price">500 руб.</span></label></legend>
+                <input type="range" min="100" max="500" step="10" value="500" id="price">
+                <div class="input-type-range">
+                  <div class="range-button-left"></div>
+                  <div class="range-button-right"></div>
+                </div>
+              </fieldset>
+            </div>
 
-        <fieldset class="price-indicator">
-          <legend><label for="price" class="label-price">Цена:</label></legend>
-          <span class="min-price">100</span><span>руб.</span><input type="range" min="100" max="500" step="10"
-            value="500" id="price"><span class="max-price">500</span><span>руб.</span>
-          <div class="input-type-range">
-            <div class="range-button-left"></div>
-            <div class="range-button-right"></div>
+            <div class="fat-content">
+              <fieldset>
+                <legend class="label-fat-content">Жирность:</legend>
+                <div class="container-radio">
+                  <input type="radio" name="fat-content" id="fatfree" value="0%" class="visually-hidden">
+                  <label for="fatfree">0 %</label>
+
+                  <input type="radio" name="fat-content" id="10purcentfat" value="до 10%" checked
+                    class="visually-hidden">
+                  <label for="10purcentfat">до 10 %</label>
+
+
+                  <input type="radio" name="fat-content" id="30purcentfat" value="до 30%" class="visually-hidden">
+                  <label for="30purcentfat">до 30 %</label>
+
+                  <input type="radio" name="fat-content" id="30pluspurcentfat" value="выше 30%" class="visually-hidden">
+                  <label for="30pluspurcentfat">выше 30 %</label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="fillings">
+              <fieldset>
+                <legend class="label-fillings">Наполнители:</legend>
+                <div class="container-checkbox">
+                  <input type="checkbox" id="chokolate-filling" name="fillings" checked class="visually-hidden">
+                  <label for="chokolate-filling">шоколадные</label>
+
+                  <input type="checkbox" id="sprinkles-filling" name="fillings" checked class="visually-hidden">
+                  <label for="sprinkles-filling">сахарные присыпки</label>
+
+                  <input type="checkbox" id="fruit-filling" name="fillings" class="visually-hidden">
+                  <label for="fruit-filling">фрукты</label>
+
+                  <input type="checkbox" id="syrups-filling" name="fillings" class="visually-hidden">
+                  <label for="syrups-filling">сиропы</label>
+
+                  <input type="checkbox" id="jams-filling" name="fillings" class="visually-hidden">
+                  <label for="jams-filling">джемы</label>
+                </div>
+              </fieldset>
+            </div>
+            <button type="submit" class="filter-button">Применить</button>
           </div>
-        </fieldset>
-
-        <fieldset class="fat-content">
-          <legend class="label-fat-content">Жирность:</legend>
-          <div class="container-radio">
-            <input type="radio" name="fat-content" id="fatfree" value="0%" class="visually-hidden">
-            <label for="fatfree">0 %</label>
-
-            <input type="radio" name="fat-content" id="10purcentfat" value="до 10%" checked class="visually-hidden">
-            <label for="10purcentfat">до 10 %</label>
-
-
-            <input type="radio" name="fat-content" id="30purcentfat" value="до 30%" class="visually-hidden">
-            <label for="30purcentfat">до 30 %</label>
-
-            <input type="radio" name="fat-content" id="30pluspurcentfat" value="выше 30%" class="visually-hidden">
-            <label for="30pluspurcentfat">выше 30 %</label>
-          </div>
-        </fieldset>
-
-        <fieldset class="fillings">
-          <legend class="label-fillings">Наполнители:</legend>
-          <div class="container-checkbox">
-            <input type="checkbox" id="chokolate-filling" name="fillings" checked class="visually-hidden">
-            <label for="chokolate-filling">шоколадные</label>
-
-            <input type="checkbox" id="sprinkles-filling" name="fillings" checked class="visually-hidden">
-            <label for="sprinkles-filling">сахарные присыпки</label>
-
-            <input type="checkbox" id="fruit-filling" name="fillings" class="visually-hidden">
-            <label for="fruit-filling">фрукты</label>
-
-            <input type="checkbox" id="syrups-filling" name="fillings" class="visually-hidden">
-            <label for="syrups-filling">сиропы</label>
-
-            <input type="checkbox" id="jams-filling" name="fillings" class="visually-hidden">
-            <label for="jams-filling">джемы</label>
-          </div>
-        </fieldset>
-        <button type="submit" class="filter-button">Применить</button>
-      </form>
+        </form>
+      </div>
     </section>
 
     <section class="catalog">
       <h2 class="visually-hidden">Раздел Сливочное мороженое</h2>
-      <ul class="catalog-list">
+      <ul class="catalog-list page-catalog">
         <li>
           <img src="img/creamy-orange.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
             height="267">
@@ -297,23 +310,25 @@
     <!--Пагинация страниц-->
     <div class="item-list">
       <ul class="pager-list">
-        <li class="pager-next first">
+        <li class="pager-item previous">
           <a href="/node?page=5" title="На предыдущую страницу">‹</a>
         </li>
-        <li class="pager-current first"><span>1</span></li>
         <li class="pager-item">
-          <a href="/node?page=1" title="На страницу номер 2">2</a>
+          <a href="/node?page=1" title="На страницу номер 1" class="pager-current">1</a>
         </li>
         <li class="pager-item">
-          <a href="/node?page=2" title="На страницу номер 3">3</a>
+          <a href="/node?page=2" title="На страницу номер 2">2</a>
         </li>
         <li class="pager-item">
-          <a href="/node?page=3" title="На страницу номер 4">4</a>
+          <a href="/node?page=3" title="На страницу номер 3">3</a>
         </li>
         <li class="pager-item">
-          <a href="/node?page=4" title="На страницу номер 5">5</a>
+          <a href="/node?page=4" title="На страницу номер 4">4</a>
         </li>
-        <li class="pager-next last">
+        <li class="pager-item">
+          <a href="/node?page=5" title="На страницу номер 5">5</a>
+        </li>
+        <li class="pager-item last">
           <a href="/node?page=1" title="На следующую страницу">›</a>
         </li>
       </ul>
