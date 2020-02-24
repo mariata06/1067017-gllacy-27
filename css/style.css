@@ -12,7 +12,6 @@ html {
   box-sizing: inherit;
 }
 
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -144,6 +143,7 @@ a {
 .site-navigation-item:focus {
   background-color: #f7f6f3;
   color: #323232;
+  text-decoration: none;
 }
 
 /*
@@ -416,8 +416,14 @@ input[type="password"] {
 /*****************************************************************************
 ******************************SECTION SLIDER**********************************
 *****************************************************************************/
-.site-wrapper {
+.page-wrapper {
   width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 27px;
+}
+.site-wrapper {
+ 
   background-color: #849d8f;
   background-image: url("../img/slider-bg-1.png");
   background-repeat: no-repeat;
@@ -429,8 +435,7 @@ input[type="password"] {
   -o-transition: background-image 0.5s ease, background-color 0.5s ease;
 
   transition: background-image 0.5s ease, background-color 0.5s ease;
-  margin: 0 auto;
-  position: relative;
+ 
 }
 
 .site-wrapper::before,
@@ -927,11 +932,21 @@ input[type="password"] {
 *********************************SECTION ADDRESS******************************
 *****************************************************************************/
 .address {
-  width: 1200px;
+ width: 1200px;
+ height: 430px;
   background-color: #849d8f;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   margin-top: 40px;
+  position: relative;
 }
+
+.map {
+  width: 1200px;
+  height: 430px;
+  background-image:  url("../img/ice-cream-pin.png"), url("../img/map.png");
+  background-position:  25% 50%, bottom center;
+  background-repeat: no-repeat, no-repeat ;
+} 
 
 .contacts {
   background-color: #fefefe;
@@ -968,31 +983,40 @@ input[type="password"] {
   display: block;
 }
 
-.address {
-  position: relative;
-}
-
-.address-pin {
-  position: absolute;
-  top: 35%;
-  left: 20%;
-}
-
 /*****************************************************************************
 *******************************SECTION FEEDBACK*******************************
 *****************************************************************************/
+.feedback {
+  display: block;
+}
+.modalDialog {
+overflow: auto;
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background: rgba(0,0,0,0.3);
+z-index: 99999;
+transition: opacity 400ms ease-in;
+display: none;
+pointer-events: none;
+}
+.modalDialog:target {
+	display: none;
+	pointer-events: auto;
+}
 .feedback-form {
   max-width: 478px;
   padding: 25px;
   padding-bottom: 70px;
   border-radius: 10px;
-  position: absolute;
+  position: fixed;
   z-index: 10;
-  top: 340px;
+  top: 200px;
   left: 50%;
   transform: translate(-50%, 0);
   background-color: #f8f7f4;
-  display: none;
 }
 
 .feedback-form input[type="text"],
@@ -1015,7 +1039,7 @@ input[type="password"] {
   height: 155px;
   border: 1px solid #d1d0ce;
   border-radius: 5px;
-
+  resize: none;
 }
 
 .feedback-form textarea::-webkit-input-placeholder {
@@ -1061,14 +1085,19 @@ input[type="password"] {
 .feedbacksend-button {
   padding: 10px 15px;
   position: absolute;
-  top: 370px;
-  left: 320px;
+  right: 28px;
+  bottom: 26px;
 }
-
+.feedback input[type="image"] {
+  cursor: pointer;
+}
+.closeModal {
+  cursor: pointer;
+}
 /*****************************************************************************
 ************************************FOOTER************************************
 *****************************************************************************/
-footer {
+.footer-wrapper {
   width: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1079,7 +1108,9 @@ footer {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 0 27px;
+  padding: 14px 27px;
+
+
 }
 
 .social-list {
@@ -1293,12 +1324,6 @@ footer {
 **********************************SECTION FILTER******************************
 *****************************************************************************/
 
-.filter {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 27px;
-}
-
 .filter-container {
   width: 880px;
   padding-bottom: 60px;
@@ -1358,14 +1383,13 @@ fieldset {
   line-height: 18px;
   color: #ffffff;
   background-color: #9db1a5;
-  padding: 9px 40px 9px 16px;
+  padding: 9px 45px 9px 16px;
   border-radius: 50px;
   display: inline;
 }
 
 .sort-item-current:hover {
   color: #000000;
-  background-color: #ffffff;
 }
 
 .sort-item-current:hover svg {
@@ -1481,6 +1505,10 @@ fieldset {
   left: 133px;
 }
 
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+}
 .container-radio {
   width: 425px;
   height: 36px;
@@ -1489,38 +1517,44 @@ fieldset {
   position: relative;
   padding-top: 6px;
 }
-
-input[type="radio"],
-input[type="checkbox"] {
-  display: none;
-}
-
 .container-radio label {
-  padding-left: 20px;
+  position: relative;
+  font-weight: 500;
+  line-height: 18px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 0;
+  padding-left: 45px;
 }
-
-[for*="fat"]::before {
+.container-radio input:checked+label::before {
   content: "";
   display: inline-block;
   width: 12px;
   height: 12px;
-  margin-right: 8px;
+  margin-right: 5px;
+  margin-left: 15px;
   border: 3px solid #aabcb2;
   -webkit-box-shadow: 0 0 0 3px #eef2f0;
   box-shadow: 0 0 0 3px #eef2f0;
   border-radius: 50%;
-}
-
-input[type="radio"]+label {
-  vertical-align: middle;
-}
-
-[for="10purcentfat"]::before {
+  position: absolute;
+  top: 5px; 
+  left: 5px;
   background-color: #eef2f0;
-  -webkit-box-shadow: 0 0 0 3px #eef2f0;
-  box-shadow: 0 0 0 3px #eef2f0;
 }
-
+.container-radio label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  margin-left: 15px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
 .container-checkbox {
   width: 703px;
   height: 36px;
@@ -1530,16 +1564,6 @@ input[type="radio"]+label {
   margin-bottom: 40px;
   padding-top: 5px;
 }
-
-.container-checkbox label::before {
-  content: url("../img/checkbox-off.svg");
-  margin-right: 12px;
-  margin-left: 15px;
-  position: absolute;
-  top: 20%;
-  left: 5px;
-}
-
 .container-checkbox input:checked+label::before {
   content: url("../img/checkbox-on.svg");
   margin-right: 12px;
@@ -1548,7 +1572,14 @@ input[type="radio"]+label {
   top: 20%;
   left: 5px;
 }
-
+.container-checkbox label::before {
+  content: url("../img/checkbox-off.svg");
+  margin-right: 12px;
+  margin-left: 15px;
+  position: absolute;
+  top: 20%;
+  left: 5px;
+}
 
 .fillings label {
   font-weight: 500;
@@ -1595,17 +1626,15 @@ input[type="radio"]+label {
 
 .page-catalog {
   margin-top: 40px;
-  width: 1200px;
-  padding: 0 27px;
-  margin: 0 auto;
 }
 
 /*****************************************************************************
 **********************************PAGINATION**********************************
 *****************************************************************************/
 .item-list {
-  width: 1200px;
+  /*width: 1200px;*/
   margin: 0 auto;
+  border-bottom: 1px solid #a9bbb1;
 }
 
 .pager-list {
