@@ -240,7 +240,7 @@ display: block;
   font-weight: 500;
   line-height: 16px;
   color: #ffffff;
-  background-color: #a1b4a9;
+  background-color: rgba(255,255,255,.2);
   display: block;
   text-align: center;
   position: relative;
