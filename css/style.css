@@ -144,7 +144,7 @@ a {
 }
 
 
-.site-navigation-catalog:hover .menu-catalog {
+.site-navigation-catalog:hover + .menu-catalog {
   display: block;
 }
 .search:hover .search-form {
@@ -947,8 +947,8 @@ input[type="password"] {
 *********************************SECTION ADDRESS******************************
 *****************************************************************************/
 .address {
-  width: 1200px;
-  height: 430px;
+ max-width: 1200px;
+  max-height: 430px;
   background-color: #849d8f;
   margin: 0 auto;
   margin-top: 40px;
@@ -956,7 +956,6 @@ input[type="password"] {
 }
 
 .map {
-  width: 1200px;
   height: 430px;
   background-image: url("../img/ice-cream-pin.png"), url("../img/map.png");
   background-position: 25% 50%, bottom center;
@@ -1001,7 +1000,7 @@ input[type="password"] {
 /*****************************************************************************
 *******************************SECTION FEEDBACK*******************************
 *****************************************************************************/
-.feedback {
+.modal-dialog {
   display: none;
   position: fixed;
   top: 0;
@@ -1010,45 +1009,34 @@ input[type="password"] {
   right: 0;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 99999;
-  transition: opacity 400ms ease-in;
 }
 
-/*
-.modalDialog {
-  overflow: auto;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 99999;
-  transition: opacity 400ms ease-in;
-  display: block;
-  pointer-events: none;
-}
-
-.modalDialog:target {
-  display: none;
-  pointer-events: auto;
-}
-*/
 .feedback-form {
   max-width: 478px;
+  max-height: 442px;
   padding: 25px;
   padding-bottom: 80px;
   border-radius: 10px;
+  background-color: #f8f7f4;
   position: fixed;
   z-index: 10;
-  top: 50px;
-  /*200px;*/
+  top: 50px;/*338px;*/
   left: 50%;
   transform: translate(-50%, 0);
-  background-color: #f8f7f4;
+  z-index: 100;
 }
-
+.modal-close {
+  position: absolute;
+  top: 10px;
+  left: 440px;
+  border: none;
+  background-color: #f8f7f4;
+  z-index: 30;
+  cursor: pointer;
+}
 .feedback-form input[type="text"],
 .feedback-form input[type="email"] {
+  box-sizing: border-box;
   width: 267px;
   border: 1px solid #d1d0ce;
   padding-top: 10px;
@@ -1104,14 +1092,6 @@ input[type="password"] {
   margin-top: 0;
 }
 
-.feedback-form .closeModal {
-  position: absolute;
-  top: 10px;
-  left: 445px;
-  border: none;
-  background-color: #f8f7f4;
-}
-
 .feedbacksend-button {
   padding: 10px 15px;
   position: absolute;
@@ -1119,15 +1099,6 @@ input[type="password"] {
   bottom: 26px;
   margin-top: 10px;
 }
-
-.feedback input[type="image"] {
-  cursor: pointer;
-}
-
-.closeModal {
-  cursor: pointer;
-}
-
 /*****************************************************************************
 ************************************FOOTER************************************
 *****************************************************************************/
@@ -1578,8 +1549,6 @@ input[type="checkbox"] {
   content: "";
   width: 10px;
   height: 10px;
-  /*margin-right: 5px;
-  margin-left: 15px;*/
   border: 3px solid #aabcb2;
   -webkit-box-shadow: 0 0 0 3px #eef2f0;
   box-shadow: 0 0 0 3px #eef2f0;
@@ -1594,8 +1563,6 @@ input[type="checkbox"] {
   content: "";
   width: 16px;
   height: 16px;
-  /*margin-right: 8px;
-  margin-left: 15px;*/
   border: 3px solid #fff;
   border-radius: 50%;
   position: absolute;

@@ -26,18 +26,16 @@
           </div>
 
           <ul class="site-navigation">
-            <div class="site-navigation-catalog">
-              <li><a href="catalog.html" class="site-navigation-item">Каталог</a>
-                <!--ВЫПАДАЮЩЕЕ ПОДМЕНЮ КАТАЛОГА-->
-                <ul class="menu-catalog">
-                  <li><a href="#" class="menu-catalog-item new-item">Новинки</a></li>
-                  <li><a href="catalog.html" class="menu-catalog-item">Сливочное</a></li>
-                  <li><a href="#" class="menu-catalog-item">Щербеты</a></li>
-                  <li><a href="#" class="menu-catalog-item">Фруктовый лёд</a></li>
-                  <li><a href="#" class="menu-catalog-item">Мелорин</a></li>
-                </ul>
-              </li>
-            </div>
+            <li><a href="catalog.html" class="site-navigation-item site-navigation-catalog">Каталог</a>
+              <!--ВЫПАДАЮЩЕЕ ПОДМЕНЮ КАТАЛОГА-->
+              <ul class="menu-catalog">
+                <li><a href="#" class="menu-catalog-item new-item">Новинки</a></li>
+                <li><a href="catalog.html" class="menu-catalog-item">Сливочное</a></li>
+                <li><a href="#" class="menu-catalog-item">Щербеты</a></li>
+                <li><a href="#" class="menu-catalog-item">Фруктовый лёд</a></li>
+                <li><a href="#" class="menu-catalog-item">Мелорин</a></li>
+              </ul>
+            </li>
             <li><a href="#" class="site-navigation-item">Доставка и оплата</a></li>
             <li><a href="#" class="site-navigation-item">О компании</a></li>
           </ul>
@@ -262,11 +260,7 @@
       <div class="map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2826.4326645986766!2d30.324025639833913!3d59.938950160497924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1582551754712!5m2!1sru!2sru"
-          width="1200" height="430" style="border:0;" allowfullscreen=""></iframe>
-
-        <!--<img src="img/map.png" class="map" alt="как найти наш интернет-магазин" width="1200" height="430">
-        <img src="img/ice-cream-pin.png" class="address-pin" alt="указатель адреса на карте"
-          width="218" height="142">-->
+          style="width:100%; border:0;" height="430" allowfullscreen=""></iframe>
       </div>
 
       <div class="contacts">
@@ -280,25 +274,19 @@
     </section>
 
     <!--ДИАЛОГОВОЕ ОКНО ФОРМА ОБРАТНОЙ СВЯЗИ-->
-    <div class="feedback">
-      <!--modalDialog-->
-      <div class="feedback-form">
-        <h2 class="visually-hidden">Обратная связь</h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <h3 class="feedback-title">Мы обязательно вам ответим!</h3>
-
-          <label for="name"><input id="name" type="text" name="userName" value="" placeholder="Имя Фамилия"></label>
-          <label for="email"><input id="email" type="email" name="userEmail" value=""
-              placeholder="email@example.com"></label>
-          <textarea cols="35" rows="5" placeholder="В свободной форме" name="userMessage" required></textarea>
-
-          <button type="submit" class="button feedbacksend-button">Отправить</button>
-
-        </form>
-        <button type="button" class="closeModal"><img src="img/x-big.svg" alt="закрыть форму" width="18"
+    <div class="modal-dialog">
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <form action="https://echo.htmlacademy.ru" method="post" class="feedback-form">
+        <h3 class="feedback-title">Мы обязательно вам ответим!</h3>
+        <label for="name"><input id="name" type="text" name="userName" value="" placeholder="Имя Фамилия"
+            required></label>
+        <label for="email"><input id="email" type="email" name="userEmail" value="" placeholder="email@example.com"
+            required></label>
+        <textarea cols="35" rows="5" placeholder="В свободной форме" name="userMessage" required></textarea>
+        <button type="submit" class="button feedbacksend-button">Отправить</button>
+        <button type="button" class="modal-close"><img src="img/x-big.svg" alt="закрыть форму" width="18"
             height="17"></button>
-        <!--<input type="image" src="img/x-big.svg" alt="закрыть форму" width="18" height="17">-->
-      </div>
+      </form>
     </div>
 
     <footer>
