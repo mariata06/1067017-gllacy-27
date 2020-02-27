@@ -419,6 +419,9 @@ input[type="password"] {
   display: block;
   text-align: right;
 }
+.working-time a[href^="tel:"] {
+  color: #ffffff;
+} 
 .breadcrumbs-working-time-container {
   display: flex;
   justify-content: space-between;
@@ -947,8 +950,7 @@ input[type="password"] {
 *********************************SECTION ADDRESS******************************
 *****************************************************************************/
 .address {
- max-width: 1200px;
-  max-height: 430px;
+  width: 1200px;
   background-color: #849d8f;
   margin: 0 auto;
   margin-top: 40px;
@@ -971,7 +973,9 @@ input[type="password"] {
   top: 62px;
   left: 870px;
 }
-
+.contacts a[href^="tel:"] {
+  color: #323232;
+}
 .contacts p {
   color: #323232;
   font-size: 18px;
@@ -1001,7 +1005,7 @@ input[type="password"] {
 *******************************SECTION FEEDBACK*******************************
 *****************************************************************************/
 .modal-dialog {
-  display: none;
+  display: block;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -1010,8 +1014,7 @@ input[type="password"] {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 99999;
 }
-
-.feedback-form {
+.form-wrapper {
   max-width: 478px;
   max-height: 442px;
   padding: 25px;
@@ -1020,11 +1023,12 @@ input[type="password"] {
   background-color: #f8f7f4;
   position: fixed;
   z-index: 10;
-  top: 50px;/*338px;*/
+  top: 100px;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 100;
 }
+
 .modal-close {
   position: absolute;
   top: 10px;
@@ -1507,7 +1511,17 @@ fieldset {
   left: 133px;
   cursor: pointer;
 }
-
+.range-button-left:hover::after {
+  border: 9px solid #ffffff;
+  top: 7px;
+  left: 33px;
+}
+.range-button-right:hover::after {
+  border: 9px solid #ffffff;
+  position: absolute;
+  top: 7px;
+  left: 132px;
+} 
 .label-fat-content {
   font-size: 14px;
   font-weight: 500;
@@ -1554,6 +1568,7 @@ input[type="checkbox"] {
   box-shadow: 0 0 0 3px #eef2f0;
   border-radius: 50%;
   position: absolute;
+  opacity: 0.8;
   top: 11px;
   left: 11px;
   background-color: #eef2f0;
@@ -1566,10 +1581,28 @@ input[type="checkbox"] {
   border: 3px solid #fff;
   border-radius: 50%;
   position: absolute;
+  opacity: 0.8;
   top: 8px;
   left: 8px;
 }
-
+.container-radio input:checked+label:hover::before,
+.container-radio label:hover::before {
+  opacity: 1;
+}
+.container-radio input:disabled+label::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 3px solid #aabcb2;
+  -webkit-box-shadow: 0 0 0 3px #eef2f0;
+  box-shadow: 0 0 0 3px #eef2f0;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0.4;
+  top: 11px;
+  left: 11px;
+  background-color: #eef2f0;
+}
 .container-checkbox {
   width: 703px;
   height: 36px;
@@ -1585,6 +1618,7 @@ input[type="checkbox"] {
   margin-right: 12px;
   margin-left: 15px;
   position: absolute;
+  opacity: 0.8;
   top: 20%;
   left: 5px;
 }
@@ -1594,10 +1628,25 @@ input[type="checkbox"] {
   margin-right: 12px;
   margin-left: 15px;
   position: absolute;
+  opacity: 0.8;
   top: 20%;
   left: 5px;
 }
-
+.container-checkbox input:checked+label:hover::before,
+.container-checkbox label:hover::before {
+  opacity: 1;
+}
+.container-checkbox input:disabled+label::before {
+  margin-right: 12px;
+  margin-left: 15px;
+  position: absolute;
+  opacity: 0.4;
+  top: 20%;
+  left: 5px;
+}
+.container-checkbox input:disabled+label:hover::before {
+  opacity: 0.4;
+}
 .fillings .label-fillings {
   padding-top: 15px;
 }
