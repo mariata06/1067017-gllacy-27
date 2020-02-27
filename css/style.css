@@ -1005,7 +1005,7 @@ input[type="password"] {
 *******************************SECTION FEEDBACK*******************************
 *****************************************************************************/
 .modal-dialog {
-  display: block;
+  display: none;
   position: fixed;
   top: 0;
   bottom: 0;
