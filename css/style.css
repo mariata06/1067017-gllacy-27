@@ -1,4 +1,3 @@
-
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -136,13 +135,14 @@ img {
   border-radius: 50px;
   background-color: transparent;
   display: inline-block;
+  border-bottom: 1px solid rgba(255,188,158,.3); 
 }
-
+/*
 .site-navigation-item::after {
   content: "";
   display: block;
-  border-bottom: 1px solid rgba(255, 255, 255, .3);
-}
+  border-bottom: 1px solid rgba(255, 255, 255, .2);
+}*/
 
 .site-navigation-item:hover,
 .site-navigation-item:focus {
@@ -151,8 +151,13 @@ img {
   text-decoration: none;
 }
 
-.site-navigation-catalog:hover+.menu-catalog {
+.site-navigation-catalog:hover+.menu-catalog,
+.menu-catalog:hover {
   display: block;
+}
+
+.menu-catalog-item:hover .site-navigation-catalog {
+  background-color: #f7f6f3;
 }
 
 .search:hover .search-form {
@@ -182,7 +187,7 @@ img {
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   position: absolute;
   display: none;
-  top: 50px;
+  top: 63px;
   z-index: 10;
 }
 
@@ -332,8 +337,8 @@ img {
   border-radius: 5px;
   position: absolute;
   display: none;
-  top: 40px;
-  left: -310px;
+  top: 36px;
+  left: -300px;
   -webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   z-index: 10;
@@ -362,7 +367,7 @@ img {
   padding: 20px;
   position: absolute;
   top: 36px;
-  left: -190px;
+  left: -180px;
   max-width: 277px;
   display: none;
   -webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -433,6 +438,7 @@ input[type="password"] {
   display: flex;
   justify-content: space-between;
 }
+
 /*****************************************************************************
 ******************************SECTION SLIDER**********************************
 *****************************************************************************/
@@ -708,8 +714,8 @@ input[type="password"] {
   color: #ffffff;
   font-weight: 500;
   text-decoration: underline;
-  -webkit-text-decoration-color: #ffffff;
-  text-decoration-color: #ffffff;
+  -webkit-text-decoration-color:rgba(255, 255, 255, .2);
+  text-decoration-color: rgba(255, 255, 255, .2);
   display: block;
   text-align: center;
   padding: 17px 10px;
@@ -718,7 +724,6 @@ input[type="password"] {
   position: relative;
   margin-top: -90px;
 }
-
 .catalog-item:hover,
 .catalog-item:focus,
 .catalog-item:active {
@@ -758,8 +763,6 @@ input[type="password"] {
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
-  /*padding-top: 35px;
-  padding-left: 20px;*/
   margin-top: 0;
 }
 
@@ -777,12 +780,15 @@ input[type="password"] {
 }
 
 .about .feature {
-  width: 553px;   /* 573px;*/   
-  padding-left: 55px; /*было 75*/
+  width: 553px;
+  /* 573px;*/
+  padding-left: 55px;
+  /*было 75*/
   padding-right: 10px;
   padding-bottom: 30px;
   position: relative;
 }
+
 /*
 .about .feature:nth-child(2n) {
   padding-left: 70px;
@@ -1017,6 +1023,7 @@ input[type="password"] {
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 100;
+  display: none;
 }
 
 .modal-close {
@@ -1101,19 +1108,29 @@ input[type="password"] {
 /*Анимация для всплывающего окна*/
 @keyframes bounce {
   0% {
+    /*
     transform: translateY(-2000px);
+    left: 50%;
+  transform: translateX(-50%);*/
+    transform: translate(-50%, -2000px);
   }
 
   70% {
-    transform: translateY(30px);
+    /*
+    transform: translateY(30px);*/
+    transform: translate(-50%, 30px);
   }
 
   90% {
-    transform: translateY(-10px);
+    /*
+    transform: translateY(-10px);*/
+    transform: translate(-50%, -10px);
   }
 
   100% {
-    transform: translateY(0);
+    /*
+    transform: translateY(0);*/
+    transform: translate(-50%, 0);
   }
 }
 
@@ -1122,7 +1139,8 @@ input[type="password"] {
 
   0%,
   100% {
-    transform: translateX(0);
+    /*transform: translateX(0);*/
+    transform: translateX(-50%);
   }
 
   10%,
@@ -1130,26 +1148,36 @@ input[type="password"] {
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    /*transform: translateX(-10px);*/
+    transform: translateX(-51%);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    /*
+    transform: translateX(10px);*/
+    transform: translateX(-49%);
   }
 }
 
 /*Добавление в стили класс, который будет отвечать за показ модального окна.*/
 .modal-show {
   display: block;
+}
+
+.form-show {
+  /*position: fixed;
+  left: 50%;
+  transform: translateX(-50%, 0);*/
+  display: block;
 
   animation: bounce 0.6s;
 }
 
 /*Добавление класса, который будет добавлять эту анимацию к модальному окну.*/
-.modal-error {
+.form-error {
   animation: shake 0.6s;
 }
 
@@ -1188,7 +1216,7 @@ input[type="password"] {
 
 .social-icon svg {
   fill: #e8ebe9;
-  border: 3px solid rgba(255, 255, 255, .2);
+  border: 3px solid rgba(255, 255, 255, .5);
   border-radius: 50%;
   max-width: 100%;
   height: auto;
@@ -1243,22 +1271,37 @@ input[type="password"] {
 .footer-menu a {
   color: #ffffff;
   display: inline-block;
+  /*text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, .3);*/
 }
 
-.footer-menu a::after {
+.footer-menu a::after  {
   content: "";
   display: block;
   border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
-
+.footer-menu a::after:hover  {
+  border-bottom-color: #ffbc9e;
+}
 .footer-menu a:hover,
 .footer-menu a:focus,
 .footer-menu a:active {
   color: #ffbc9e;
-  -webkit-text-decoration-color: #ffbc9e;
-  text-decoration-color: #ffbc9e;
+  /*border-bottom-color: #ffbc9e;*/
 }
-
+/*
+.footer-menu a::after:hover {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #ffbc9e;
+}
+/*
+.footer-menu a::after:hover {
+  border-bottom: 1px solid #ffbc9e;
+}
+-webkit-text-decoration-color: #ffbc9e;
+  text-decoration-color: #ffbc9e;*/
+  
 .copyright p {
   font-size: 12px;
   line-height: 18px;
