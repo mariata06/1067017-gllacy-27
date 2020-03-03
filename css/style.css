@@ -135,14 +135,13 @@ img {
   border-radius: 50px;
   background-color: transparent;
   display: inline-block;
-  border-bottom: 1px solid rgba(255,188,158,.3); 
 }
-/*
+
 .site-navigation-item::after {
   content: "";
   display: block;
   border-bottom: 1px solid rgba(255, 255, 255, .2);
-}*/
+}
 
 .site-navigation-item:hover,
 .site-navigation-item:focus {
@@ -709,21 +708,41 @@ input[type="password"] {
   margin-bottom: 50px;
   z-index: 2;
 }
-
+/*
+.catalog-list li {
+  display: block;
+  text-align: center;
+}*/
+.catalog-list p {
+display: block;
+margin-top: -80px;
+text-align: center;
+}
 .catalog-item {
   color: #ffffff;
   font-weight: 500;
-  text-decoration: underline;
+  /*text-decoration: underline;
   -webkit-text-decoration-color:rgba(255, 255, 255, .2);
-  text-decoration-color: rgba(255, 255, 255, .2);
-  display: block;
+  text-decoration-color: rgba(255, 255, 255, .2);*/
+  display: inline;
   text-align: center;
-  padding: 17px 10px;
-  padding-bottom: 12px;
-  padding-top: -40px;
+  /*padding: 17px 10px;*/
+  padding-bottom: 0;
+  /*padding-top: -90px;*/
   position: relative;
-  margin-top: -90px;
+  border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
+.catalog-item:hover {
+  border-bottom: 1px solid #ffbc9e;
+}
+/*
+.catalog-item::after {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, .2);
+}*/
 .catalog-item:hover,
 .catalog-item:focus,
 .catalog-item:active {
@@ -1273,6 +1292,7 @@ input[type="password"] {
   display: inline-block;
   /*text-decoration: underline;
   text-decoration-color: rgba(255, 255, 255, .3);*/
+  /*border-bottom: 1px solid rgba(255, 255, 255, .3);*/
 }
 
 .footer-menu a::after  {
@@ -1281,7 +1301,7 @@ input[type="password"] {
   border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 .footer-menu a::after:hover  {
-  border-bottom-color: #ffbc9e;
+  border-color: #ffbc9e;
 }
 .footer-menu a:hover,
 .footer-menu a:focus,
@@ -1289,16 +1309,11 @@ input[type="password"] {
   color: #ffbc9e;
   /*border-bottom-color: #ffbc9e;*/
 }
-/*
-.footer-menu a::after:hover {
-  content: "";
-  display: block;
-  border-bottom: 1px solid #ffbc9e;
-}
-/*
+
 .footer-menu a::after:hover {
   border-bottom: 1px solid #ffbc9e;
 }
+/*
 -webkit-text-decoration-color: #ffbc9e;
   text-decoration-color: #ffbc9e;*/
   
@@ -1335,7 +1350,7 @@ input[type="password"] {
   padding-left: 5px;
   padding-right: 5px;
   position: absolute;
-  top: 50px;
+  top: 65px;
   left: 655px;
   z-index: 10;
   display: none;
@@ -1392,38 +1407,61 @@ input[type="password"] {
   flex-wrap: wrap;
   padding-left: 0px;
 }
-
+.breadcrumbs li {
+  margin-right: 20px;
+  position: relative;
+}
 .breadcrumbs a {
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
   color: #ffffff;
-  text-decoration: underline;
+  
+  /*text-decoration: underline;
   -webkit-text-decoration-color: #aebeb5;
-  text-decoration-color: #aebeb5;
+  text-decoration-color: #aebeb5;*/
 }
-
+/*
 .breadcrumbs .active {
   text-decoration: none;
 }
-
-.breadcrumbs .next {
+*/
+.breadcrumbs .next::after {
+  display: block;
   content: "»";
-  font-size: 14px;
+  /*font-size: 14px;
   font-weight: 400;
-  line-height: 16px;
+  line-height: 16px;*/
   color: #ffffff;
   padding: 0 8px;
+  position: absolute;
+  left: 50px;
+  top: 0;
+ /* padding-left: 7px;
+  padding-right: 7px;*/
 }
 
 .breadcrumbs a:hover,
 .breadcrumbs a:focus,
 .breadcrumbs a:active {
   color: #ffbc9e;
+  /*
   -webkit-text-decoration-color: #ffbc9e;
-  text-decoration-color: #ffbc9e;
+  text-decoration-color: #ffbc9e;*/
 }
-
+.breadcrumbs a:first-of-type::after, 
+.breadcrumbs a:nth-of-type(2)::after {
+ top: -1px;
+  position: relative;
+  display: block;
+  content: "";
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+}  
+.breadcrumbs a:first-of-type::after:hover, 
+.breadcrumbs a:nth-of-type(2)::after:hover {
+ 
+  border-color: #ffbc9e;
+}  
 /*****************************************************************************
 **********************************SECTION FILTER******************************
 *****************************************************************************/
