@@ -1300,7 +1300,8 @@ text-align: center;
   display: block;
   border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
-.footer-menu a::after:hover  {
+
+.footer-menu a:hover::after {
   border-color: #ffbc9e;
 }
 .footer-menu a:hover,
@@ -1457,8 +1458,8 @@ text-align: center;
   content: "";
   border-bottom: 1px solid rgba(255, 255, 255, .3);
 }  
-.breadcrumbs a:first-of-type::after:hover, 
-.breadcrumbs a:nth-of-type(2)::after:hover {
+.breadcrumbs a:first-of-type:hover::after, 
+.breadcrumbs a:nth-of-type(2):hover::after {
  
   border-color: #ffbc9e;
 }  
