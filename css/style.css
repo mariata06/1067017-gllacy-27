@@ -1337,9 +1337,16 @@ text-align: center;
 /*****************************************************************************
 ************************************CATALOG PAGE******************************
 *****************************************************************************/
-.site-navigation .navigation-current {
+.navigation-current {
   background-color: #d07058;
   text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #ffffff;
+  padding: 7px 14px;
+  border-radius: 50px;
+  display: inline-block;
 }
 
 .cart-form {
@@ -1446,23 +1453,19 @@ text-align: center;
 .breadcrumbs a:focus,
 .breadcrumbs a:active {
   color: #ffbc9e;
-  /*
-  -webkit-text-decoration-color: #ffbc9e;
-  text-decoration-color: #ffbc9e;*/
 }
-.breadcrumbs a:first-of-type::after, 
-.breadcrumbs a:nth-of-type(2)::after {
+
+.breadcrumbs a:not(.active)::after {
  top: -1px;
   position: relative;
   display: block;
   content: "";
   border-bottom: 1px solid rgba(255, 255, 255, .3);
-}  
-.breadcrumbs a:first-of-type:hover::after, 
-.breadcrumbs a:nth-of-type(2):hover::after {
- 
+}
+.breadcrumbs a:not(.active):hover::after {
   border-color: #ffbc9e;
-}  
+}
+
 /*****************************************************************************
 **********************************SECTION FILTER******************************
 *****************************************************************************/
