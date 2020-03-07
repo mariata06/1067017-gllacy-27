@@ -14,12 +14,13 @@
     <header>
       <nav class="main-navigation">
         <div class="main-logo-container">
-        <a href="index.html">
-          <img src="img/main-logo.svg" alt="Логотип интернет-магазина Gllaсy" width="154" height="64">
-        </a>
-      </div>
+          <a href="index.html">
+            <img src="img/main-logo.svg" alt="Логотип интернет-магазина Gllaсy" width="154" height="64">
+          </a>
+        </div>
         <ul class="site-navigation">
-          <li><a href="catalog.html" class="navigation-current site-navigation-catalog">Каталог</a> <!--site-navigation-item    -->
+          <li><a href="catalog.html" class="navigation-current site-navigation-catalog">Каталог</a>
+            
             <!--ВЫПАДАЮЩЕЕ ПОДМЕНЮ КАТАЛОГА-->
             <ul class="menu-catalog">
               <li><a href="#" class="menu-catalog-item new-item">Новинки</a></li>
@@ -161,30 +162,25 @@
               <div class="sort-price-fat-container">
 
                 <div class="sort">
-                  <p class="label-sort">Сортировка:</p>
-                  <a href="#" class="menu-sort-item sort-item-current">по популярности<svg width="11px" height="10px">
-                      <polyline points="5.5,10 0,0 11,0 " />
-                    </svg></a>
-                  <ul class="menu-sort">
-                    <li><a href="#" class="menu-sort-item">по популярности</a></li>
-                    <li><a href="#" class="menu-sort-item">сначала недорогие</a></li>
-                    <li><a href="#" class="menu-sort-item">сначала дорогие</a></li>
-                    <li><a href="#" class="menu-sort-item">по жирности</a></li>
-                  </ul>
+                  <p>Сортировка:</p>
+                  <svg width="11px" height="10px"><polyline points="5.5,10 0,0 11,0"/></svg>
+                  <select>
+                    <option value="по популярности" selected>по популярности</option>
+                    <option value="сначала недорогие">сначала недорогие</option>
+                    <option value="сначала дорогие">сначала дорогие</option>
+                    <option value="по жирности">по жирности</option>
+                  </select>
                 </div>
-
+                
                 <div class="price-indicator">
-                  
-                      <!--<label for="price" class="label-price">Цена:&nbsp;<span class="min-price">100
-                        руб.-&nbsp;</span><span class="max-price">500 руб.</span></label></legend>
-                  <input type="range" min="100" max="500" step="10" value="500" id="price">-->
-                     <p><label for="price" class="label-price">Цена: 100 руб.- 500 руб.</label></p> 
-                    <input type="range" min="100" max="500" step="10" value="500" id="price">
-                    <div class="input-type-range">
-                      <div class="range-button-left"></div>
-                      <div class="range-button-right"></div>
-                    </div>
-                  
+
+                  <p><label for="price" class="label-price">Цена: 100 руб.- 500 руб.</label></p>
+                  <input type="range" min="100" max="500" step="10" value="500" id="price">
+                  <div class="input-type-range">
+                    <div class="range-button-left"></div>
+                    <div class="range-button-right"></div>
+                  </div>
+
                 </div>
 
                 <div class="fat-content">
@@ -250,9 +246,9 @@
           <li>
             <img src="img/creamy-orange.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
               height="267">
-              <div class="ice-cream-price">
-                <span>310&#8381;</span><span class="kilo">/кг</span>
-              </div>
+            <div class="ice-cream-price">
+              <span>310&#8381;</span><span class="kilo">/кг</span>
+            </div>
             <p>
               <a href="#" class="catalog-item">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
             </p>
@@ -271,9 +267,9 @@
           <li>
             <img src="img/creamy-strawberry.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267"
               height="267">
-              <div class="ice-cream-price">
-                <span>355&#8381;</span><span class="kilo">/кг</span>
-              </div>
+            <div class="ice-cream-price">
+              <span>355&#8381;</span><span class="kilo">/кг</span>
+            </div>
             <p>
               <a href="#" class="catalog-item">Сливочно-клубничное с присыпкой из белого шоколада</a>
             </p>
@@ -302,9 +298,9 @@
           <li>
             <img src="img/creamy-blueberry.jpg" alt="Сливочно-черничное с цельными ягодами черники" width="267"
               height="267">
-              <div class="ice-cream-price">
-                <span>410&#8381;</span><span class="kilo">/кг</span>
-              </div>
+            <div class="ice-cream-price">
+              <span>410&#8381;</span><span class="kilo">/кг</span>
+            </div>
             <p>
               <a href="#" class="catalog-item">Сливочно-черничное с цельными ягодами черники</a>
             </p>
@@ -313,9 +309,9 @@
           <li>
             <img src="img/creamy-lemon-caramel.jpg" alt="Сливочно-лимонное с карамельной присыпкой" width="267"
               height="267">
-              <div class="ice-cream-price">
-                <span>375&#8381;</span><span class="kilo">/кг</span>
-              </div>
+            <div class="ice-cream-price">
+              <span>375&#8381;</span><span class="kilo">/кг</span>
+            </div>
             <p>
               <a href="#" class="catalog-item">Сливочно-лимонное с карамельной присыпкой</a>
             </p>
