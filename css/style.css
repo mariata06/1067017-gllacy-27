@@ -1,4 +1,3 @@
-
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -26,7 +25,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -106,6 +105,7 @@ img {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding-top: 9px;
+  
 }
 
 .main-logo-container {
@@ -119,12 +119,16 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 500px;
+  max-width: 724px;
   padding-left: 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   margin-left: 9px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .site-navigation-item {
@@ -136,6 +140,19 @@ img {
   border-radius: 50px;
   background-color: transparent;
   display: inline-block;
+  vertical-align: baseline;
+}
+
+.site-navigation-catalog::before,
+.user-account .user-navigation-item::before,
+.search .user-navigation-item::before,
+.full-cart::before {
+  content: "";
+  position: absolute;
+  top: 80%;
+  width: 100px;
+  height: 20px;
+  bottom: -14px;
 }
 
 .site-navigation-item::after {
@@ -151,12 +168,29 @@ img {
   text-decoration: none;
 }
 
-.site-navigation-catalog:hover+.menu-catalog,
-.menu-catalog:hover {
+.site-navigation-catalog:hover+.menu-catalog {
+  display: block;
+  z-index: 10;
+} 
+.user-account:hover .login-form {
+  display: block;
+  z-index: 10;
+}
+.search:hover .search-form {
+  display: block;
+  z-index: 10;
+}
+.full-cart:hover .cart-form {
   display: block;
   z-index: 10;
 }
 
+/*.site-navigation-catalog::before:hover+.menu-catalog,
+menu-catalog:hover {
+  display: block;
+  z-index: 10;
+}
+*/
 .menu-catalog-item:hover .site-navigation-catalog {
   background-color: #f7f6f3;
 }
@@ -254,6 +288,8 @@ img {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-left: auto;
+  /*align-self: start;*/
+  padding-left: 0;
 }
 
 .user-navigation-item {
@@ -266,6 +302,8 @@ img {
   text-align: center;
   position: relative;
   margin-left: 10px;
+  padding-right: 5px;
+  padding-bottom: 5px;
 }
 
 .user-navigation-item svg {
@@ -309,19 +347,19 @@ img {
 }
 
 .user-account .user-navigation-item {
-  height: 32px;
-  width: 92px;
   border-radius: 50px;
-  padding-top: 7px;
-  padding-left: 25px;
+  padding-top: 8px;
+  padding-left: 45px;
+  padding-bottom: 8px;
+  padding-right: 15px;
 }
 
 .cart .user-navigation-item {
-  height: 32px;
-  width: 100px;
   border-radius: 50px;
-  padding-top: 7px;
-  padding-left: 25px;
+  padding-top: 8px;
+  padding-left: 45px;
+  padding-bottom: 8px;
+  padding-right: 15px;
 }
 
 .cart .full-cart {
@@ -330,11 +368,11 @@ img {
   line-height: 16px;
   color: #323232;
   background-color: #f8f7f4;
-  height: 32px;
-  width: 118px;
   border-radius: 50px;
-  padding-left: 30px;
-  padding-right: 5px;
+  padding-top: 8px;
+  padding-left: 45px;
+  padding-bottom: 8px;
+  padding-right: 15px;
 }
 
 .search {
@@ -358,13 +396,35 @@ img {
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
-  color: #999999;
+  color: #323232;
   width: 310px;
   padding-top: 9px;
   padding-bottom: 9px;
-  padding-left: 15px;
+  padding-left: 14px;
   border-radius: 5px;
   border: 1px solid #d1d0ce;
+  height: 44px;
+  box-sizing: border-box;
+  display: block;
+  outline: 0;
+}
+
+input[type="search"]::placeholder,
+input[type="email"]::placeholder,
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #999999;
+}
+
+input[type="search"]:hover,
+input[type="search"]:focus,
+input[type="email"]:hover,
+input[type="email"]:focus,
+input[type="text"]:hover,
+input[type="text"]:focus,
+input[type="password"]:hover,
+input[type="password"]:focus {
+  border: 2px solid #d1d0ce;
 }
 
 .user-account {
@@ -391,18 +451,23 @@ input[type="password"] {
   line-height: 24px;
   border-radius: 5px;
   border: 1px solid #d1d0ce;
-  width: 240px;
+  width: 241px;
   padding-top: 10px;
-  padding-bottom: 9px;
-  padding-left: 10px;
-  margin-bottom: 18px;
+  padding-bottom: 10px;
+  padding-left: 12px;
+  margin-bottom: 20px;
+  height: 44px;
 }
 
 .login-button {
-  padding: 10px 25px;
+  padding: 10px 24px;
   position: absolute;
   left: 20px;
-  bottom: 20px;
+  bottom: 24px;
+}
+
+.login-link {
+  height: 47px;
 }
 
 .login-form a {
@@ -412,10 +477,12 @@ input[type="password"] {
   text-decoration: underline;
   display: block;
   text-align: right;
+  height: 20px;
 }
 
 .login-form a:first-of-type {
   padding-right: 18px;
+  padding-bottom: 0;
 }
 
 .working-time-index-container .working-time {
@@ -451,8 +518,8 @@ input[type="password"] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 /*****************************************************************************
@@ -530,6 +597,7 @@ input[type="password"] {
   vertical-align: top;
   cursor: pointer;
   margin-bottom: 40px;
+  vertical-align: baseline;
 }
 
 .slider-controls {
@@ -550,6 +618,10 @@ input[type="password"] {
   border: 2px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
+  vertical-align: baseline;
+}
+.slider-controls label:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 #product-1:checked~.site-wrapper {
@@ -602,7 +674,7 @@ input[type="password"] {
 
 .action-raspberry {
   background-color: #a3092d;
-  background-image: url(../img/raspberry-bg.jpg);
+  background-image: url("../img/raspberry-bg.jpg");
   background-repeat: no-repeat;
   background-position: left;
   position: relative;
@@ -610,7 +682,7 @@ input[type="password"] {
 
 .action-choko {
   background-color: #512f19;
-  background-image: url(../img/chokolate-bg.jpg);
+  background-image: url("../img/chokolate-bg.jpg");
   background-repeat: no-repeat;
   background-position: left;
   position: relative;
@@ -643,6 +715,7 @@ input[type="password"] {
   margin-right: 22px;
   margin-bottom: 22px;
   display: inline-block;
+  vertical-align: baseline;
 }
 
 /*****************************************************************************
@@ -658,9 +731,6 @@ input[type="password"] {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -672,15 +742,17 @@ input[type="password"] {
   min-height: 362px;
   background-color: transparent;
 }
-
-.hits .catalog-list>li::after {
+.catalog-list .card-item:not(:nth-child(4n)) { 
+  margin-right: 26px;
+} 
+.hits li::after {
   content: "";
   position: absolute;
   width: 61px;
   height: 61px;
   left: 0;
   top: 0;
-  background-image: url(../img/icon-hit.png);
+  background-image: url("../img/icon-hit.svg");
   z-index: 2;
 }
 
@@ -725,14 +797,14 @@ input[type="password"] {
   z-index: 2;
 }
 
-.catalog-list .ice-cream-price>span:first-of-type {
+.ice-cream-price>span:first-of-type {
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
   text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
-.catalog-list .ice-cream-price>span:last-of-type {
+.ice-cream-price>span:last-of-type {
   font-size: 30px;
   font-weight: 700;
   line-height: 45px;
@@ -775,14 +847,14 @@ input[type="password"] {
   left: 50%;
   bottom: -30px;
   -webkit-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
   display: none;
   z-index: 10;
   min-width: 208px;
 }
 
-.catalog-list>li:hover .quick-view-button {
+.card-item:hover .quick-view-button {
   display: block;
 }
 
@@ -882,7 +954,7 @@ input[type="password"] {
 
 .news {
   background-color: #ffffff;
-  background-image: url(../img/strawberry-bg.jpg);
+  background-image: url("../img/strawberry-bg.jpg");
   background-repeat: no-repeat;
   background-position: -51px -224px;
   color: #323232;
@@ -922,7 +994,7 @@ input[type="password"] {
 *****************************************************************************/
 .mailing {
   background-color: #f8f7f4;
-  background-image: url(../img/mail-pattern-bg.png);
+  background-image: url("../img/mail-pattern-bg.png");
   width: 560px;
   min-height: 220px;
   border-radius: 15px;
@@ -944,12 +1016,14 @@ input[type="password"] {
 }
 
 .mailing-container input[type="email"] {
+  font-size: 16px;
   width: 368px;
   margin-top: 35px;
   margin-bottom: 0;
   padding-top: 9px;
   padding-left: 15px;
   padding-bottom: 9px;
+  height: 43px;
 }
 
 .mailing-container input::-webkit-input-placeholder {
@@ -986,7 +1060,7 @@ input[type="password"] {
 *********************************SECTION ADDRESS******************************
 *****************************************************************************/
 .address {
-  width: 1200px;
+  width: 100%;
   background-color: #849d8f;
   margin: 0 auto;
   margin-top: 39px;
@@ -994,10 +1068,17 @@ input[type="password"] {
 }
 
 .map {
+  
   height: 430px;
   background-image: url("../img/ice-cream-pin.png"), url("../img/map.png");
   background-position: 25% 50%, bottom center;
   background-repeat: no-repeat, no-repeat;
+}
+
+.map iframe {
+  width: 100%;
+  height: 430px;
+  border: 0;
 }
 
 .contacts {
@@ -1075,26 +1156,31 @@ input[type="password"] {
   top: 100px;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
   z-index: 100;
-  display: none;
+  display: block;
 }
 
 .modal-close {
+  width: 18px;
+  height: 17px;
+  background-image: url("../img/x-big.svg");
   position: absolute;
-  top: 10px;
+  top: 20px;
   left: 440px;
   border: none;
   background-color: #f8f7f4;
   z-index: 30;
   cursor: pointer;
+  outline: none;
 }
 
 .feedback-form input[type="text"],
 .feedback-form input[type="email"] {
+  font-size: 16px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 267px;
   border: 1px solid #d1d0ce;
   padding-top: 10px;
@@ -1165,43 +1251,44 @@ input[type="password"] {
 @-webkit-keyframes bounce {
   0% {
     -webkit-transform: translate(-50%, -2000px);
-            transform: translate(-50%, -2000px);
+    transform: translate(-50%, -2000px);
   }
 
   70% {
     -webkit-transform: translate(-50%, 30px);
-            transform: translate(-50%, 30px);
+    transform: translate(-50%, 30px);
   }
 
   90% {
     -webkit-transform: translate(-50%, -10px);
-            transform: translate(-50%, -10px);
+    transform: translate(-50%, -10px);
   }
 
   100% {
     -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
   }
 }
+
 @keyframes bounce {
   0% {
     -webkit-transform: translate(-50%, -2000px);
-            transform: translate(-50%, -2000px);
+    transform: translate(-50%, -2000px);
   }
 
   70% {
     -webkit-transform: translate(-50%, 30px);
-            transform: translate(-50%, 30px);
+    transform: translate(-50%, 30px);
   }
 
   90% {
     -webkit-transform: translate(-50%, -10px);
-            transform: translate(-50%, -10px);
+    transform: translate(-50%, -10px);
   }
 
   100% {
     -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
   }
 }
 
@@ -1211,7 +1298,7 @@ input[type="password"] {
   0%,
   100% {
     -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 
   10%,
@@ -1220,7 +1307,7 @@ input[type="password"] {
   70%,
   90% {
     -webkit-transform: translateX(-51%);
-            transform: translateX(-51%);
+    transform: translateX(-51%);
   }
 
   20%,
@@ -1228,15 +1315,16 @@ input[type="password"] {
   60%,
   80% {
     -webkit-transform: translateX(-49%);
-            transform: translateX(-49%);
+    transform: translateX(-49%);
   }
 }
+
 @keyframes shake {
 
   0%,
   100% {
     -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 
   10%,
@@ -1245,7 +1333,7 @@ input[type="password"] {
   70%,
   90% {
     -webkit-transform: translateX(-51%);
-            transform: translateX(-51%);
+    transform: translateX(-51%);
   }
 
   20%,
@@ -1253,7 +1341,7 @@ input[type="password"] {
   60%,
   80% {
     -webkit-transform: translateX(-49%);
-            transform: translateX(-49%);
+    transform: translateX(-49%);
   }
 }
 
@@ -1267,13 +1355,13 @@ input[type="password"] {
 
   -webkit-animation: bounce 0.6s;
 
-          animation: bounce 0.6s;
+  animation: bounce 0.6s;
 }
 
 /*Добавление класса, который будет добавлять эту анимацию к модальному окну.*/
 .form-error {
   -webkit-animation: shake 0.6s;
-          animation: shake 0.6s;
+  animation: shake 0.6s;
 }
 
 /*****************************************************************************
@@ -1299,17 +1387,19 @@ input[type="password"] {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 188px;
-  -webkit-box-pack: justify;
+  /*width: 188px;*/
+  /*-webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: space-between;*/
   padding-left: 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
+  align-items: left;
   margin-top: 20px;
 }
-
+.social-list li {
+  margin-right: 11px;
+}
 .social-icon svg {
   fill: #e8ebe9;
   border: 3px solid rgba(255, 255, 255, .5);
@@ -1351,7 +1441,10 @@ input[type="password"] {
   width: 160px;
   padding-top: 4px;
 }
-
+.footer-menu p {
+  display: block;
+  margin:0;
+}
 .footer-menu li:nth-child(odd) {
   padding-left: 15px;
 }
@@ -1377,16 +1470,12 @@ input[type="password"] {
 
 .footer-menu a {
   color: #ffffff;
-  display: inline-block;
-}
-
-.footer-menu a::after {
-  content: "";
-  display: block;
+  display: inline;
+  vertical-align: baseline;
   border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 
-.footer-menu a:hover::after {
+.footer-menu a:hover {
   border-color: #ffbc9e;
 }
 
@@ -1434,6 +1523,7 @@ input[type="password"] {
   padding: 6px 14px;
   border-radius: 50px;
   display: inline-block;
+  vertical-align: baseline;
 }
 
 .cart-form {
@@ -1552,9 +1642,9 @@ input[type="password"] {
 
 .filter-container {
   width: 880px;
-  padding-top: 0;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
   height: 135px;
+  margin-bottom: 50px;
 }
 
 .filter-form {
@@ -1572,7 +1662,7 @@ input[type="password"] {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .filter h2 {
@@ -1583,7 +1673,7 @@ input[type="password"] {
   margin-bottom: 26px;
 }
 
-fieldset {
+.fieldset {
   border: 0;
   padding: 0;
 }
@@ -1602,6 +1692,7 @@ fieldset {
   min-width: 195px;
   margin-right: 16px;
 }
+
 .sort p {
   font-size: 14px;
   font-weight: 500;
@@ -1610,12 +1701,13 @@ fieldset {
   margin-top: 5px;
   padding-left: 10px;
 }
+
 .sort select {
   padding: 9px 40px 9px 10px;
   border-radius: 50px;
   background-color: #a9bab0;
   border: none;
-  color:#ffffff;
+  color: #ffffff;
   overflow: hidden;
   position: relative;
   z-index: 0;
@@ -1623,9 +1715,11 @@ fieldset {
   -ms-appearance: none;
   -moz-appearance: none;
 }
+
 .sort select::-ms-expand {
   display: none;
 }
+
 .sort svg {
   fill: #ffffff;
   position: absolute;
@@ -1639,8 +1733,9 @@ fieldset {
 }
 
 .sort:hover select {
-  color:#000000;
+  color: #000000;
 }
+
 .label-price {
   font-size: 14px;
   font-weight: 500;
@@ -1653,6 +1748,7 @@ fieldset {
   display: inline-block;
   padding-left: 0;
   padding-right: 0;
+  vertical-align: baseline;
 }
 
 .price-indicator p {
@@ -1752,17 +1848,18 @@ fieldset {
 input[type="radio"],
 input[type="checkbox"] {
   display: none;
+  tabindex='0'
 }
 
 .container-radio {
   width: 415px;
-  height: 36px;
   border-radius: 50px;
   background-color: #aabcb2;
   position: relative;
   padding-top: 6px;
   margin-top: 8px;
   padding-left: 8px;
+  padding-bottom: 6px;
 }
 
 .container-radio label {
@@ -1825,12 +1922,12 @@ input[type="checkbox"] {
 
 .container-checkbox {
   width: 703px;
-  height: 36px;
   border-radius: 50px;
   background-color: #aabcb2;
   position: relative;
   margin-bottom: 39px;
   padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .container-checkbox input:checked+label::before {
@@ -1885,6 +1982,7 @@ input[type="checkbox"] {
   padding-bottom: 0;
   position: relative;
   padding-left: 48px;
+  display: inline-block;
 }
 
 .filter-button {
@@ -1907,9 +2005,10 @@ input[type="checkbox"] {
 }
 
 .filter-button:active {
+  border: none;
+  padding: 10px 30px;
   -webkit-box-shadow: inset 0 3px 3px 0 #6a6b6a;
   box-shadow: inset 0 3px 3px 0 #6a6b6a;
-  border: none;
 }
 
 /*****************************************************************************
@@ -1948,6 +2047,7 @@ input[type="checkbox"] {
   -ms-flex-pack: center;
   justify-content: center;
   padding-left: 0;
+  position: relative;
 }
 
 .pager-list li {
@@ -1964,6 +2064,30 @@ input[type="checkbox"] {
   display: block;
   border-radius: 50px;
   padding-top: 5px;
+}
+
+.pager-list .last::before {
+  content: "";
+  background-image: url("../img/icon-right-small.svg");
+  width: 8px;
+  height: 12px;
+  position: absolute;
+  top: 8px;
+  left: 175px;
+  z-index: 10;
+}
+
+.pager-list .previous::before {
+  content: "";
+  background-image: url("../img/icon-right-small.svg");
+  transform: rotateY(180deg);
+  opacity: 0.3;
+  width: 8px;
+  height: 12px;
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  z-index: 10;
 }
 
 .pager-list .pager-current {

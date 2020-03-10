@@ -39,7 +39,7 @@
             <!--ФОРМА ПОИСКА-->
             <div class="search">
               <h2 class="visually-hidden">Форма поиска</h2>
-              <a href="#" class="user-navigation-item">
+              <a href="#" class="user-navigation-item" aria-label="search">
                 <svg width="17px" height="17px" viewBox="0 0 17 17">
                   <path d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
 		S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
@@ -68,7 +68,7 @@
               <form action="https://echo.htmlacademy.ru" method="post">
                 <div class="login-form">
                   <input type="email" name="login" placeholder="email@example.com">
-                  <input type="password" name="password" placeholder="........">
+                  <input type="password" name="password" placeholder="••••••••">
                   <a href="#">Забыли пароль?</a>
                   <a href="#">Новая регистрация</a>
                   <button type="button" class="button login-button">Войти</button>
@@ -174,8 +174,8 @@
                 
                 <div class="price-indicator">
 
-                  <p><label for="price" class="label-price">Цена: 100 руб.- 500 руб.</label></p>
-                  <input type="range" min="100" max="500" step="10" value="500" id="price">
+                  <p><label tabindex="0" for="price" class="label-price">Цена: 100 руб.- 500 руб.</label></p>
+                  <input  type="range" min="100" max="500" step="10" value="500" id="price">
                   <div class="input-type-range">
                     <div class="range-button-left"></div>
                     <div class="range-button-right"></div>
@@ -184,23 +184,24 @@
                 </div>
 
                 <div class="fat-content">
-                  <fieldset>
+                  <fieldset class="fieldset">
                     <legend class="label-fat-content">Жирность:</legend>
                     <div class="container-radio">
                       <input type="radio" name="fat-content" id="fatfree" value="0%" class="visually-hidden">
-                      <label for="fatfree">0 %</label>
+                      <label tabindex="0" for="fatfree">0 %</label>
 
                       <input type="radio" name="fat-content" id="10purcentfat" value="до 10%" checked
                         class="visually-hidden">
-                      <label for="10purcentfat">до 10 %</label>
+                      <label tabindex="0" for="10purcentfat">до 10 %</label>
 
 
                       <input type="radio" name="fat-content" id="30purcentfat" value="до 30%" class="visually-hidden">
-                      <label for="30purcentfat">до 30 %</label>
+                      <label tabindex="0" for="30purcentfat">до 30 %</label>
 
                       <input type="radio" name="fat-content" id="30pluspurcentfat" value="выше 30%"
                         class="visually-hidden">
-                      <label for="30pluspurcentfat">выше 30 %</label>
+                      <label tabindex="0" for="30pluspurcentfat">выше 30 %</label>
+
                     </div>
                   </fieldset>
                 </div>
@@ -210,23 +211,24 @@
               <div class="fillings-button-container">
 
                 <div class="fillings">
-                  <fieldset>
+                  <fieldset class="fieldset">
                     <legend class="label-fillings">Наполнители:</legend>
                     <div class="container-checkbox">
                       <input type="checkbox" id="chokolate-filling" name="fillings" checked class="visually-hidden">
-                      <label for="chokolate-filling">шоколадные</label>
+                      <label tabindex="0" for="chokolate-filling">шоколадные</label>
 
                       <input type="checkbox" id="sprinkles-filling" name="fillings" checked class="visually-hidden">
-                      <label for="sprinkles-filling">сахарные присыпки</label>
+                      <label tabindex="0" for="sprinkles-filling">сахарные присыпки</label>
 
                       <input type="checkbox" id="fruit-filling" name="fillings" class="visually-hidden" checked>
-                      <label for="fruit-filling">фрукты</label>
+                      <label tabindex="0" for="fruit-filling">фрукты</label>
 
                       <input type="checkbox" id="syrups-filling" name="fillings" class="visually-hidden">
-                      <label for="syrups-filling">сиропы</label>
+                      <label tabindex="0" for="syrups-filling">сиропы</label>
 
                       <input type="checkbox" id="jams-filling" name="fillings" class="visually-hidden">
-                      <label for="jams-filling">джемы</label>
+                      <label tabindex="0" for="jams-filling">джемы</label>
+
                     </div>
                   </fieldset>
                 </div>
@@ -243,7 +245,7 @@
       <section class="catalog">
         <h2 class="visually-hidden">Раздел Сливочное мороженое</h2>
         <ul class="catalog-list page-catalog">
-          <li>
+          <li class="card-item">
             <img src="img/creamy-orange.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
               height="267">
             <div class="ice-cream-price">
@@ -254,7 +256,7 @@
             </p>
             <button type="button" class="button quick-view-button">Быстрый просмотр</button>
           </li>
-          <li>
+          <li class="card-item">
             <img src="img/creamy-coffee.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
             <div class="ice-cream-price">
               <span>380&#8381;</span><span class="kilo">/кг</span>
@@ -264,7 +266,7 @@
             </p>
             <button type="button" class="button quick-view-button">Быстрый просмотр</button>
           </li>
-          <li>
+          <li class="card-item">
             <img src="img/creamy-strawberry.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267"
               height="267">
             <div class="ice-cream-price">
@@ -275,7 +277,7 @@
             </p>
             <button type="button" class="button quick-view-button">Быстрый просмотр</button>
           </li>
-          <li>
+          <li class="card-item">
             <img src="img/creme-brulee.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
             <div class="ice-cream-price">
               <span>415&#8381;</span><span class="kilo">/кг</span>
@@ -285,7 +287,7 @@
             </p>
             <button type="button" class="button quick-view-button">Быстрый просмотр</button>
           </li>
-          <li>
+          <li class="card-item">
             <img src="img/creamy-cowberry.jpg" alt="Сливочное с брусничным джемом" width="267" height="267">
             <div class="ice-cream-price">
               <span>325&#8381;</span><span class="kilo">/кг</span>
@@ -295,7 +297,7 @@
             </p>
             <button type="button" class="button quick-view-button">Быстрый просмотр</button>
           </li>
-          <li>
+          <li class="card-item">
             <img src="img/creamy-blueberry.jpg" alt="Сливочно-черничное с цельными ягодами черники" width="267"
               height="267">
             <div class="ice-cream-price">
@@ -306,7 +308,7 @@
             </p>
             <button type="button" class="button quick-view-button">Быстрый просмотр</button>
           </li>
-          <li>
+          <li class="card-item">
             <img src="img/creamy-lemon-caramel.jpg" alt="Сливочно-лимонное с карамельной присыпкой" width="267"
               height="267">
             <div class="ice-cream-price">
@@ -317,7 +319,7 @@
             </p>
             <button type="button" class="button quick-view-button">Быстрый просмотр</button>
           </li>
-          <li>
+          <li class="card-item">
             <img src="img/creamy-choko-chips.jpg" alt="Сливочное с шоколадной стружкой" width="267" height="267">
             <div class="ice-cream-price">
               <span>320&#8381;</span><span class="kilo">/кг</span>
@@ -327,7 +329,7 @@
             </p>
             <button type="button" class="button quick-view-button">Быстрый просмотр</button>
           </li>
-          <li>
+          <li class="card-item">
             <img src="img/creamy-vanilla.jpg" alt="Сливочно-ванильное с кусочками шоколада" width="267" height="267">
             <div class="ice-cream-price">
               <span>440&#8381;</span><span class="kilo">/кг</span>
@@ -337,7 +339,7 @@
             </p>
             <button type="button" class="button quick-view-button">Быстрый просмотр</button>
           </li>
-          <li>
+          <li class="card-item">
             <img src="img/creamy-menthol.jpg" alt="Сливочноe с ментоловым сиропом" width="267" height="267">
             <div class="ice-cream-price">
               <span>435&#8381;</span><span class="kilo">/кг</span>
@@ -347,7 +349,8 @@
             </p>
             <button type="button" class="button quick-view-button">Быстрый просмотр</button>
           </li>
-          <li>
+          
+          <li class="card-item">
             <img src="img/creamy-blackchoko.jpg" alt="Сливочное с кусочками черного шоколада" width="267" height="267">
             <div class="ice-cream-price">
               <span>355&#8381;</span><span class="kilo">/кг</span>
@@ -357,7 +360,7 @@
             </p>
             <button type="button" class="button quick-view-button">Быстрый просмотр</button>
           </li>
-          <li>
+          <li class="card-item">
             <img src="img/creamy-mint.jpg" alt="Сливочное с мятным сиропом" width="267" height="267">
             <div class="ice-cream-price">
               <span>420&#8381;</span><span class="kilo">/кг</span>
@@ -374,7 +377,7 @@
       <div class="item-list">
         <ul class="pager-list">
           <li class="pager-item previous">
-            <a href="#" title="На предыдущую страницу">‹</a>
+            <a href="#" title="На предыдущую страницу"></a>
           </li>
           <li class="pager-item">
             <a href="#" title="На страницу номер 1" class="pager-current">1</a>
@@ -392,7 +395,7 @@
             <a href="#" title="На страницу номер 5">5</a>
           </li>
           <li class="pager-item last">
-            <a href="#" title="На следующую страницу">›</a>
+            <a href="#" title="На следующую страницу"></a>
           </li>
         </ul>
       </div>

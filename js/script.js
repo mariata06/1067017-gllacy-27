@@ -4,7 +4,7 @@ var popup = document.querySelector(".modal-dialog");
 
 var close = popup.querySelector(".modal-close");
 
-var form = popup.querySelector(".form-wrapper"); /*feedback-form*/
+var form = popup.querySelector(".form-wrapper"); 
 
 var userName = popup.querySelector("[name=userName]");
 
@@ -45,8 +45,6 @@ button.addEventListener("click", function (evt) {
 
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
-  /*popup.classList.remove("modal-show");
-  popup.classList.remove("modal-error");*/
   popup.classList.remove("modal-show");
   form.classList.remove("form-show");
   form.classList.remove("form-error");
@@ -56,7 +54,7 @@ form.addEventListener("submit", function (evt) {
   if (!userName.value || !userEmail.value) {
     evt.preventDefault();
     form.classList.remove("form-error");
-    form.offsetWidth = form.offsetWidth;  /*здесь везде был popup вместо form*/
+    form.offsetWidth = form.offsetWidth;  
     form.classList.add("form-error");
   } else {
     if (isStorageSupport) {
@@ -71,8 +69,7 @@ window.addEventListener("keydown", function (evt) {
     evt.preventDefault();
     if (popup.classList.contains("modal-show")) {
       popup.classList.remove("modal-show");
-      form.classList.remove("form-show"); /*это лишнее здесь?*/
-      /*popup.classList.remove("modal-error");*/
+      form.classList.remove("form-show"); 
     }
   }
 });

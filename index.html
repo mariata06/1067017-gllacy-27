@@ -54,7 +54,7 @@
                   <form action="https://echo.htmlacademy.ru" method="post">
 
                     <label for="search"></label>
-                    <input type="search" id="search" value="Крем-брюле">
+                    <input type="search" id="search" placeholder="Крем-брюле">
 
                     <button type="submit" class="visually-hidden"></button>
                   </form>
@@ -75,11 +75,13 @@
                 <div class="login-form">
                   <form action="https://echo.htmlacademy.ru" method="post">
                     <input type="email" name="login" placeholder="email@example.com">
-                    <input type="password" name="password" placeholder="........">
+                    <input type="password" name="password" placeholder="••••••••">
                     <button type="button" class="button login-button">Войти</button>
                   </form>
-                  <a href="#">Забыли пароль?</a>
-                  <a href="#">Новая регистрация</a>
+                  <div class="login-link">
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#">Новая регистрация</a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -165,18 +167,18 @@
         <section class="hits">
           <h2 class="visually-hidden">Наши хиты</h2>
           <ul class="catalog-list">
-            <li>
+            <li class="card-item">
               <img src="img/creamy-orange.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
                 height="267">
-                <div class="ice-cream-price">
-                  <span>310&#8381;</span><span class="kilo">/кг</span>
-                </div>
+              <div class="ice-cream-price">
+                <span>310&#8381;</span><span class="kilo">/кг</span>
+              </div>
               <p>
                 <a href="#" class="catalog-item">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
               </p>
               <button type="button" class="button quick-view-button">Быстрый просмотр</button>
             </li>
-            <li>
+            <li class="card-item">
               <img src="img/creamy-coffee.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
               <div class="ice-cream-price">
                 <span>380&#8381;</span><span class="kilo">/кг</span>
@@ -186,23 +188,23 @@
               </p>
               <button type="button" class="button quick-view-button">Быстрый просмотр</button>
             </li>
-            <li>
+            <li class="card-item">
               <img src="img/creamy-strawberry.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267"
                 height="267">
-                <div class="ice-cream-price">
-                  <span>355&#8381;</span><span class="kilo">/кг</span>
-                </div>
+              <div class="ice-cream-price">
+                <span>355&#8381;</span><span class="kilo">/кг</span>
+              </div>
               <p>
                 <a href="#" class="catalog-item">Сливочно-клубничное с присыпкой из белого шоколада</a>
               </p>
               <button type="button" class="button quick-view-button">Быстрый просмотр</button>
             </li>
-            <li>
+            <li class="card-item">
               <img src="img/creme-brulee.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267"
                 height="267">
-                <div class="ice-cream-price">
-                  <span>415&#8381;</span><span class="kilo">/кг</span>
-                </div>
+              <div class="ice-cream-price">
+                <span>415&#8381;</span><span class="kilo">/кг</span>
+              </div>
               <p>
                 <a href="#" class="catalog-item">Сливочное крем-брюле с карамельной подливкой</a>
               </p>
@@ -270,14 +272,15 @@
         <div class="map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2826.4326645986766!2d30.324025639833913!3d59.938950160497924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1582551754712!5m2!1sru!2sru"
-            style="width:1200px; height:430px; border:0;" allowfullscreen=""></iframe>
+            allowfullscreen=""></iframe>
         </div>
 
         <div class="contacts">
           <p class="contacts-address"><span>Адрес главного офиса и офлайн-магазина:</span>ул. Большая Конюшенная
             19/8,
             Санкт-Петербург</p>
-          <p class="contacts-phone"><span>Для заказов по телефону:</span><a href="tel:+88124502525">8 812 450-25-25</a><span>(с 10 до 20
+          <p class="contacts-phone"><span>Для заказов по телефону:</span><a href="tel:+88124502525">8 812
+              450-25-25</a><span>(с 10 до 20
               ежедневно)</span></p>
           <a href="#" class="button feedback-button">Форма обратной связи</a>
         </div>
@@ -289,15 +292,14 @@
           <h2 class="visually-hidden">Обратная связь</h2>
           <h3 class="feedback-title">Мы обязательно вам ответим!</h3>
           <form action="https://echo.htmlacademy.ru" method="post" class="feedback-form">
-            <label for="name"><input id="name" type="text" name="userName" value="" placeholder="Имя Фамилия"
-                ></label>
-            <label for="email"><input id="email" type="email" name="userEmail" value="" placeholder="email@example.com"
-                ></label>
+            <label for="name"><input id="name" type="text" name="userName" value="" placeholder="Имя Фамилия"></label>
+            <label for="email"><input id="email" type="email" name="userEmail" value=""
+                placeholder="email@example.com"></label>
             <textarea cols="35" rows="5" placeholder="В свободной форме" name="userMessage"></textarea>
             <button type="submit" class="button feedbacksend-button">Отправить</button>
           </form>
-          <button type="button" class="modal-close"><img src="img/x-big.svg" alt="закрыть форму" width="18"
-              height="17"></button>
+          <button type="button" class="modal-close"></button> <!--<img src="img/x-big.svg" alt="закрыть форму" width="18"
+          height="17">-->
         </div>
       </div>
     </main>
@@ -360,13 +362,30 @@
 		c0.917,0.182,1.642,0.559,2.179,1.13c0.537,0.571,0.807,1.325,0.807,2.261C23.013,19.392,22.875,19.997,22.602,20.531z" />
               </svg>
             </a>
+          </li>
         </ul>
 
         <ul class="footer-menu">
-          <li><a href="#">Для поставщиков</a></li>
-          <li><a href="#">Наши документы</a></li>
-          <li><a href="#">О производстве</a></li>
-          <li><a href="#">Экологические стандарты</a></li>
+          <li>
+            <p>
+              <a href="#">Для поставщиков</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="#">Наши документы</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="#">О производстве</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="#">Экологические стандарты</a>
+            </p>
+          </li>
         </ul>
 
         <div class="copyright">
@@ -384,7 +403,7 @@
 
   </div>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
