@@ -19,7 +19,7 @@
           </a>
         </div>
         <ul class="site-navigation">
-          <li><a href="catalog.html" class="navigation-current site-navigation-catalog">Каталог</a>
+          <li class="site-navigation-catalog"><a href="catalog.html" class="navigation-current">Каталог</a>
             <!--ВЫПАДАЮЩЕЕ ПОДМЕНЮ КАТАЛОГА-->
             <ul class="menu-catalog">
               <li><a href="#" class="menu-catalog-item new-item">Новинки</a></li>
@@ -47,7 +47,7 @@
               <form action="https://echo.htmlacademy.ru" method="post">
                 <div class="search-form">
                   <label for="search"></label>
-                  <input type="search" id="search" value="Крем-брюле">
+                  <input type="search" id="search" placeholder="Крем-брюле">
                 </div>
                 <button type="submit" class="visually-hidden"></button>
               </form>
@@ -183,7 +183,7 @@
                 </div>
 
                 <div class="fat-content">
-                  <fieldset class="fieldset">
+                  <fieldset class="label-fieldset">
                     <legend class="label-fat-content">Жирность:</legend>
                     <div class="container-radio">
                       <input type="radio" name="fat-content" id="fatfree" value="0%" class="visually-hidden">
@@ -210,7 +210,7 @@
               <div class="fillings-button-container">
 
                 <div class="fillings">
-                  <fieldset class="fieldset">
+                  <fieldset class="label-fieldset">
                     <legend class="label-fillings">Наполнители:</legend>
                     <div class="container-checkbox">
                       <input type="checkbox" id="chokolate-filling" name="fillings" checked class="visually-hidden">
@@ -241,9 +241,9 @@
         </div>
       </section>
 
-      <section class="catalog">
+      <section class="catalog page-catalog">
         <h2 class="visually-hidden">Раздел Сливочное мороженое</h2>
-        <ul class="catalog-list page-catalog">
+        <ul class="catalog-list"> 
           <li class="card-item">
             <img src="img/creamy-orange.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
               height="267">
