@@ -1,3 +1,4 @@
+
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -106,10 +107,14 @@ img {
   flex-wrap: wrap;
   padding-top: 9px;
   padding-bottom: 9px;
-  flex-direction: row;
-
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
-
+.main-navigation-catalog {
+padding-bottom: 0;
+}
 .main-logo-container {
   width: 154px;
   height: 64px;
@@ -121,7 +126,7 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 720px;
+  width: 700px;
   padding-left: 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -129,7 +134,7 @@ img {
   margin-left: 9px;
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 10px;
+  padding-top: 8px;
   padding-bottom: 10px;
 }
 
@@ -224,7 +229,8 @@ img {
   color: #323232;
 }
 
-.site-navigation-item:active, .navigation-current:active {
+.site-navigation-item:active,
+.navigation-current:active {
   background-color: rgba(248, 247, 244, 0.9);
   -webkit-box-shadow: inset 0 2px 1px 0 #696969;
   box-shadow: inset 0 2px 1px 0 #696969;
@@ -233,14 +239,13 @@ img {
 .menu-catalog {
   background-color: #f8f7f4;
   padding-left: 0;
-  padding-bottom: 7px;
   border-radius: 5px;
   -webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   position: absolute;
   display: none;
   top: 35px;
-  left: -5px;
+  left: -6px;
   z-index: 11;
 }
 
@@ -249,14 +254,17 @@ img {
   line-height: 16px;
   color: #323232;
   text-decoration: none;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 11px;
+  padding-bottom: 4px;
   padding-left: 20px;
   padding-right: 18px;
   display: block;
   min-width: 143px;
 }
-
+.menu-catalog-item-last {
+  padding-bottom: 11px;
+  border-radius: 0 0 5px 5px;
+}
 .menu-catalog-item:hover,
 .menu-catalog-item:focus {
   background-color: #fbded7;
@@ -297,14 +305,14 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  /*margin-left: auto;*/
+  margin-left: auto;
   padding-left: 0;
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   margin-right: 0;
+  margin-top: 15px
 }
-.user-navigation-index {
-  margin-left: 17px;
-}
+
 .user-navigation-item {
   font-size: 14px;
   font-weight: 500;
@@ -318,9 +326,11 @@ img {
   padding-right: 5px;
   padding-bottom: 5px;
 }
+
 .search .user-navigation-item {
   margin-left: 0;
 }
+
 .user-navigation-item svg {
   fill: #ffffff;
 }
@@ -364,9 +374,9 @@ img {
 .user-account .user-navigation-item {
   border-radius: 50px;
   padding-top: 8px;
-  padding-left: 45px;
+  padding-left: 44px;
   padding-bottom: 8px;
-  padding-right: 15px;
+  padding-right: 16px;
 }
 
 .cart .user-navigation-item {
@@ -406,13 +416,14 @@ img {
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
+
 /*****************************************************************************
 *********************************INPUT STYLES*********************************
 *****************************************************************************/
 input[type="search"],
 input[type="email"],
 input[type="text"],
-input[type="password"], 
+input[type="password"],
 .feedback-form textarea {
   line-height: 24px;
   border: 1px solid #d1d0ce;
@@ -421,6 +432,7 @@ input[type="password"],
   padding-left: 11px;
   padding-bottom: 11px;
 }
+
 input[type="search"] {
   font-size: 14px;
   font-weight: 400;
@@ -428,6 +440,7 @@ input[type="search"] {
   height: 44px;
   display: block;
 }
+
 .login-form input[type="email"],
 .login-form input[type="password"] {
   font-size: 14px;
@@ -435,6 +448,7 @@ input[type="search"] {
   height: 44px;
   margin-bottom: 20px;
 }
+
 .mailing input[type="email"] {
   font-size: 16px;
   width: 368px;
@@ -442,6 +456,7 @@ input[type="search"] {
   margin-top: 35px;
   margin-bottom: 0;
 }
+
 .feedback-form input[type="text"],
 .feedback-form input[type="email"] {
   font-size: 16px;
@@ -452,18 +467,21 @@ input[type="search"] {
   margin-top: 24px;
   margin-bottom: 20px;
 }
+
 .feedback-form input[type="email"] {
   margin-bottom: 20px;
 }
+
 .feedback-form textarea {
   width: 427px;
   height: 155px;
   resize: none;
 }
+
 input[type="search"]:hover,
 input[type="email"]:hover,
 input[type="text"]:hover,
-input[type="password"]:hover, 
+input[type="password"]:hover,
 .feedback-form textarea:hover {
   border: 2px solid #d1d0ce;
   padding-top: 10px;
@@ -482,6 +500,22 @@ input[type="password"]:focus,
   padding-left: 10px;
   padding-bottom: 10px;
   outline: none;
+}
+
+input[type="search"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder {
+  color: #999999;
+}
+
+input[type="search"]::-moz-placeholder, input[type="email"]::-moz-placeholder, input[type="text"]::-moz-placeholder, input[type="password"]::-moz-placeholder {
+  color: #999999;
+}
+
+input[type="search"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="text"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder {
+  color: #999999;
+}
+
+input[type="search"]::-ms-input-placeholder, input[type="email"]::-ms-input-placeholder, input[type="text"]::-ms-input-placeholder, input[type="password"]::-ms-input-placeholder {
+  color: #999999;
 }
 
 input[type="search"]::placeholder,
@@ -546,7 +580,7 @@ input[type="password"]::placeholder {
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .working-time span {
@@ -613,7 +647,7 @@ input[type="password"]::placeholder {
 
 .slider {
   position: relative;
-  padding-top: 321px;
+  padding-top: 310px;
   text-align: center;
   color: #ffffff;
 }
@@ -631,7 +665,7 @@ input[type="password"]::placeholder {
 .slider-title {
   width: 700px;
   margin: 0 auto;
-  margin-bottom: 29px;
+  margin-bottom: 31px;
   font-size: 60px;
   font-weight: 700;
   line-height: 60px;
@@ -764,7 +798,7 @@ input[type="password"]::placeholder {
 .choko-button {
   padding: 12px 22px;
   margin-right: 22px;
-  margin-bottom: 22px;
+  margin-bottom: 21px;
   display: inline-block;
   vertical-align: baseline;
 }
@@ -790,7 +824,7 @@ input[type="password"]::placeholder {
 .catalog-list li {
   width: 267px;
   position: relative;
-  min-height: 362px;
+  min-height: 363px;
   background-color: transparent;
 }
 
@@ -867,7 +901,7 @@ input[type="password"]::placeholder {
 
 .catalog-list p {
   display: block;
-  margin-top: -92px;
+  margin-top: -93px;
   text-align: center;
 }
 
@@ -928,6 +962,7 @@ input[type="password"]::placeholder {
   line-height: 30px;
   font-weight: 500;
   margin-top: 0;
+  letter-spacing: 0.17px;
 }
 
 .about ul {
@@ -1009,12 +1044,12 @@ input[type="password"]::placeholder {
   background-color: #ffffff;
   background-image: url("../img/strawberry-bg.jpg");
   background-repeat: no-repeat;
-  background-position: -51px -224px;
+  background-position: -51px -224px;  /*224*/
   color: #323232;
   width: 560px;
   min-height: 220px;
   border-radius: 15px;
-  padding: 25px 20px;
+  padding: 24px 20px 26px 20px;
 }
 
 .news-title {
@@ -1056,9 +1091,9 @@ input[type="password"]::placeholder {
 .mailing-container {
   background-color: #f8f7f4;
   width: 548px;
-  min-height: 210px;
+  min-height: 208px;
   margin: 6px;
-  padding: 30px 20px;
+  padding: 29px 20px 30px 20px;
   border-radius: 10px;
 }
 
@@ -1080,7 +1115,7 @@ input[type="password"]::placeholder {
   width: 100%;
   background-color: #849d8f;
   margin: 0 auto;
-  margin-top: 39px;
+  margin-top: 40px;                  
   position: relative;
 }
 
@@ -1113,6 +1148,7 @@ input[type="password"]::placeholder {
 .contacts a[href^="tel:"] {
   color: #323232;
   margin-top: 5px;
+  margin-bottom: 1px;
   display: block;
 }
 
@@ -1194,6 +1230,7 @@ input[type="password"]::placeholder {
   cursor: pointer;
   outline: none;
 }
+
 .feedback-title {
   font-size: 24px;
   font-weight: 500;
@@ -1359,7 +1396,7 @@ input[type="password"]::placeholder {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: left;
-  margin-top: 20px;
+  margin-top: 22px;
 }
 
 .social-list li {
@@ -1404,7 +1441,7 @@ input[type="password"]::placeholder {
   font-weight: 400;
   line-height: 18px;
   color: #ffffff;
-  width: 160px;
+  width: 153px;
   padding-top: 4px;
 }
 
@@ -1414,12 +1451,12 @@ input[type="password"]::placeholder {
 }
 
 .footer-menu li:nth-child(odd) {
-  padding-left: 15px;
+  padding-left: 12px;
 }
 
 .footer-menu li:nth-child(even) {
-  padding-left: 0;
-  width: 170px;
+  padding-left: -5px;
+  width: 177px;
 }
 
 .footer-menu li:first-of-type {
@@ -1431,7 +1468,7 @@ input[type="password"]::placeholder {
   content: url("../img/icon-heart.svg");
   position: absolute;
   top: 7px;
-  left: -5px;
+  left: -9px;
   width: 15px;
   height: 13px;
 }
@@ -1465,7 +1502,7 @@ input[type="password"]::placeholder {
 .copyright p {
   font-size: 12px;
   line-height: 18px;
-  margin-top: 2px;
+  margin-top: 3px;
   margin-bottom: 0;
 }
 
@@ -1504,7 +1541,7 @@ input[type="password"]::placeholder {
   padding-right: 5px;
   position: absolute;
   top: 61px;
-  left: 634px;
+  left: 633px;
   z-index: 10;
   display: none;
 }
@@ -1527,7 +1564,7 @@ input[type="password"]::placeholder {
 .cart-form .item {
   font-size: 13px;
   line-height: 16px;
-  padding-top: 20px;
+  padding-top: 2px;
   padding-left: 15px;
 }
 
@@ -1552,9 +1589,11 @@ input[type="password"]::placeholder {
   margin-left: auto;
   margin-right: 10px;
 }
+
 .cart-form input[type="image"] {
   outline: none;
 }
+
 .breadcrumbs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1562,7 +1601,7 @@ input[type="password"]::placeholder {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding-left: 0px;
-  margin-top: 20px;
+  margin-top: 22px;
   margin-bottom: 0;
 }
 
@@ -1609,16 +1648,8 @@ input[type="password"]::placeholder {
 /*****************************************************************************
 **********************************SECTION FILTER******************************
 *****************************************************************************/
-.filter {
-  /*margin-bottom: 50px;*/
-}
-
 .filter-container {
   width: 880px;
-  /*padding-bottom: 50px;*/
-  /*height: 135px;*/
-  /*margin-bottom: 50px;*/
-  /*min-height: 230px;*/
 }
 
 .filter-form {
@@ -1644,7 +1675,7 @@ input[type="password"]::placeholder {
   font-weight: 700;
   line-height: 41px;
   margin-top: 0;
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 }
 
 .label-fieldset {
@@ -1655,7 +1686,7 @@ input[type="password"]::placeholder {
 .sort {
   position: relative;
   min-width: 195px;
-  margin-right: 16px;
+  margin-right: 15px;
 }
 
 .sort p {
@@ -1663,12 +1694,12 @@ input[type="password"]::placeholder {
   font-weight: 500;
   line-height: 16px;
   margin-bottom: 4px;
-  margin-top: 5px;
-  padding-left: 10px;
+  margin-top: 4px;
+  padding-left: 15px;
 }
 
 .sort select {
-  padding: 9px 40px 9px 10px;
+  padding: 9px 35px 9px 14px;
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
@@ -1706,7 +1737,7 @@ input[type="password"]::placeholder {
   font-weight: 500;
   line-height: 16px;
   margin-bottom: 5px;
-  padding-left: 15px;
+  padding-left: 13px;
 }
 
 .price-indicator {
@@ -1802,6 +1833,7 @@ input[type="password"]::placeholder {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
+  padding: 4px;
   padding-left: 15px;
 }
 
@@ -1821,7 +1853,7 @@ input[type="checkbox"] {
   background-color: rgba(255, 255, 255, 0.2);
   position: relative;
   padding-top: 1px;
-  margin-top: 5px;
+  margin-top: 0;
   padding-left: 8px;
   padding-bottom: 1px;
 }
@@ -1834,12 +1866,13 @@ input[type="checkbox"] {
   padding-bottom: 0;
   padding-left: 35px;
   padding-right: 7px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   display: inline-block;
   vertical-align: baseline;
 }
 
 .container-radio input:checked+label::before {
+  /*радио выбранный*/
   content: "";
   width: 14px;
   height: 14px;
@@ -1849,13 +1882,14 @@ input[type="checkbox"] {
   border-radius: 50%;
   position: absolute;
   opacity: 0.8;
-  top: 11px;
-  left: 11px;
+  top: 11px;                                  
+  left: 11px;                                
   background-color: #eef2f0;
   margin-bottom: 10px;
 }
 
 .container-radio label::before {
+  /*радио пустой*/
   content: "";
   width: 20px;
   height: 20px;
@@ -1863,17 +1897,24 @@ input[type="checkbox"] {
   border-radius: 50%;
   position: absolute;
   opacity: 0.8;
-  top: 8px;
-  left: 8px;
+  top: 8px;                
+  left: 8px;             
   margin-bottom: 10px;
 }
 
 .container-radio input:checked+label:hover::before,
+/*радио выбранный и пустой с hover*/
 .container-radio label:hover::before {
   opacity: 1;
 }
 
 .container-radio input:disabled+label::before {
+  /*радио пустой disabled*/
+  opacity: 0.4;
+}
+
+.container-radio input:disabled+label:hover::before {
+  /*радио выбранный disabled с hover*/
   opacity: 0.4;
 }
 
@@ -1882,59 +1923,64 @@ input[type="checkbox"] {
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.2);
   position: relative;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-top: 1px;
 }
 
 .container-checkbox input:checked+label::before {
+  /*чекбокс выбранный */
   content: url("../img/checkbox-on.svg");
   margin-right: 12px;
   margin-left: 11px;
   position: absolute;
   opacity: 0.8;
-  top: 20%;
-  left: 5px;
+  top: 4px;
+  left: 3px;
 }
 
 .container-checkbox label::before {
+  /*чекбокс пустой*/
   content: url("../img/checkbox-off.svg");
   margin-right: 12px;
   margin-left: 11px;
   position: absolute;
   opacity: 0.8;
-  top: 20%;
-  left: 5px;
+  top: 4px;
+  left: 3px;
 }
 
 .container-checkbox input:checked+label:hover::before,
+/*чекбокс выбранный и пустой с hover*/
 .container-checkbox label:hover::before {
   opacity: 1;
 }
-.container-checkbox label:disabled::before {
-  opacity: 0.4;
-}
+
+.container-checkbox label:disabled::before,
 .container-checkbox input:disabled+label::before {
+  /*чекбокс выбранный и пустой  disabled*/
   opacity: 0.4;
 }
 
 .container-checkbox input:disabled+label:hover::before {
+  /*чекбокс выбранный disabled c hover*/
   opacity: 0.4;
 }
 
 .fillings .label-fillings {
   font-size: 14px;
   padding-top: 13px;
-  padding-left: 15px;
+  padding-left: 13px;
 }
 
 .fillings label {
   font-weight: 500;
   line-height: 18px;
-  margin-bottom: 10px;
-  padding-top: 5px;
+  margin-bottom: 4px;
+  padding-top: 7px;
   padding-bottom: 0;
   position: relative;
-  padding-left: 48px;
+  padding-left: 45px;
   display: inline-block;
   vertical-align: baseline;
 }
@@ -1949,8 +1995,8 @@ input[type="checkbox"] {
   height: 36px;
   min-width: 143px;
   position: absolute;
-  bottom: 5px;
-  right: 2%;
+  bottom: 1px;
+  right: 20px;
   padding: 0 14px;
 }
 
@@ -1972,7 +2018,7 @@ input[type="checkbox"] {
 *****************************************************************************/
 .page-catalog {
   margin-top: 40px;
-  margin-bottom: 55px;
+  margin-bottom: 38px;
 }
 
 .catalog-list p:nth-of-child(5),
@@ -2004,6 +2050,7 @@ input[type="checkbox"] {
   justify-content: center;
   padding-left: 0;
   position: relative;
+  margin-bottom: 30px;
 }
 
 .pager-list li {
@@ -2036,7 +2083,8 @@ input[type="checkbox"] {
 .pager-list .previous::before {
   content: "";
   background-image: url("../img/icon-right-small.svg");
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
   opacity: 0.3;
   width: 8px;
   height: 12px;

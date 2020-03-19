@@ -6,7 +6,7 @@
   <title>HTML Academy: Глейси</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -26,14 +26,14 @@
               <li><a href="catalog.html" class="menu-catalog-item catalog-current">Сливочное</a></li>
               <li><a href="#" class="menu-catalog-item">Щербеты</a></li>
               <li><a href="#" class="menu-catalog-item">Фруктовый лёд</a></li>
-              <li><a href="#" class="menu-catalog-item">Мелорин</a></li>
+              <li><a href="#" class="menu-catalog-item menu-catalog-item-last">Мелорин</a></li>
             </ul>
           </li>
           <li><a href="#" class="site-navigation-item">Доставка и оплата</a></li>
           <li><a href="#" class="site-navigation-item">О Компании</a></li>
         </ul>
 
-        <ul class="user-navigation">
+        <ul class="user-navigation user-navigation-catalog">
           <li>
             <!--ФОРМА ПОИСКА-->
             <div class="search">
@@ -173,7 +173,7 @@
                 
                 <div class="price-indicator">
 
-                  <p><label tabindex="0" for="price" class="label-price">Цена: 100 руб.- 500 руб.</label></p>
+                  <p><label tabindex="0" for="price" class="label-price">Цена: 100 руб. - 500 руб.</label></p>
                   <input  type="range" min="100" max="500" step="10" value="500" id="price">
                   <div class="input-type-range">
                     <div class="range-button-left"></div>
@@ -186,11 +186,11 @@
                   <fieldset class="label-fieldset">
                     <legend class="label-fat-content">Жирность:</legend>
                     <div class="container-radio">
-                      <input type="radio" name="fat-content" id="fatfree" value="0%" class="visually-hidden" disabled>
+                      <input type="radio" name="fat-content" id="fatfree" value="0%" class="visually-hidden">
                       <label tabindex="0" for="fatfree">0 %</label>
 
-                      <input type="radio" name="fat-content" id="10purcentfat" value="до 10%" checked
-                        class="visually-hidden" disabled>
+                      <input type="radio" name="fat-content" id="10purcentfat" value="до 10%" checked 
+                        class="visually-hidden">
                       <label tabindex="0" for="10purcentfat">до 10 %</label>
 
 
@@ -219,7 +219,7 @@
                       <input type="checkbox" id="sprinkles-filling" name="fillings" class="visually-hidden" checked>
                       <label tabindex="0" for="sprinkles-filling">сахарные присыпки</label>
 
-                      <input type="checkbox" id="fruit-filling" name="fillings" class="visually-hidden" checked>
+                      <input type="checkbox" id="fruit-filling" name="fillings" class="visually-hidden">
                       <label tabindex="0" for="fruit-filling">фрукты</label>
 
                       <input type="checkbox" id="syrups-filling" name="fillings" class="visually-hidden">
@@ -464,8 +464,8 @@
 
       <ul class="footer-menu">
         <li><a href="#">Для поставщиков</a></li>
-        <li><a href="#">О производстве</a></li>
         <li><a href="#">Наши документы</a></li>
+        <li><a href="#">О производстве</a></li>
         <li><a href="#">Экологические стандарты</a></li>
       </ul>
 
