@@ -428,6 +428,7 @@ input[type="email"],
 input[type="text"],
 input[type="password"],
 .feedback-form textarea {
+  color: #323232;
   font-weight: 700;
   line-height: 24px;
   border: 1px solid #d1d0ce;
@@ -509,6 +510,7 @@ input[type="search"]::-webkit-input-placeholder,
 input[type="email"]::-webkit-input-placeholder,
 input[type="text"]::-webkit-input-placeholder,
 input[type="password"]::-webkit-input-placeholder {
+  font-weight: 400;
   color: #999999;
 }
 
@@ -516,6 +518,7 @@ input[type="search"]::-moz-placeholder,
 input[type="email"]::-moz-placeholder,
 input[type="text"]::-moz-placeholder,
 input[type="password"]::-moz-placeholder {
+  font-weight: 400;
   color: #999999;
 }
 
@@ -523,6 +526,7 @@ input[type="search"]:-ms-input-placeholder,
 input[type="email"]:-ms-input-placeholder,
 input[type="text"]:-ms-input-placeholder,
 input[type="password"]:-ms-input-placeholder {
+  font-weight: 400;
   color: #999999;
 }
 
@@ -530,6 +534,7 @@ input[type="search"]::-ms-input-placeholder,
 input[type="email"]::-ms-input-placeholder,
 input[type="text"]::-ms-input-placeholder,
 input[type="password"]::-ms-input-placeholder {
+  font-weight: 400;
   color: #999999;
 }
 
@@ -537,11 +542,30 @@ input[type="search"]::placeholder,
 input[type="email"]::placeholder,
 input[type="text"]::placeholder,
 input[type="password"]::placeholder,
-.feedback-form textarea {
+.feedback-form textarea::placeholder {
   color: #999999;
   font-weight: 400;
 }
-
+.feedback-form textarea::-webkit-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+.feedback-form textarea::-moz-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+.feedback-form textarea:-ms-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+.feedback-form textarea::-ms-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+.feedback-form textarea::placeholder {
+  color: #999999;
+  font-weight: 400;
+}
 .user-account {
   position: relative;
 }
@@ -1219,14 +1243,14 @@ input[type="password"]::placeholder,
 
 .form-wrapper {
   max-width: 478px;
-  max-height: 442px;
+  max-height: 462px;                      
   padding: 25px;
-  padding-bottom: 80px;
+  padding-bottom: 96px;
   border-radius: 10px;
   background-color: #f8f7f4;
   position: fixed;
   z-index: 10;
-  top: 100px;
+  top: 100px;      
   left: 50%;
   -webkit-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
@@ -1262,8 +1286,7 @@ input[type="password"]::placeholder,
   padding: 10px 15px;
   position: absolute;
   right: 28px;
-  bottom: 26px;
-  margin-top: 10px;
+  bottom: 24px;             
 }
 
 /*********************************************************************************
