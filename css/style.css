@@ -538,6 +538,42 @@ input[type="password"]::-ms-input-placeholder {
   color: #999999;
 }
 
+input[type="search"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
+input[type="text"]::-webkit-input-placeholder,
+input[type="password"]::-webkit-input-placeholder,
+.feedback-form textarea::-webkit-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+input[type="search"]::-moz-placeholder,
+input[type="email"]::-moz-placeholder,
+input[type="text"]::-moz-placeholder,
+input[type="password"]::-moz-placeholder,
+.feedback-form textarea::-moz-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+input[type="search"]:-ms-input-placeholder,
+input[type="email"]:-ms-input-placeholder,
+input[type="text"]:-ms-input-placeholder,
+input[type="password"]:-ms-input-placeholder,
+.feedback-form textarea:-ms-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+input[type="search"]::-ms-input-placeholder,
+input[type="email"]::-ms-input-placeholder,
+input[type="text"]::-ms-input-placeholder,
+input[type="password"]::-ms-input-placeholder,
+.feedback-form textarea::-ms-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
 input[type="search"]::placeholder,
 input[type="email"]::placeholder,
 input[type="text"]::placeholder,
@@ -546,26 +582,32 @@ input[type="password"]::placeholder,
   color: #999999;
   font-weight: 400;
 }
+
 .feedback-form textarea::-webkit-input-placeholder {
   color: #999999;
   font-weight: 400;
 }
+
 .feedback-form textarea::-moz-placeholder {
   color: #999999;
   font-weight: 400;
 }
+
 .feedback-form textarea:-ms-input-placeholder {
   color: #999999;
   font-weight: 400;
 }
+
 .feedback-form textarea::-ms-input-placeholder {
   color: #999999;
   font-weight: 400;
 }
+
 .feedback-form textarea::placeholder {
   color: #999999;
   font-weight: 400;
 }
+
 .user-account {
   position: relative;
 }
@@ -789,7 +831,7 @@ input[type="password"]::placeholder,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 }
 
 .action {
@@ -831,8 +873,8 @@ input[type="password"]::placeholder,
   margin-left: 20px;
   margin-right: 20px;
   text-align: left;
-  margin-top: 15px;
-  margin-bottom: 43px;
+  margin-top: 16px;
+  margin-bottom: 44px;
 }
 
 .raspberry-button,
@@ -995,7 +1037,7 @@ input[type="password"]::placeholder,
   background-image: url("../img/vafle-bg.jpg");
   width: 1146px;
   border-radius: 14px;
-  padding: 26px 20px 0 20px;
+  padding: 26px 20px 4px 20px;
 }
 
 .about h2 {
@@ -1004,6 +1046,7 @@ input[type="password"]::placeholder,
   font-weight: 500;
   margin-top: 0;
   letter-spacing: 0.17px;
+  margin-bottom: 20px;
 }
 
 .about ul {
@@ -1023,7 +1066,7 @@ input[type="password"]::placeholder,
   width: 553px;
   padding-left: 56px;
   padding-right: 20px;
-  padding-bottom: 23px;
+  padding-bottom: 24px;
   position: relative;
 }
 
@@ -1243,14 +1286,14 @@ input[type="password"]::placeholder,
 
 .form-wrapper {
   max-width: 478px;
-  max-height: 462px;                      
+  max-height: 462px;
   padding: 25px;
   padding-bottom: 96px;
   border-radius: 10px;
   background-color: #f8f7f4;
   position: fixed;
   z-index: 10;
-  top: 100px;      
+  top: 100px;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
@@ -1286,7 +1329,7 @@ input[type="password"]::placeholder,
   padding: 10px 15px;
   position: absolute;
   right: 28px;
-  bottom: 24px;             
+  bottom: 24px;
 }
 
 /*********************************************************************************
