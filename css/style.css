@@ -127,7 +127,6 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 700px;
   padding-left: 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -137,6 +136,8 @@ img {
   margin-bottom: 0;
   padding-top: 8px;
   padding-bottom: 10px;
+  margin-right: auto;
+  max-width: 500px;
 }
 
 .site-navigation-item {
@@ -313,7 +314,8 @@ img {
   -ms-flex-item-align: start;
   align-self: flex-start;
   margin-right: 0;
-  margin-top: 15px
+  margin-top: 15px;
+  margin-left: auto;
 }
 
 .user-navigation-item {
@@ -423,6 +425,7 @@ img {
 /*****************************************************************************
 *********************************INPUT STYLES*********************************
 *****************************************************************************/
+/*
 input[type="search"],
 input[type="email"],
 input[type="text"],
@@ -437,14 +440,38 @@ input[type="password"],
   padding-left: 11px;
   padding-bottom: 11px;
 }
+*/
+.search-form input,
+.login-form input,
+.subscribe-form input,
+.feedback-form input,
+.feedback-form textarea {
+  color: #323232;
+  font-weight: 700;
+  line-height: 24px;
+  border: 1px solid #d1d0ce;
+  border-radius: 5px;
+  padding-top: 11px;
+  padding-left: 11px;
+  padding-bottom: 11px;
+}
 
+/*
 input[type="search"] {
   font-size: 14px;
   width: 311px;
   height: 44px;
   display: block;
 }
+*/
+.search-form input {
+  font-size: 14px;
+  width: 311px;
+  height: 44px;
+  display: block;
+}
 
+/*
 .login-form input[type="email"],
 .login-form input[type="password"] {
   font-size: 14px;
@@ -452,7 +479,15 @@ input[type="search"] {
   height: 44px;
   margin-bottom: 20px;
 }
+*/
+.login-form input {
+  font-size: 14px;
+  width: 241px;
+  height: 44px;
+  margin-bottom: 20px;
+}
 
+/*
 .mailing input[type="email"] {
   font-size: 16px;
   width: 368px;
@@ -460,20 +495,37 @@ input[type="search"] {
   margin-top: 36px;
   margin-bottom: 0;
 }
+*/
+.subscribe-form input {
+  font-size: 16px;
+  width: 368px;
+  height: 44px;
+  margin-top: 36px;
+  margin-bottom: 0;
+}
 
+/*
 .feedback-form input[type="text"],
 .feedback-form input[type="email"] {
   font-size: 16px;
   width: 267px;
 }
-
 .feedback-form input[type="text"] {
   margin-top: 24px;
   margin-bottom: 20px;
 }
-
 .feedback-form input[type="email"] {
   margin-bottom: 20px;
+}
+*/
+.feedback-form input {
+  font-size: 16px;
+  width: 267px;
+  margin-bottom: 20px;
+}
+
+.feedback-form input[type="text"] {
+  margin-top: 24px;
 }
 
 .feedback-form textarea {
@@ -482,6 +534,7 @@ input[type="search"] {
   resize: none;
 }
 
+/*
 input[type="search"]:hover,
 input[type="email"]:hover,
 input[type="text"]:hover,
@@ -492,7 +545,19 @@ input[type="password"]:hover,
   padding-left: 10px;
   padding-bottom: 10px;
 }
+*/
+.search-form input:hover,
+.login-form input:hover,
+.subscribe-form input:hover,
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  border: 2px solid #d1d0ce;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
 
+/*
 input[type="search"]:focus,
 input[type="email"]:focus,
 input[type="text"]:focus,
@@ -505,7 +570,21 @@ input[type="password"]:focus,
   padding-bottom: 10px;
   outline: none;
 }
+*/
+.search-form input:focus,
+.login-form input:focus,
+.subscribe-form input:focus,
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border: 2px solid rgba(046, 136, 228, 0.5);
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  outline: none;
+}
 
+/*
 input[type="search"]::-webkit-input-placeholder,
 input[type="email"]::-webkit-input-placeholder,
 input[type="text"]::-webkit-input-placeholder,
@@ -609,7 +688,8 @@ input[type="password"]::-ms-input-placeholder,
   color: #999999;
   font-weight: 400;
 }
-
+*/
+/*
 input[type="search"]::placeholder,
 input[type="email"]::placeholder,
 input[type="text"]::placeholder,
@@ -618,7 +698,17 @@ input[type="password"]::placeholder,
   color: #999999;
   font-weight: 400;
 }
+*/
+.search-form input::placeholder,
+.login-form input::placeholder,
+.subscribe-form input::placeholder,
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder {
+  color: #999999;
+  font-weight: 400;
+}
 
+/*
 .feedback-form textarea::-webkit-input-placeholder {
   color: #999999;
   font-weight: 400;
@@ -638,11 +728,7 @@ input[type="password"]::placeholder,
   color: #999999;
   font-weight: 400;
 }
-
-.feedback-form textarea::placeholder {
-  color: #999999;
-  font-weight: 400;
-}
+*/
 
 .user-account {
   position: relative;
@@ -1805,7 +1891,6 @@ input[type="password"]::placeholder,
 
 .sort {
   position: relative;
-  min-width: 195px;
   margin-right: 15px;
 }
 
@@ -1819,7 +1904,8 @@ input[type="password"]::placeholder,
 }
 
 .sort select {
-  padding: 9px 35px 9px 14px;
+  width: 194px;
+  padding: 9px 24px 9px 15px;
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
@@ -1962,8 +2048,13 @@ input[type="password"]::placeholder,
   line-height: 18px;
 }
 
+/*
 input[type="radio"],
 input[type="checkbox"] {
+  display: none;
+}
+*/
+.container-radio input {
   display: none;
 }
 
@@ -2003,7 +2094,7 @@ input[type="checkbox"] {
   position: absolute;
   opacity: 0.8;
   top: 11px;
-  left: 11px;
+  left: 10px;
   background-color: #eef2f0;
   margin-bottom: 10px;
 }
@@ -2018,7 +2109,7 @@ input[type="checkbox"] {
   position: absolute;
   opacity: 0.8;
   top: 8px;
-  left: 8px;
+  left: 7px;
   margin-bottom: 10px;
 }
 
@@ -2157,9 +2248,8 @@ input[type="checkbox"] {
   margin-bottom: 38px;
 }
 
-.catalog-list p:nth-of-child(5),
-.catalog-list p:nth-of-child(9) {
-  padding: 0 10px;
+.catalog-item-size {
+  margin: 0 10px;
 }
 
 /*****************************************************************************
