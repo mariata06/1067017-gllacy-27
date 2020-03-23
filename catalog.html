@@ -165,7 +165,7 @@
                   <svg width="11" height="10">
                     <polyline points="5.5,10 0,0 11,0" /></svg>
                   <select>
-                    <option value="по популярности" selected>по популярностипопопулярности</option>
+                    <option value="по популярности" selected>по популярности</option>
                     <option value="сначала недорогие">сначала недорогие</option>
                     <option value="сначала дорогие">сначала дорогие</option>
                     <option value="по жирности">по жирности</option>
@@ -187,19 +187,19 @@
                   <fieldset class="label-fieldset">
                     <legend class="label-fat-content">Жирность:</legend>
                     <div class="container-radio">
-                      <input type="radio" name="fat-content" id="fatfree" value="0%" class="visually-hidden">
-                      <label tabindex="0" for="fatfree">0 %</label>
+                      <input type="radio" name="fat-content" id="fatfree" value="0%" class="visually-hidden fat-content-input">
+                      <label for="fatfree">0 %</label>
 
                       <input type="radio" name="fat-content" id="10purcentfat" value="до 10%" checked
-                        class="visually-hidden">
-                      <label tabindex="0" for="10purcentfat">до 10 %</label>
+                        class="visually-hidden fat-content-input">
+                      <label for="10purcentfat">до 10 %</label>
 
-                      <input type="radio" name="fat-content" id="30purcentfat" value="до 30%" class="visually-hidden">
-                      <label tabindex="0" for="30purcentfat">до 30 %</label>
+                      <input type="radio" name="fat-content" id="30purcentfat" value="до 30%" class="visually-hidden fat-content-input">
+                      <label for="30purcentfat">до 30 %</label>
 
                       <input type="radio" name="fat-content" id="30pluspurcentfat" value="выше 30%"
-                        class="visually-hidden">
-                      <label tabindex="0" for="30pluspurcentfat">выше 30 %</label>
+                        class="visually-hidden fat-content-input">
+                      <label for="30pluspurcentfat">выше 30 %</label>
                     </div>
                   </fieldset>
                 </div>
@@ -212,20 +212,22 @@
                   <fieldset class="label-fieldset">
                     <legend class="label-fillings">Наполнители:</legend>
                     <div class="container-checkbox">
-                      <input type="checkbox" id="chokolate-filling" name="fillings" class="visually-hidden" checked>
-                      <label tabindex="0" for="chokolate-filling">шоколадные</label>
+                      <input type="checkbox" id="chokolate-filling" name="fillings" class="visually-hidden fillings-input"
+                        checked>
+                      <label for="chokolate-filling">шоколадные</label>
 
-                      <input type="checkbox" id="sprinkles-filling" name="fillings" class="visually-hidden" checked>
-                      <label tabindex="0" for="sprinkles-filling">сахарные присыпки</label>
+                      <input type="checkbox" id="sprinkles-filling" name="fillings" class="visually-hidden fillings-input"
+                        checked>
+                      <label for="sprinkles-filling">сахарные присыпки</label>
 
-                      <input type="checkbox" id="fruit-filling" name="fillings" class="visually-hidden">
-                      <label tabindex="0" for="fruit-filling">фрукты</label>
+                      <input type="checkbox" id="fruit-filling" name="fillings" class="visually-hidden fillings-input">
+                      <label for="fruit-filling">фрукты</label>
 
-                      <input type="checkbox" id="syrups-filling" name="fillings" class="visually-hidden">
-                      <label tabindex="0" for="syrups-filling">сиропы</label>
+                      <input type="checkbox" id="syrups-filling" name="fillings" class="visually-hidden fillings-input">
+                      <label for="syrups-filling">сиропы</label>
 
-                      <input type="checkbox" id="jams-filling" name="fillings" class="visually-hidden">
-                      <label tabindex="0" for="jams-filling">джемы</label>
+                      <input type="checkbox" id="jams-filling" name="fillings" class="visually-hidden fillings-input">
+                      <label for="jams-filling">джемы</label>
                     </div>
                   </fieldset>
                 </div>

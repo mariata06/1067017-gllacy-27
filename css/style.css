@@ -105,7 +105,7 @@ img {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding-top: 9px;
-  padding-bottom: 9px;
+  /*padding-bottom: 9px;*/
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
@@ -127,17 +127,20 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding-left: 0;
+  /*
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
+  align-items: center;*/
   margin-left: 9px;
-  margin-top: 0;
+  margin-top: 15px;
+  /*margin-top: 0;*/
   margin-bottom: 0;
-  padding-top: 8px;
-  padding-bottom: 10px;
+  /*padding-top: 8px;*/
   margin-right: auto;
+  padding-left: 0;
+  padding-bottom: 2px;
   max-width: 500px;
+  align-self: flex-start;
 }
 
 .site-navigation-item {
@@ -152,10 +155,18 @@ img {
   vertical-align: baseline;
 }
 
+/*
 .site-navigation-catalog,
 .user-account,
 .search .user-navigation-item,
 .full-cart {
+  position: relative;
+}
+*/
+.site-navigation-catalog,
+.user-account,
+.search .user-navigation-item,
+.cart .full-cart {
   position: relative;
 }
 
@@ -165,7 +176,8 @@ img {
 .full-cart::before {
   content: "";
   position: absolute;
-  top: 80%;
+  top: 70%;
+  /*80%;*/
   width: 100px;
   height: 20px;
 }
@@ -309,13 +321,16 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-left: auto;
   padding-left: 0;
+  /*
   -ms-flex-item-align: start;
-  align-self: flex-start;
+  align-self: flex-start;*/
+  justify-content: flex-end;
   margin-right: 0;
   margin-top: 15px;
   margin-left: auto;
+  width: 450px;
+  margin-bottom: 0;
 }
 
 .user-navigation-item {
@@ -324,12 +339,20 @@ img {
   line-height: 16px;
   color: #ffffff;
   background-color: rgba(255, 255, 255, .2);
-  display: block;
+  display: inline-block;
   text-align: center;
   position: relative;
   margin-left: 10px;
   padding-right: 5px;
-  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.user-account .user-navigation-item {
+  border-radius: 50px;
+  padding-top: 8px;
+  padding-left: 44px;
+  padding-bottom: 8px;
+  padding-right: 16px;
 }
 
 .search .user-navigation-item {
@@ -376,14 +399,6 @@ img {
   border-radius: 50%;
 }
 
-.user-account .user-navigation-item {
-  border-radius: 50px;
-  padding-top: 8px;
-  padding-left: 44px;
-  padding-bottom: 8px;
-  padding-right: 16px;
-}
-
 .cart .user-navigation-item {
   border-radius: 50px;
   padding-top: 8px;
@@ -425,22 +440,6 @@ img {
 /*****************************************************************************
 *********************************INPUT STYLES*********************************
 *****************************************************************************/
-/*
-input[type="search"],
-input[type="email"],
-input[type="text"],
-input[type="password"],
-.feedback-form textarea {
-  color: #323232;
-  font-weight: 700;
-  line-height: 24px;
-  border: 1px solid #d1d0ce;
-  border-radius: 5px;
-  padding-top: 11px;
-  padding-left: 11px;
-  padding-bottom: 11px;
-}
-*/
 .search-form input,
 .login-form input,
 .subscribe-form input,
@@ -456,14 +455,6 @@ input[type="password"],
   padding-bottom: 11px;
 }
 
-/*
-input[type="search"] {
-  font-size: 14px;
-  width: 311px;
-  height: 44px;
-  display: block;
-}
-*/
 .search-form input {
   font-size: 14px;
   width: 311px;
@@ -471,15 +462,6 @@ input[type="search"] {
   display: block;
 }
 
-/*
-.login-form input[type="email"],
-.login-form input[type="password"] {
-  font-size: 14px;
-  width: 241px;
-  height: 44px;
-  margin-bottom: 20px;
-}
-*/
 .login-form input {
   font-size: 14px;
   width: 241px;
@@ -487,15 +469,6 @@ input[type="search"] {
   margin-bottom: 20px;
 }
 
-/*
-.mailing input[type="email"] {
-  font-size: 16px;
-  width: 368px;
-  height: 44px;
-  margin-top: 36px;
-  margin-bottom: 0;
-}
-*/
 .subscribe-form input {
   font-size: 16px;
   width: 368px;
@@ -504,20 +477,6 @@ input[type="search"] {
   margin-bottom: 0;
 }
 
-/*
-.feedback-form input[type="text"],
-.feedback-form input[type="email"] {
-  font-size: 16px;
-  width: 267px;
-}
-.feedback-form input[type="text"] {
-  margin-top: 24px;
-  margin-bottom: 20px;
-}
-.feedback-form input[type="email"] {
-  margin-bottom: 20px;
-}
-*/
 .feedback-form input {
   font-size: 16px;
   width: 267px;
@@ -534,18 +493,6 @@ input[type="search"] {
   resize: none;
 }
 
-/*
-input[type="search"]:hover,
-input[type="email"]:hover,
-input[type="text"]:hover,
-input[type="password"]:hover,
-.feedback-form textarea:hover {
-  border: 2px solid #d1d0ce;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
-}
-*/
 .search-form input:hover,
 .login-form input:hover,
 .subscribe-form input:hover,
@@ -557,20 +504,6 @@ input[type="password"]:hover,
   padding-bottom: 10px;
 }
 
-/*
-input[type="search"]:focus,
-input[type="email"]:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-.feedback-form textarea:focus {
-  border: 2px solid rgba(046, 136, 228, 0.5);
-  border-radius: 5px;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
-  outline: none;
-}
-*/
 .search-form input:focus,
 .login-form input:focus,
 .subscribe-form input:focus,
@@ -584,121 +517,6 @@ input[type="password"]:focus,
   outline: none;
 }
 
-/*
-input[type="search"]::-webkit-input-placeholder,
-input[type="email"]::-webkit-input-placeholder,
-input[type="text"]::-webkit-input-placeholder,
-input[type="password"]::-webkit-input-placeholder {
-  font-weight: 400;
-  color: #999999;
-}
-
-input[type="search"]::-moz-placeholder,
-input[type="email"]::-moz-placeholder,
-input[type="text"]::-moz-placeholder,
-input[type="password"]::-moz-placeholder {
-  font-weight: 400;
-  color: #999999;
-}
-
-input[type="search"]:-ms-input-placeholder,
-input[type="email"]:-ms-input-placeholder,
-input[type="text"]:-ms-input-placeholder,
-input[type="password"]:-ms-input-placeholder {
-  font-weight: 400;
-  color: #999999;
-}
-
-input[type="search"]::-ms-input-placeholder,
-input[type="email"]::-ms-input-placeholder,
-input[type="text"]::-ms-input-placeholder,
-input[type="password"]::-ms-input-placeholder {
-  font-weight: 400;
-  color: #999999;
-}
-
-input[type="search"]::-webkit-input-placeholder,
-input[type="email"]::-webkit-input-placeholder,
-input[type="text"]::-webkit-input-placeholder,
-input[type="password"]::-webkit-input-placeholder,
-.feedback-form textarea::-webkit-input-placeholder {
-  color: #999999;
-  font-weight: 400;
-}
-
-input[type="search"]::-moz-placeholder,
-input[type="email"]::-moz-placeholder,
-input[type="text"]::-moz-placeholder,
-input[type="password"]::-moz-placeholder,
-.feedback-form textarea::-moz-placeholder {
-  color: #999999;
-  font-weight: 400;
-}
-
-input[type="search"]:-ms-input-placeholder,
-input[type="email"]:-ms-input-placeholder,
-input[type="text"]:-ms-input-placeholder,
-input[type="password"]:-ms-input-placeholder,
-.feedback-form textarea:-ms-input-placeholder {
-  color: #999999;
-  font-weight: 400;
-}
-
-input[type="search"]::-ms-input-placeholder,
-input[type="email"]::-ms-input-placeholder,
-input[type="text"]::-ms-input-placeholder,
-input[type="password"]::-ms-input-placeholder,
-.feedback-form textarea::-ms-input-placeholder {
-  color: #999999;
-  font-weight: 400;
-}
-
-input[type="search"]::-webkit-input-placeholder,
-input[type="email"]::-webkit-input-placeholder,
-input[type="text"]::-webkit-input-placeholder,
-input[type="password"]::-webkit-input-placeholder,
-.feedback-form textarea::-webkit-input-placeholder {
-  color: #999999;
-  font-weight: 400;
-}
-
-input[type="search"]::-moz-placeholder,
-input[type="email"]::-moz-placeholder,
-input[type="text"]::-moz-placeholder,
-input[type="password"]::-moz-placeholder,
-.feedback-form textarea::-moz-placeholder {
-  color: #999999;
-  font-weight: 400;
-}
-
-input[type="search"]:-ms-input-placeholder,
-input[type="email"]:-ms-input-placeholder,
-input[type="text"]:-ms-input-placeholder,
-input[type="password"]:-ms-input-placeholder,
-.feedback-form textarea:-ms-input-placeholder {
-  color: #999999;
-  font-weight: 400;
-}
-
-input[type="search"]::-ms-input-placeholder,
-input[type="email"]::-ms-input-placeholder,
-input[type="text"]::-ms-input-placeholder,
-input[type="password"]::-ms-input-placeholder,
-.feedback-form textarea::-ms-input-placeholder {
-  color: #999999;
-  font-weight: 400;
-}
-*/
-/*
-input[type="search"]::placeholder,
-input[type="email"]::placeholder,
-input[type="text"]::placeholder,
-input[type="password"]::placeholder,
-.feedback-form textarea::placeholder {
-  color: #999999;
-  font-weight: 400;
-}
-*/
 .search-form input::placeholder,
 .login-form input::placeholder,
 .subscribe-form input::placeholder,
@@ -707,28 +525,6 @@ input[type="password"]::placeholder,
   color: #999999;
   font-weight: 400;
 }
-
-/*
-.feedback-form textarea::-webkit-input-placeholder {
-  color: #999999;
-  font-weight: 400;
-}
-
-.feedback-form textarea::-moz-placeholder {
-  color: #999999;
-  font-weight: 400;
-}
-
-.feedback-form textarea:-ms-input-placeholder {
-  color: #999999;
-  font-weight: 400;
-}
-
-.feedback-form textarea::-ms-input-placeholder {
-  color: #999999;
-  font-weight: 400;
-}
-*/
 
 .user-account {
   position: relative;
@@ -776,9 +572,11 @@ input[type="password"]::placeholder,
 
 .working-time-index-container .working-time {
   width: 250px;
-  position: absolute;
+  /*position: absolute;
   top: 74px;
-  left: 923px;
+  left: 923px;*/
+  /*margin-top: 5px;*/
+  margin-left: auto;
 }
 
 .working-time span:first-child {
@@ -852,7 +650,8 @@ input[type="password"]::placeholder,
 
 .slider {
   position: relative;
-  padding-top: 310px;
+  /*padding-top: 310px;*/
+  padding-top: 275px;
   text-align: center;
   color: #ffffff;
 }
@@ -1158,6 +957,7 @@ input[type="password"]::placeholder,
   background-color: #ecdfc7;
   background-image: url("../img/vafle-bg.jpg");
   width: 1146px;
+  min-height: 305px;
   border-radius: 14px;
   padding: 25px 20px 0 20px;
 }
@@ -1336,7 +1136,7 @@ input[type="password"]::placeholder,
 .map {
   width: 1200px;
   margin: 0 auto;
-  height: 430px;
+  height: 429px;
   background-image: url("../img/ice-cream-pin.png"), url("../img/map.png");
   background-position: 25% 50%, bottom center;
   background-repeat: no-repeat, no-repeat;
@@ -1346,7 +1146,7 @@ input[type="password"]::placeholder,
   background-color: #fefefe;
   max-width: 302px;
   border-radius: 15px;
-  padding: 30px 25px 32px 25px;
+  padding: 30px 24px 32px 26px;
   position: relative;
   top: 62px;
   left: 870px;
@@ -1368,7 +1168,7 @@ input[type="password"]::placeholder,
 }
 
 .contacts-phone {
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
 
 .contacts span {
@@ -1708,7 +1508,7 @@ input[type="password"]::placeholder,
 .copyright p {
   font-size: 12px;
   line-height: 18px;
-  margin-top: 3px;
+  margin-top: 4px;
   margin-bottom: 0;
 }
 
@@ -1855,7 +1655,8 @@ input[type="password"]::placeholder,
 **********************************SECTION FILTER******************************
 *****************************************************************************/
 .filter-container {
-  width: 880px;
+  min-width: 880px;
+  margin-right: auto;
 }
 
 .filter-form {
@@ -1874,8 +1675,14 @@ input[type="password"]::placeholder,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  min-width: 860px;
+  justify-content: space-between;
 }
 
+/*
+.fillings-button-container {
+  justify-content: space-between;
+}*/
 .filter h2 {
   font-size: 35px;
   font-weight: 700;
@@ -1887,6 +1694,7 @@ input[type="password"]::placeholder,
 .label-fieldset {
   border: 0;
   padding: 0;
+  margin: 0;
 }
 
 .sort {
@@ -1900,12 +1708,12 @@ input[type="password"]::placeholder,
   line-height: 16px;
   margin-bottom: 4px;
   margin-top: 4px;
-  padding-left: 15px;
+  padding-left: 16px;
 }
 
 .sort select {
-  width: 194px;
-  padding: 9px 24px 9px 15px;
+  min-width: 194px;
+  padding: 9px 34px 9px 15px;
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
@@ -1926,7 +1734,7 @@ input[type="password"]::placeholder,
   fill: #ffffff;
   position: absolute;
   top: 37px;
-  left: 168px;
+  right: 13px;
   z-index: 3;
 }
 
@@ -1974,7 +1782,7 @@ input[type="password"]::placeholder,
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.2);
   position: relative;
-  margin-right: 13px;
+  margin-right: 15px;
 }
 
 .input-type-range::before {
@@ -2049,15 +1857,11 @@ input[type="password"]::placeholder,
 }
 
 /*
-input[type="radio"],
-input[type="checkbox"] {
+.container-radio input,
+.container-checkbox input {
   display: none;
 }
 */
-.container-radio input {
-  display: none;
-}
-
 .container-radio {
   width: 415px;
   border-radius: 50px;
@@ -2067,6 +1871,7 @@ input[type="checkbox"] {
   margin-top: 0;
   padding-left: 8px;
   padding-bottom: 1px;
+  margin-right: 3px;
 }
 
 .container-radio label {
@@ -2137,6 +1942,7 @@ input[type="checkbox"] {
   padding-top: 4px;
   padding-bottom: 4px;
   margin-top: 1px;
+  margin-right: auto;
 }
 
 .container-checkbox input:checked+label::before {
@@ -2178,10 +1984,44 @@ input[type="checkbox"] {
   opacity: 0.4;
 }
 
+/***************************************************************************************
+****************************RADIO & CHECKBOX ACTIVE by tab******************************
+***************************************************************************************/
+.fillings-input:focus+label::before,
+.fat-content-input:focus+label::before {
+  outline: 15px auto -webkit-focus-ring-color;
+}
+
+.fillings-input:checked:focus+label::before,
+.fillings-input:checked:hover+label::before {
+  content: url("../img/checkbox-on.svg");
+  cursor: pointer;
+}
+
+.fat-content-input:checked:focus+label::before,
+.fat-content-input:checked:hover+label::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border: 3px solid #aabcb2;
+  -webkit-box-shadow: 0 0 0 3px #eef2f0;
+  box-shadow: 0 0 0 3px #eef2f0;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0.8;
+  top: 11px;
+  left: 10px;
+  background-color: #eef2f0;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+/*******************************************************************************************
+****************************END RADIO & CHECKBOX ACTIVE by tab******************************
+*******************************************************************************************/
 .fillings .label-fillings {
   font-size: 14px;
   padding-top: 13px;
-  padding-left: 13px;
+  padding-left: 15px;
 }
 
 .fillings label {
@@ -2191,7 +2031,7 @@ input[type="checkbox"] {
   padding-top: 7px;
   padding-bottom: 0;
   position: relative;
-  padding-left: 45px;
+  padding-left: 47px;
   display: inline-block;
   vertical-align: baseline;
 }
@@ -2221,10 +2061,8 @@ input[type="checkbox"] {
   background-color: rgba(255, 255, 255, 0.2);
   height: 36px;
   min-width: 143px;
-  position: absolute;
-  bottom: 1px;
-  right: 20px;
   padding: 0 14px;
+  align-self: flex-end;
 }
 
 .filter-button:hover,
