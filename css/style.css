@@ -573,6 +573,26 @@ img {
   font-weight: 400;
 }
 
+.search-form input::-webkit-input-placeholder, .login-form input::-webkit-input-placeholder, .subscribe-form input::-webkit-input-placeholder, .feedback-form input::-webkit-input-placeholder, .feedback-form textarea::-webkit-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.search-form input::-moz-placeholder, .login-form input::-moz-placeholder, .subscribe-form input::-moz-placeholder, .feedback-form input::-moz-placeholder, .feedback-form textarea::-moz-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.search-form input:-ms-input-placeholder, .login-form input:-ms-input-placeholder, .subscribe-form input:-ms-input-placeholder, .feedback-form input:-ms-input-placeholder, .feedback-form textarea:-ms-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.search-form input::-ms-input-placeholder, .login-form input::-ms-input-placeholder, .subscribe-form input::-ms-input-placeholder, .feedback-form input::-ms-input-placeholder, .feedback-form textarea::-ms-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
 .search-form input::placeholder,
 .login-form input::placeholder,
 .subscribe-form input::placeholder,
@@ -1760,7 +1780,7 @@ img {
 }
 
 .sort select {
-  min-width: 194px;
+  width: 194px;
   padding: 9px 34px 9px 15px;
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -1929,7 +1949,7 @@ img {
   vertical-align: baseline;
 }
 
-.container-radio input:checked+label::before {
+.fat-content-input:checked+label::before {
   /*радио выбранный*/
   -webkit-box-shadow: 0 0 0 3px #aabcb2 inset;
   box-shadow: 0 0 0 3px #aabcb2 inset;
@@ -1950,20 +1970,20 @@ img {
   margin-bottom: 10px;
 }
 
-.container-radio input:checked+label:hover::before,
-.container-radio input:checked+label:focus::before,
+.fat-content-input:checked+label:hover::before,
+.fat-content-input:checked+label:focus::before,
 .container-radio label:hover::before,
 .container-radio label:focus::before {
   /*радио выбранный и пустой с hover, с focus*/
   opacity: 100%;
 }
 
-.container-radio input:disabled+label::before {
+.fat-content-input:disabled+label::before {
   /*радио пустой disabled*/
   opacity: 0.4;
 }
 
-.container-radio input:disabled+label:hover::before {
+.fat-content-input:disabled+label:hover::before {
   /*радио выбранный disabled с hover*/
   opacity: 0.4;
 }
@@ -1979,7 +1999,7 @@ img {
   margin-right: auto;
 }
 
-.container-checkbox input:checked+label::before {
+.fillings-input:checked+label::before {
   /*чекбокс выбранный */
   content: url("../img/checkbox-on.svg");
   margin-right: 12px;
@@ -2001,19 +2021,19 @@ img {
   left: 3px;
 }
 
-.container-checkbox input:checked+label:hover::before,
+.fillings-input:checked+label:hover::before,
 /*чекбокс выбранный и пустой с hover*/
 .container-checkbox label:hover::before {
   opacity: 100%;
 }
 
 .container-checkbox label:disabled::before,
-.container-checkbox input:disabled+label::before {
+.fillings-input:disabled+label::before {
   /*чекбокс выбранный и пустой  disabled*/
   opacity: 0.4;
 }
 
-.container-checkbox input:disabled+label:hover::before {
+.fillings-input:disabled+label:hover::before {
   /*чекбокс выбранный disabled c hover*/
   opacity: 0.4;
 }
@@ -2023,6 +2043,7 @@ img {
 ***************************************************************************************/
 .fillings-input:focus+label::before,
 .fat-content-input:focus+label::before {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   opacity: 100%;
 }
