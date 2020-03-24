@@ -1856,12 +1856,6 @@ img {
   line-height: 18px;
 }
 
-/*
-.container-radio input,
-.container-checkbox input {
-  display: none;
-}
-*/
 .container-radio {
   width: 415px;
   border-radius: 50px;
@@ -1880,8 +1874,8 @@ img {
   line-height: 18px;
   padding-top: 10px;
   padding-bottom: 0;
-  padding-left: 35px;
-  padding-right: 7px;
+  padding-left: 37px;
+  padding-right: 9px;
   margin-bottom: 8px;
   display: inline-block;
   vertical-align: baseline;
@@ -1889,19 +1883,8 @@ img {
 
 .container-radio input:checked+label::before {
   /*радио выбранный*/
-  content: "";
-  width: 14px;
-  height: 14px;
-  border: 3px solid #aabcb2;
-  -webkit-box-shadow: 0 0 0 3px #eef2f0;
-  box-shadow: 0 0 0 3px #eef2f0;
-  border-radius: 50%;
-  position: absolute;
-  opacity: 0.8;
-  top: 11px;
-  left: 10px;
+  box-shadow: 0 0 0 3px #aabcb2 inset;
   background-color: #eef2f0;
-  margin-bottom: 10px;
 }
 
 .container-radio label::before {
@@ -1911,8 +1894,8 @@ img {
   height: 20px;
   border: 3px solid #fff;
   border-radius: 50%;
-  position: absolute;
   opacity: 0.8;
+  position: absolute;
   top: 8px;
   left: 7px;
   margin-bottom: 10px;
@@ -1989,7 +1972,7 @@ img {
 ***************************************************************************************/
 .fillings-input:focus+label::before,
 .fat-content-input:focus+label::before {
-  outline: 15px auto -webkit-focus-ring-color;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .fillings-input:checked:focus+label::before,
@@ -2000,21 +1983,10 @@ img {
 
 .fat-content-input:checked:focus+label::before,
 .fat-content-input:checked:hover+label::before {
-  content: "";
-  width: 14px;
-  height: 14px;
-  border: 3px solid #aabcb2;
-  -webkit-box-shadow: 0 0 0 3px #eef2f0;
-  box-shadow: 0 0 0 3px #eef2f0;
-  border-radius: 50%;
-  position: absolute;
-  opacity: 0.8;
-  top: 11px;
-  left: 10px;
+  box-shadow: 0 0 0 3px #aabcb2 inset;
   background-color: #eef2f0;
-  margin-bottom: 10px;
-  cursor: pointer;
 }
+
 /*******************************************************************************************
 ****************************END RADIO & CHECKBOX ACTIVE by tab******************************
 *******************************************************************************************/
