@@ -1975,7 +1975,7 @@ img {
 .container-radio label:hover::before,
 .container-radio label:focus::before {
   /*радио выбранный и пустой с hover, с focus*/
-  opacity: 100%;
+  opacity: 1;
 }
 
 .fat-content-input:disabled+label::before {
@@ -2024,7 +2024,7 @@ img {
 .fillings-input:checked+label:hover::before,
 /*чекбокс выбранный и пустой с hover*/
 .container-checkbox label:hover::before {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .container-checkbox label:disabled::before,
@@ -2045,14 +2045,14 @@ img {
 .fat-content-input:focus+label::before {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
-  opacity: 100%;
+  opacity: 1;
 }
 
 .fillings-input:checked:focus+label::before,
 .fillings-input:checked:hover+label::before {
   content: url("../img/checkbox-on.svg");
   cursor: pointer;
-  opacity: 100%;
+  opacity: 1;
 }
 
 .fat-content-input:checked:focus+label::before,
